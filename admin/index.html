@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yönetim Paneli | İbrahim Yılmaz Gayrimenkul</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body" data-page="admin">
+
+<!-- ==================== GİRİŞ EKRANI ==================== -->
+<div class="admin-login-wrap" id="view-login">
+  <div class="admin-login-card">
+    <div class="brand">
+      <img src="../assets/img/logo.svg" alt="" width="40" height="40">
+      <span class="brand-text"><strong>İbrahim Yılmaz</strong><span>Gayrimenkul</span></span>
+    </div>
+    <h1 style="font-size:1.2rem;">Yönetim Paneli Girişi</h1>
+    <p class="text-muted" style="font-size:.85rem;">Bu alan yalnızca yetkili personel içindir.</p>
+    <form id="login-form">
+      <div class="field-group" style="text-align:left;">
+        <label for="login-password">Şifre</label>
+        <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+      </div>
+      <p class="alert alert-error hidden" id="login-error">Şifre hatalı. Lütfen tekrar deneyin.</p>
+      <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+    </form>
+    <p class="text-muted" style="font-size:.76rem;margin-top:16px;">
+      Varsayılan şifreyi kullanıyorsanız lütfen değiştirin (bkz. README.md — "Panel Şifresini Değiştirme").
+    </p>
+    <a href="../index.html" style="font-size:.8rem;color:var(--color-text-muted);">← Siteye dön</a>
+  </div>
+</div>
+
+<!-- ==================== PANEL ==================== -->
+<div class="admin-shell hidden" id="view-panel">
+  <aside class="admin-sidebar">
+    <div class="brand">
+      <img src="../assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand-text"><strong>İbrahim Yılmaz</strong><span>Gayrimenkul</span></span>
+    </div>
+    <nav>
+      <button class="nav-item active" data-tab="dashboard">📊 Özet</button>
+      <button class="nav-item" data-tab="listings">🏠 İlanlar</button>
+      <button class="nav-item" data-tab="settings">⚙️ Site Ayarları</button>
+      <button class="nav-item" data-tab="data">💾 Veri Yönetimi</button>
+      <button class="nav-item" data-tab="password">🔒 Şifre Hash Aracı</button>
+      <button class="nav-item" id="btn-logout" style="margin-top:20px;color:#f0b3ab;">↩ Çıkış Yap</button>
+    </nav>
+    <p style="font-size:.7rem;color:#6d7a8f;margin-top:24px;"><a href="../index.html" style="color:#8b96a8;">← Siteye dön</a></p>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 style="margin:0;font-size:1.3rem;">Yönetim Paneli</h1>
+      <span class="text-muted" id="session-info" style="font-size:.82rem;"></span>
+    </div>
+
+    <!-- ---- ÖZET ---- -->
+    <section class="admin-tab" id="tab-dashboard">
+      <div class="stats-row" style="margin-bottom:20px;">
+        <div class="admin-card stat"><strong id="stat-total">0</strong><span>Toplam İlan</span></div>
+        <div class="admin-card stat"><strong id="stat-satilik">0</strong><span>Satılık</span></div>
+        <div class="admin-card stat"><strong id="stat-kiralik">0</strong><span>Kiralık</span></div>
+        <div class="admin-card stat"><strong id="stat-featured">0</strong><span>Öne Çıkan</span></div>
+      </div>
+      <div class="admin-card">
+        <h3>Hızlı Başlangıç</h3>
+        <p class="text-muted">İlan eklemek/düzenlemek için soldaki menüden <strong>İlanlar</strong> sekmesine geçin. Yaptığınız değişiklikler bu tarayıcıda anında saklanır (localStorage). Sitenin canlıya yansıması için <strong>Veri Yönetimi</strong> sekmesinden <code>listings.json</code> dosyasını dışa aktarıp sunucudaki <code>data/listings.json</code> dosyasının üzerine yazmanız gerekir.</p>
+      </div>
+    </section>
+
+    <!-- ---- İLANLAR ---- -->
+    <section class="admin-tab hidden" id="tab-listings">
+      <div class="admin-topbar">
+        <h2 style="margin:0;font-size:1.1rem;">İlanlar</h2>
+        <button class="btn btn-primary btn-sm" id="btn-new-listing">+ Yeni İlan</button>
+      </div>
+      <div class="admin-card" style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Görsel</th><th>Başlık</th><th>İşlem</th><th>Tür</th><th>Fiyat</th><th>Bölge</th><th>Durum</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="admin-listings-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---- SİTE AYARLARI ---- -->
+    <section class="admin-tab hidden" id="tab-settings">
+      <div class="admin-card">
+        <h2 style="font-size:1.1rem;">Site Ayarları (Önizleme)</h2>
+        <p class="text-muted" style="font-size:.85rem;">
+          Aşağıdaki değişiklikler yalnızca bu tarayıcıda önizleme olarak uygulanır (localStorage).
+          Sitenin <strong>tüm ziyaretçilerde</strong> kalıcı olarak değişmesi için bu değerleri
+          <code>assets/js/config.js</code> dosyasına elle işlemeniz ve sunucuya tekrar yüklemeniz gerekir —
+          "JSON İndir" ile aldığınız dosya bu işlemde size rehber olur.
+        </p>
+        <form id="settings-form">
+          <div class="form-grid">
+            <div class="field-group"><label>Görünen Telefon</label><input type="text" name="phoneDisplay"></div>
+            <div class="field-group"><label>Tel Bağlantısı (rakam)</label><input type="text" name="phoneHref"></div>
+            <div class="field-group"><label>WhatsApp Numarası (rakam)</label><input type="text" name="whatsappNumber"></div>
+            <div class="field-group"><label>E-posta</label><input type="email" name="email"></div>
+            <div class="field-group"><label>Adres</label><input type="text" name="addressLine"></div>
+            <div class="field-group"><label>Çalışma Saatleri</label><input type="text" name="workingHoursDisplay"></div>
+            <div class="field-group"><label>Enlem (lat)</label><input type="text" name="geoLat"></div>
+            <div class="field-group"><label>Boylam (lng)</label><input type="text" name="geoLng"></div>
+            <div class="field-group"><label>Instagram URL</label><input type="text" name="social.instagram"></div>
+            <div class="field-group"><label>Facebook URL</label><input type="text" name="social.facebook"></div>
+            <div class="field-group"><label>GA4 Ölçüm Kimliği</label><input type="text" name="ga4Id" placeholder="G-XXXXXXXXXX"></div>
+            <div class="field-group"><label>GTM Kapsayıcı Kimliği</label><input type="text" name="gtmId" placeholder="GTM-XXXXXXX"></div>
+            <div class="field-group"><label>Search Console Doğrulama</label><input type="text" name="searchConsoleVerify"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Önizlemeyi Kaydet</button>
+          <button type="button" class="btn btn-outline" id="settings-reset">Config.js Varsayılanına Dön</button>
+          <p class="alert alert-success hidden mt-16" id="settings-saved-note">Ayarlar bu tarayıcıda kaydedildi.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ---- VERİ YÖNETİMİ ---- -->
+    <section class="admin-tab hidden" id="tab-data">
+      <div class="admin-card">
+        <h2 style="font-size:1.1rem;">İlan Verisini Dışa/İçe Aktar</h2>
+        <p class="text-muted" style="font-size:.85rem;">İlanlar bu tarayıcıda (localStorage) saklanır. Değişikliklerinizi kalıcı hale getirmek ve tüm ziyaretçilere yansıtmak için JSON dosyasını indirip sunucudaki <code>data/listings.json</code> dosyasının üzerine yazmanız gerekir.</p>
+        <div class="btn-row" style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-primary" id="btn-export-json">⬇ listings.json İndir</button>
+          <label class="btn btn-outline" for="import-json-input" style="margin:0;">⬆ JSON İçe Aktar</label>
+          <input type="file" id="import-json-input" accept="application/json" class="hidden">
+          <button class="btn btn-outline" id="btn-reset-seed">Örnek Verilere Sıfırla</button>
+        </div>
+        <p class="alert alert-success hidden mt-16" id="data-note"></p>
+      </div>
+    </section>
+
+    <!-- ---- ŞİFRE HASH ARACI ---- -->
+    <section class="admin-tab hidden" id="tab-password">
+      <div class="admin-card">
+        <h2 style="font-size:1.1rem;">Yeni Şifre Hash'i Üret</h2>
+        <p class="text-muted" style="font-size:.85rem;">Panel şifresi kaynak kodda asla düz metin olarak saklanmaz. Yeni şifrenizi aşağıya yazın, üretilen SHA-256 hash değerini kopyalayıp <code>assets/js/config.js</code> içindeki <code>adminPasswordHash</code> alanına yapıştırın.</p>
+        <div class="field-group">
+          <label for="hash-input">Yeni Şifre</label>
+          <input type="text" id="hash-input" placeholder="Yeni şifrenizi yazın">
+        </div>
+        <button class="btn btn-primary" id="btn-generate-hash">Hash Üret</button>
+        <div class="field-group mt-16">
+          <label for="hash-output">SHA-256 Hash (config.js'e yapıştırın)</label>
+          <input type="text" id="hash-output" readonly>
+        </div>
+        <button class="btn btn-outline btn-sm" id="btn-copy-hash">Panoya Kopyala</button>
+        <p class="alert alert-success hidden mt-16" id="hash-copied-note">Kopyalandı.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ==================== İLAN EKLE/DÜZENLE MODAL ==================== -->
+<div class="modal-backdrop hidden" id="listing-modal">
+  <div class="modal">
+    <div class="modal-head">
+      <h2 id="modal-title" style="margin:0;font-size:1.05rem;">Yeni İlan</h2>
+      <button type="button" id="modal-close" aria-label="Kapat">×</button>
+    </div>
+    <form id="listing-form">
+      <input type="hidden" name="id">
+      <div class="form-grid">
+        <div class="field-group" style="grid-column:1/-1;"><label>Başlık</label><input type="text" name="title" required></div>
+        <div class="field-group">
+          <label>İşlem</label>
+          <select name="operation" required>
+            <option value="satilik">Satılık</option>
+            <option value="kiralik">Kiralık</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Tür</label>
+          <select name="category" required>
+            <option value="daire">Daire</option>
+            <option value="dukkan">Dükkan</option>
+            <option value="isyeri">İş Yeri</option>
+            <option value="arsa">Arsa</option>
+          </select>
+        </div>
+        <div class="field-group"><label>Fiyat (₺)</label><input type="number" name="price" required></div>
+        <div class="field-group">
+          <label>Bölge</label>
+          <select name="district">
+            <option value="İskitler">İskitler</option>
+            <option value="Altındağ">Altındağ</option>
+          </select>
+        </div>
+        <div class="field-group" style="grid-column:1/-1;"><label>Adres</label><input type="text" name="addressText"></div>
+        <div class="field-group"><label>Oda Sayısı (örn. 3+1)</label><input type="text" name="rooms"></div>
+        <div class="field-group"><label>Brüt m²</label><input type="number" name="areaGross"></div>
+        <div class="field-group"><label>Net m²</label><input type="number" name="areaNet"></div>
+        <div class="field-group"><label>Bulunduğu Kat</label><input type="text" name="floor"></div>
+        <div class="field-group"><label>Bina Kat Sayısı</label><input type="number" name="buildingFloors"></div>
+        <div class="field-group"><label>Bina Yaşı</label><input type="number" name="buildingAge"></div>
+        <div class="field-group"><label>Isıtma</label><input type="text" name="heating"></div>
+        <div class="field-group"><label>Banyo Sayısı</label><input type="number" name="bathrooms"></div>
+        <div class="field-group"><label>Tapu Durumu</label><input type="text" name="titleDeedStatus"></div>
+        <div class="field-group">
+          <label>Durum</label>
+          <select name="status">
+            <option value="aktif">Aktif</option>
+            <option value="pasif">Pasif</option>
+          </select>
+        </div>
+        <div class="field-group"><label>Enlem (lat)</label><input type="text" name="lat"></div>
+        <div class="field-group"><label>Boylam (lng)</label><input type="text" name="lng"></div>
+        <div class="field-group">
+          <label><input type="checkbox" name="featured"> Öne Çıkan</label>
+          <label><input type="checkbox" name="creditEligible"> Krediye Uygun</label>
+        </div>
+      </div>
+      <div class="field-group"><label>Açıklama</label><textarea name="description"></textarea></div>
+      <div class="field-group"><label>Özellikler (virgülle ayırın)</label><input type="text" name="featuresText" placeholder="Otopark, Asansör, Doğalgaz"></div>
+
+      <div class="field-group">
+        <label>Görseller</label>
+        <div class="dropzone">
+          <input type="file" id="image-upload-input" accept="image/*" multiple>
+          <p>Bilgisayarınızdan fotoğraf seçin (JPEG/PNG önerilir, dosya boyutunu küçük tutun).</p>
+        </div>
+        <div id="image-preview-list" class="chip-list mt-16"></div>
+      </div>
+
+      <div class="btn-row" style="display:flex;gap:10px;margin-top:16px;">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <button type="button" class="btn btn-outline" id="modal-cancel">İptal</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

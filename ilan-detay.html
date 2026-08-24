@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İlan Detayı | İbrahim Yılmaz Gayrimenkul</title>
+<meta name="description" content="Ankara İskitler ve Altındağ bölgesindeki emlak ilanının fotoğraf galerisi, özellik tablosu, konumu ve iletişim bilgilerini inceleyin.">
+<link rel="canonical" href="https://ibrahimyilmazgayrimenkul.com/ilan-detay.html">
+<meta property="og:type" content="product">
+<meta property="og:title" content="İlan Detayı | İbrahim Yılmaz Gayrimenkul">
+<meta property="og:description" content="Ankara İskitler ve Altındağ bölgesindeki emlak ilanı detayları.">
+<meta property="og:url" content="https://ibrahimyilmazgayrimenkul.com/ilan-detay.html">
+<meta property="og:image" content="https://ibrahimyilmazgayrimenkul.com/assets/img/og-cover.svg">
+<meta property="og:locale" content="tr_TR">
+<meta name="theme-color" content="#10233f">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="detail">
+<a class="skip-link" href="#main">İçeriğe geç</a>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a data-cfg-tel href="tel:">📞 <span data-cfg="phoneDisplay">Telefon</span></a>
+      <span data-cfg-hours>Çalışma Saatleri</span>
+    </div>
+    <div class="topbar-links"><a data-cfg-mail href="mailto:"><span data-cfg="email">E-posta</span></a></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="İbrahim Yılmaz Gayrimenkul logosu" width="42" height="42">
+      <span class="brand-text"><strong>İbrahim Yılmaz</strong><span>Gayrimenkul</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menü</button>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ilanlar.html" aria-current="page">İlanlar</a></li>
+        <li><a href="hakkimizda.html">Kurumsal</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a class="nav-cta" data-cfg-wa href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="nav-backdrop"></div>
+</header>
+
+<main id="main">
+  <div class="container section-tight">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Ana Sayfa</a><span aria-hidden="true">/</span>
+      <a href="ilanlar.html">İlanlar</a><span aria-hidden="true">/</span>
+      <span id="breadcrumb-current">İlan</span>
+    </nav>
+  </div>
+
+  <div class="container" id="detail-not-found" style="display:none">
+    <div class="empty-state">
+      <h3>İlan bulunamadı</h3>
+      <p>Aradığınız ilan kaldırılmış veya bağlantı hatalı olabilir.</p>
+      <a class="btn btn-primary" href="ilanlar.html">Tüm İlanlara Dön</a>
+    </div>
+  </div>
+
+  <div class="container" id="detail-wrap">
+    <div class="detail-header">
+      <span class="badge" id="detail-badge" style="display:inline-block;background:var(--color-navy);color:#fff;padding:5px 12px;border-radius:20px;font-size:.78rem;margin-bottom:10px;">İlan</span>
+      <h1 id="detail-title">İlan başlığı yükleniyor…</h1>
+      <div class="loc" id="detail-loc"></div>
+      <div class="price" id="detail-price"></div>
+    </div>
+
+    <div class="detail-grid">
+      <div>
+        <div class="gallery">
+          <div class="main-image"><img id="gallery-main-img" src="assets/img/placeholder.svg" alt=""></div>
+          <div class="thumbs" id="gallery-thumbs"></div>
+        </div>
+
+        <section class="mt-16">
+          <h2>Açıklama</h2>
+          <p id="detail-desc"></p>
+        </section>
+
+        <section>
+          <h2>Öne Çıkan Özellikler</h2>
+          <div class="chip-list" id="chip-list"></div>
+        </section>
+
+        <section>
+          <h2>İlan Bilgileri</h2>
+          <table class="feature-table">
+            <tbody id="feature-table-body"></tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Konum</h2>
+          <div class="map-embed">
+            <iframe id="detail-map-frame" src="" loading="lazy" title="İlan konumu haritası" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
+
+        <section class="mt-16" id="similar-section">
+          <h2>Benzer İlanlar</h2>
+          <div class="listing-grid" id="similar-listings"></div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="sidebar-card">
+          <h3>Bu İlan Hakkında Bilgi Alın</h3>
+          <a class="btn btn-whatsapp btn-block detail-wa-btn" href="#" target="_blank" rel="noopener">WhatsApp ile Sor</a>
+          <a class="btn btn-outline btn-block detail-tel-btn mt-16" href="#">Telefonla Ara</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Bilgi Talep Formu</h3>
+          <form id="listing-request-form">
+            <div class="field-group">
+              <label for="req-name">Ad Soyad</label>
+              <input type="text" id="req-name" name="name" required>
+            </div>
+            <div class="field-group">
+              <label for="req-phone">Telefon</label>
+              <input type="tel" id="req-phone" name="phone" required>
+            </div>
+            <div class="field-group">
+              <label for="req-message">Mesajınız</label>
+              <textarea id="req-message" name="message" placeholder="Bu ilan hakkında bilgi almak istiyorum."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">WhatsApp ile Gönder</button>
+            <p class="form-note form-success-note hidden alert alert-success mt-16">Talebiniz WhatsApp'a yönlendirildi.</p>
+          </form>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Danışman</h3>
+          <div class="agent-card">
+            <img src="assets/img/logo.svg" alt="İbrahim Yılmaz Gayrimenkul" width="54" height="54">
+            <div>
+              <strong data-cfg="companyName">İbrahim Yılmaz Gayrimenkul</strong>
+              <div class="text-muted" data-cfg-hours>Çalışma Saatleri</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="color:#fff;margin-bottom:10px;">
+        <img src="assets/img/logo.svg" alt="" width="36" height="36">
+        <span class="brand-text"><strong style="color:#fff;">İbrahim Yılmaz</strong><span>Gayrimenkul</span></span>
+      </div>
+      <p style="font-size:.86rem;">Ankara İskitler ve Altındağ bölgesinde satılık ve kiralık daire, iş yeri, dükkan ve arsa danışmanlığı.</p>
+      <div class="social-row">
+        <a data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div>
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ilanlar.html">İlanlar</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>İletişim</h4>
+      <ul>
+        <li data-cfg-address>Adres</li>
+        <li><a data-cfg-tel href="tel:"><span data-cfg="phoneDisplay">Telefon</span></a></li>
+        <li><a data-cfg-mail href="mailto:"><span data-cfg="email">E-posta</span></a></li>
+        <li data-cfg-hours>Çalışma Saatleri</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Bölgeler</h4>
+      <ul>
+        <li>İskitler Satılık Daire</li>
+        <li>İskitler Kiralık Daire</li>
+        <li>Altındağ Satılık İşyeri</li>
+        <li>Altındağ Satılık Arsa</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-cfg-year>2026</span> İbrahim Yılmaz Gayrimenkul. Tüm hakları saklıdır.</span>
+    <span><a href="admin/index.html" style="color:#8b96a8;">Yönetim</a></span>
+  </div>
+</footer>
+<a class="wa-float" data-cfg-wa target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geç">💬</a>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

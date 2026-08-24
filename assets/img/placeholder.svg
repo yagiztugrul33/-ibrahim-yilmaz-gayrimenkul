@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#10233f"/>
+  
+    <g transform="translate(400,280) scale(3.6)" fill="none" stroke="#d8b06a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity="0.35">
+      <path d="M -40 10 L 0 -30 L 40 10" />
+      <rect x="-28" y="10" width="56" height="34" />
+      <rect x="-8" y="26" width="16" height="18" />
+    </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" fill="#d8b06a">İbrahim Yılmaz Gayrimenkul</text>
+</svg>

@@ -86,7 +86,34 @@ sonra tarayıcıda `http://localhost:8080/index.html` adresini açın.
 `data/listings.json` yüklemesini engelleyebilir; mutlaka bir yerel sunucu
 üzerinden test edin.)
 
-## Yayına Alma (cPanel / public_html)
+## Yayına Alma — Vercel (ücretsiz)
+
+Bu site framework'süz statik HTML/CSS/JS olduğu için Vercel'in ücretsiz
+planında sorunsuz çalışır. `.htaccess` yalnızca Apache/cPanel içindir;
+Vercel bunun yerine `vercel.json` dosyasını okur (aynı güvenlik
+başlıklarını — CSP, HSTS, X-Frame-Options vb. — içerir, bu depoda hazır
+bulunur). HTTPS, sıkıştırma ve CDN önbelleği Vercel tarafından otomatik
+sağlanır; ayrıca ayar gerekmez. `404.html` dosyası da otomatik olarak
+eşleşmeyen adreslerde gösterilir.
+
+1. https://vercel.com adresine gidip mevcut hesabınızla giriş yapın.
+2. **"Add New..." → "Project"** ile bu GitHub deposunu
+   (`yagiztugrul33/-ibrahim-yilmaz-gayrimenkul`) içe aktarın.
+3. "Framework Preset" alanını **"Other"** (veya "No Framework") olarak
+   bırakın — build komutu/çıktı klasörü gerekmez, kök dizin olduğu gibi
+   yayınlanır.
+4. **"Deploy"**e basın; birkaç saniye içinde geçici bir
+   `*.vercel.app` adresinde site yayında olur.
+5. Proje ayarlarından **"Domains"** sekmesine girip
+   `ibrahimyilmazgayrimenkul.com` alan adınızı ekleyin. Vercel size
+   ekleyeceğiniz DNS kaydını (genelde bir `A` kaydı ve `www` için `CNAME`)
+   gösterecektir.
+6. Bu DNS kayıtlarını alan adınızın yönetildiği İsimtescil panelinden
+   ("Domain Yönetimi" → "DNS Ayarları") ekleyin.
+7. DNS yayılması (birkaç dakika – birkaç saat) sonrası
+   `https://ibrahimyilmazgayrimenkul.com` otomatik SSL ile yayında olur.
+
+## Yayına Alma (cPanel / public_html) — alternatif
 
 1. Bu klasördeki **tüm dosya ve klasörleri** (`.htaccess` dahil — gizli
    dosyadır, "Dosyaları Göster" / "Show Hidden Files" seçeneğini açık tutun)

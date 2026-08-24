@@ -89,10 +89,11 @@ window.SITE_CONFIG = {
   // ADMIN PANEL
   // ------------------------------------------------------------------
   // Şifre asla düz metin olarak SAKLANMAZ, sadece SHA-256 hash'i saklanır.
-  // VARSAYILAN ŞİFRE: Iskitler2026!  — YAYINA ALMADAN ÖNCE MUTLAKA DEĞİŞTİRİN.
-  // Yeni şifre hash'i üretmek için admin/index.html içindeki
+  // Başlangıç şifresi size ayrıca (bu depodan bağımsız, sohbet üzerinden)
+  // iletildi — bu depo herkese açık (public) olduğu için düz metin şifre
+  // hiçbir dosyaya yazılmadı. Değiştirmek için admin/index.html içindeki
   // "Şifre Hash Üret" aracını kullanın (bkz. README.md "Şifre Değiştirme").
-  adminPasswordHash: "fa8e67a4564b5f5e1df16e5b68f5888b9eb47423aeac1e8df23206bcad0d2e6f",
+  adminPasswordHash: "7039f57abb422a0d64f8f6ed5da89343a30797115dc63601d2e9f933f76b9399",
 
   // Oturumun tarayıcıda açık kalma süresi (dakika)
   adminSessionMinutes: 60

@@ -133,9 +133,10 @@ Adres: `https://ibrahimyilmazgayrimenkul.com/admin/`
 
 ### Panel Şifresini Değiştirme (ÖNEMLİ — mutlaka yapın)
 
-Varsayılan şifre `Iskitler2026!` şeklindedir ve **yalnızca teslim/test
-amaçlıdır**. Şifre kaynak kodda asla düz metin olarak tutulmaz, yalnızca
-SHA-256 hash'i saklanır. Değiştirmek için:
+Bu depo **herkese açık (public)** olduğu için başlangıç şifresi bilerek bu
+dosyaya yazılmadı; size ayrıca sohbet üzerinden iletildi. Şifre kaynak
+kodda asla düz metin olarak tutulmaz, yalnızca SHA-256 hash'i saklanır.
+Değiştirmek için:
 
 1. `/admin/` adresine gidip mevcut şifreyle giriş yapın.
 2. Sol menüden **"Şifre Hash Aracı"**na tıklayın.

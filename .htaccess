@@ -3,12 +3,16 @@
 # Apache/cPanel için güvenlik, hız ve yönlendirme ayarları.
 # =========================================================================
 
-# ---- HTTP -> HTTPS ve www yönlendirmesi ---------------------------------
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
+# ---- HTTP -> HTTPS yönlendirmesi ------------------------------------------
+# GEÇİCİ OLARAK KAPALI: Bu sunucuda henüz geçerli bir SSL sertifikası yok
+# (isimtescil.net destek yanıtı: "Sunucularımız üzerinde ücretsiz SSL desteği
+# mevcut değildir"). SSL kurulduğunda aşağıdaki <IfModule> bloğunun başındaki
+# ve sonundaki "#" işaretlerini kaldırıp yeniden aktif edin.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
 
 # ---- Varsayılan sayfa -----------------------------------------------------
 DirectoryIndex index.html
@@ -32,7 +36,10 @@ ErrorDocument 404 /404.html
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # GEÇİCİ OLARAK KAPALI: SSL kurulana kadar HSTS gönderilmemeli (tarayıcıları
+  # kalıcı olarak https'e zorlar; SSL yokken siteyi tamamen erişilemez yapar).
+  # SSL kurulduktan sonra bu satırı aktif edin:
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com; object-src 'none'; frame-ancestors 'self'"
 </IfModule>
 

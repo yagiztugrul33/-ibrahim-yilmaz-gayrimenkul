@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>İletişim | İbrahim Yılmaz Gayrimenkul - İskitler, Altındağ/Ankara</title>
-<meta name="description" content="İbrahim Yılmaz Gayrimenkul'e ulaşın: adres, telefon, WhatsApp, harita ve online iletişim formu. İskitler, Altındağ/Ankara.">
-<link rel="canonical" href="https://ibrahimyilmazgayrimenkul.com/iletisim.html">
+<title>Ücretsiz Gayrimenkul Değerleme | İbrahim Yılmaz Gayrimenkul</title>
+<meta name="description" content="Gayrimenkulünüzün güncel piyasa değerini ücretsiz öğrenin. Ankara İskitler ve Altındağ'da satılık/kiralık daire, iş yeri ve arsa değerleme talebi.">
+<link rel="canonical" href="https://ibrahimyilmazgayrimenkul.com/degerleme.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="İletişim | İbrahim Yılmaz Gayrimenkul">
-<meta property="og:description" content="İskitler, Altındağ/Ankara adresimize ve iletişim kanallarımıza ulaşın.">
-<meta property="og:url" content="https://ibrahimyilmazgayrimenkul.com/iletisim.html">
+<meta property="og:title" content="Ücretsiz Gayrimenkul Değerleme | İbrahim Yılmaz Gayrimenkul">
+<meta property="og:description" content="Gayrimenkulünüzün güncel piyasa değerini ücretsiz öğrenin.">
+<meta property="og:url" content="https://ibrahimyilmazgayrimenkul.com/degerleme.html">
 <meta property="og:image" content="https://ibrahimyilmazgayrimenkul.com/assets/img/og-cover.png">
 <meta property="og:locale" content="tr_TR">
-<meta name="theme-color" content="#10233f">
+<meta name="theme-color" content="#0a1a36">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body data-page="contact">
+<body data-page="valuation">
 <a class="skip-link" href="#main">İçeriğe geç</a>
 
 <div class="topbar">
@@ -54,43 +54,60 @@
 <main id="main">
   <div class="container section-tight">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Ana Sayfa</a><span aria-hidden="true">/</span><span>İletişim</span>
+      <a href="index.html">Ana Sayfa</a><span aria-hidden="true">/</span><span>Ücretsiz Değerleme</span>
     </nav>
-    <h1>Bize Ulaşın</h1>
-    <p class="text-muted">İskitler ve Altındağ bölgesindeki ofisimize uğrayabilir, telefon, WhatsApp veya aşağıdaki form ile bize ulaşabilirsiniz.</p>
+    <h1>Ücretsiz Gayrimenkul Değerleme</h1>
+    <p class="text-muted">Gayrimenkulünüzün bilgilerini paylaşın, bölge emsallerine göre güncel piyasa değerini ücretsiz olarak değerlendirelim.</p>
   </div>
 
   <section class="section-tight">
     <div class="container detail-grid">
       <div>
         <div class="form-card">
-          <h2>İletişim Formu</h2>
-          <form id="contact-form">
+          <h2>Değerleme Talep Formu</h2>
+          <form id="valuation-form">
             <div class="form-grid">
               <div class="field-group">
-                <label for="c-name">Ad Soyad</label>
-                <input type="text" id="c-name" name="name" required>
+                <label for="v-name">Ad Soyad</label>
+                <input type="text" id="v-name" name="name" required>
               </div>
               <div class="field-group">
-                <label for="c-phone">Telefon</label>
-                <input type="tel" id="c-phone" name="phone" required>
+                <label for="v-phone">Telefon</label>
+                <input type="tel" id="v-phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="v-type">Gayrimenkul Türü</label>
+                <select id="v-type" name="type">
+                  <option>Daire</option>
+                  <option>Dükkan</option>
+                  <option>İş Yeri</option>
+                  <option>Arsa</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="v-operation">İşlem</label>
+                <select id="v-operation" name="operation">
+                  <option>Satılık Değerleme</option>
+                  <option>Kiralık Değerleme</option>
+                </select>
               </div>
             </div>
             <div class="field-group">
-              <label for="c-subject">Konu</label>
-              <select id="c-subject" name="subject">
-                <option value="Satılık İlan">Satılık İlan Hakkında</option>
-                <option value="Kiralık İlan">Kiralık İlan Hakkında</option>
-                <option value="Gayrimenkulümü Satmak/Kiralamak İstiyorum">Gayrimenkulümü Satmak/Kiralamak İstiyorum</option>
-                <option value="Diğer">Diğer</option>
-              </select>
+              <label for="v-address">Adres / Bölge</label>
+              <input type="text" id="v-address" name="address" placeholder="Örn. İskitler Mahallesi, Altındağ" required>
             </div>
             <div class="field-group">
-              <label for="c-message">Mesajınız</label>
-              <textarea id="c-message" name="message" required></textarea>
+              <label for="v-area">Yaklaşık m²</label>
+              <input type="number" id="v-area" name="area" placeholder="Örn. 120">
+            </div>
+            <div class="field-group">
+              <label for="v-message">Ek Bilgi</label>
+              <textarea id="v-message" name="message" placeholder="Bina yaşı, kat, oda sayısı gibi ek bilgiler..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">WhatsApp ile Gönder</button>
-            <p class="form-note">Form gönderildiğinde mesajınız WhatsApp üzerinden bize iletilir; sunucu tarafında hiçbir veri saklanmaz.</p>
+            <p class="form-note">Bilgileriniz sunucuda saklanmaz, doğrudan WhatsApp üzerinden bize iletilir.</p>
             <p class="form-note form-success-note hidden alert alert-success mt-16">Talebiniz WhatsApp'a yönlendirildi.</p>
           </form>
         </div>
@@ -98,18 +115,17 @@
 
       <aside>
         <div class="sidebar-card">
-          <h3>İletişim Bilgileri</h3>
-          <p><strong>Adres:</strong> <span data-cfg-address>Adres</span></p>
-          <p><strong>Telefon:</strong> <a data-cfg-tel href="tel:"><span data-cfg="phoneDisplay">Telefon</span></a></p>
-          <p><strong>E-posta:</strong> <a data-cfg-mail href="mailto:"><span data-cfg="email">E-posta</span></a></p>
-          <p><strong>Çalışma Saatleri:</strong> <span data-cfg-hours>Çalışma Saatleri</span></p>
-          <a class="btn btn-whatsapp btn-block" data-cfg-wa href="#" target="_blank" rel="noopener">WhatsApp ile Yaz</a>
+          <h3>Değerleme Süreci Nasıl İşler?</h3>
+          <ul style="list-style:disc;padding-left:18px;">
+            <li style="margin-bottom:8px;">Formu doldurup gönderirsiniz.</li>
+            <li style="margin-bottom:8px;">Bölge emsallerine göre ön değerlendirme yaparız.</li>
+            <li style="margin-bottom:8px;">Gerekirse yerinde inceleme için randevu ayarlarız.</li>
+            <li>24-48 saat içinde size dönüş yaparız.</li>
+          </ul>
         </div>
         <div class="sidebar-card">
-          <h3>Konum</h3>
-          <div class="map-embed">
-            <iframe id="contact-map-frame" src="" loading="lazy" title="Ofis konumu haritası" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+          <h3>Hemen Konuşmak İster misiniz?</h3>
+          <a class="btn btn-whatsapp btn-block" data-cfg-wa="Merhaba, gayrimenkulümün ücretsiz değerlemesini talep etmek istiyorum." href="#" target="_blank" rel="noopener">WhatsApp ile Yaz</a>
         </div>
       </aside>
     </div>

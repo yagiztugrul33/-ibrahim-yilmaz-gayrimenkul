@@ -4,16 +4,19 @@
    ========================================================================= */
 
 :root {
-  --color-navy: #10233f;
-  --color-navy-dark: #0a1930;
-  --color-navy-light: #1c355c;
-  --color-gold: #b3893c;
-  --color-gold-light: #d8b06a;
-  --color-bg: #f6f5f1;
+  /* İbrahim Yılmaz Gayrimenkul marka paleti — kırmızı/mavi/lacivert/beyaz */
+  --color-navy: #0a1a36;
+  --color-navy-dark: #050d1d;
+  --color-navy-light: #13294f;
+  --color-gold: #dc1c2e;        /* ana vurgu (kırmızı) — isim tarihseldir, değer kırmızı */
+  --color-gold-light: #f02038;  /* kırmızı hover/parlak ton */
+  --color-blue: #003da5;        /* ikincil vurgu (mavi) */
+  --color-blue-dark: #002a78;
+  --color-bg: #f4f6fa;
   --color-card: #ffffff;
   --color-text: #1f2530;
   --color-text-muted: #5b6472;
-  --color-border: #e3e0d8;
+  --color-border: #e5e9f0;
   --color-success: #2f7d4f;
   --color-danger: #b3392c;
   --radius: 10px;
@@ -79,7 +82,7 @@ main { display: block; min-height: 60vh; }
   display: inline-block; padding: 10px 14px; border-radius: var(--radius-sm); color: #e7ebf2; font-weight: 500; font-size: .95rem;
 }
 .main-nav a:hover, .main-nav a[aria-current="page"] { background: rgba(255,255,255,.1); color: var(--color-gold-light); }
-.nav-cta { background: var(--color-gold); color: var(--color-navy-dark) !important; font-weight: 700 !important; }
+.nav-cta { background: var(--color-gold); color: #fff !important; font-weight: 700 !important; }
 .nav-cta:hover { background: var(--color-gold-light); }
 
 .nav-toggle {
@@ -103,7 +106,7 @@ main { display: block; min-height: 60vh; }
   font-weight: 600; font-size: .95rem; transition: transform .12s ease, box-shadow .12s ease, background .15s;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--color-gold); color: var(--color-navy-dark); }
+.btn-primary { background: var(--color-gold); color: #fff; }
 .btn-primary:hover { background: var(--color-gold-light); }
 .btn-outline { background: transparent; border-color: currentColor; color: var(--color-navy); }
 .btn-outline:hover { background: var(--color-navy); color: #fff; }
@@ -170,7 +173,7 @@ main { display: block; min-height: 60vh; }
   position: absolute; top: 10px; left: 10px; background: var(--color-navy); color: #fff; font-size: .72rem;
   padding: 4px 10px; border-radius: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
 }
-.listing-card .badge.kiralik { background: var(--color-gold); color: var(--color-navy-dark); }
+.listing-card .badge.kiralik { background: var(--color-blue); color: #fff; }
 .listing-card .body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .listing-card .price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-navy); font-weight: 700; }
 .listing-card h3 { font-size: 1.02rem; margin: 0; }
@@ -256,11 +259,14 @@ main { display: block; min-height: 60vh; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
-  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
-  color: var(--color-navy-dark); border-radius: var(--radius); padding: 34px; text-align: center;
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-gold) 130%);
+  color: #fff; border-radius: var(--radius); padding: 34px; text-align: center;
 }
-.cta-band h2 { color: var(--color-navy-dark); }
+.cta-band h2 { color: #fff; }
+.cta-band p { color: #e7ebf2; }
 .cta-band .btn-row { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.cta-band .btn-outline { background: transparent; border-color: #fff; color: #fff; }
+.cta-band .btn-outline:hover { background: #fff; color: var(--color-navy); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--color-navy-dark); color: #c7cfdc; padding: 46px 0 20px; margin-top: 40px; }
@@ -286,6 +292,31 @@ main { display: block; min-height: 60vh; }
 .breadcrumb { font-size: .82rem; color: var(--color-text-muted); margin-bottom: 14px; }
 .breadcrumb a { color: var(--color-navy); }
 .breadcrumb span[aria-hidden] { margin: 0 6px; }
+
+/* ---------- Rehberler / Blog ---------- */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+.guide-card { background: var(--color-card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); display: flex; flex-direction: column; }
+.guide-card:hover { box-shadow: var(--shadow-md); }
+.guide-thumb { display: block; aspect-ratio: 16/10; overflow: hidden; background: #e9e6dd; }
+.guide-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.guide-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.guide-body h3 { font-size: 1.05rem; margin: 4px 0; }
+.guide-meta { margin-top: auto; color: var(--color-text-muted); font-size: .8rem; padding-top: 6px; }
+.guide-article h2 { font-size: 1.25rem; margin-top: 1.4em; }
+.guide-cover { width: 100%; border-radius: var(--radius); margin-bottom: 20px; aspect-ratio: 16/9; object-fit: cover; }
+.guide-hero-meta { color: var(--color-text-muted); font-size: .88rem; margin-bottom: 6px; }
+
+/* ---------- SSS / FAQ ---------- */
+.faq-item { border-bottom: 1px solid var(--color-border); }
+.faq-item summary { padding: 16px 4px; cursor: pointer; font-weight: 600; color: var(--color-navy); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 1.3rem; color: var(--color-gold); flex-shrink: 0; }
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { padding: 0 4px 16px; color: var(--color-text-muted); }
+
+/* ---------- Hizmetler ---------- */
+.service-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.service-card .icon { width: 46px; height: 46px; border-radius: 10px; background: var(--color-navy); color: var(--color-gold-light); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
 
 /* ---------- 404 ---------- */
 .error-page { text-align: center; padding: 90px 20px; }

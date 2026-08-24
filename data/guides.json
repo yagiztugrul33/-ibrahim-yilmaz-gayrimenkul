@@ -1,0 +1,83 @@
+[
+  {
+    "id": "iskitler-ev-alma-rehberi",
+    "title": "İskitler'de Ev Alırken Dikkat Edilmesi Gereken 7 Nokta",
+    "category": "Satın Alma Rehberi",
+    "excerpt": "İskitler'de daire alırken bina yaşı, tapu durumu ve ulaşımdan imar durumuna kadar gözden kaçırılmaması gereken 7 kritik nokta.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-1/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-07-20",
+    "sections": [
+      { "heading": "1. Tapu Durumunu Mutlaka Kontrol Edin", "body": "Kat mülkiyeti mi kat irtifakı mı olduğunu, üzerinde ipotek/haciz olup olmadığını Tapu Müdürlüğü'nden ya da e-Devlet üzerinden mutlaka teyit edin. İskitler'in eski yapı stoğunda zaman zaman kat irtifaklı, henüz kat mülkiyetine geçmemiş binalarla karşılaşılabiliyor; bu durum krediye uygunluğu doğrudan etkiler." },
+      { "heading": "2. Bina Yaşı ve Deprem Yönetmeliği", "body": "İskitler, Ankara'nın köklü mahallelerinden biri olduğu için bina yaşı bölgeye göre değişkenlik gösterir. 1999 sonrası yönetmeliğe göre inşa edilmiş binaları tercih etmek, hem güvenlik hem de ileride yapılacak kentsel dönüşüm süreçleri açısından avantaj sağlar. Bina ruhsatını ve varsa güçlendirme raporunu talep edin." },
+      { "heading": "3. Ulaşım ve Sosyal Donatıya Yakınlık", "body": "İskitler'in avantajı, ana caddeye ve toplu taşımaya kolay erişim sunması. Daireyi gezerken gündüz ve akşam saatlerinde ayrı ayrı ziyaret ederek trafik, gürültü ve otopark durumunu değerlendirin. Okul, pazar yeri ve sağlık ocağına mesafe aile yaşamı için önemlidir." },
+      { "heading": "4. Aidat ve Ortak Gider Geçmişi", "body": "Apartman yönetiminden son 12 aya ait aidat ödeme geçmişini ve varsa biriken borç olup olmadığını isteyin. Devraldığınız dairenin geçmiş dönem ortak gider borcu bazı durumlarda yeni malike de yansıyabilir." },
+      { "heading": "5. Isıtma Sistemi ve Enerji Kimlik Belgesi", "body": "Doğalgaz kombili dairelerde kombinin bakım geçmişini, kat kaloriferi sistemi olan binalarda ise ortak yakıt giderinin nasıl paylaşıldığını sorun. Enerji kimlik belgesi (EKB) sınıfı, aylık ısınma giderinizi doğrudan etkiler." },
+      { "heading": "6. Kredi Değerleme ve Ekspertiz", "body": "Krediyle alım planlıyorsanız, bankanın atayacağı ekspertiz raporu satış bedelini onaylamayabilir. Bölgedeki emsal satış fiyatlarını önceden araştırmak, pazarlık gücünüzü artırır ve sürpriz yaşamanızı engeller." },
+      { "heading": "7. Güvenilir Bir Danışmanla İlerleyin", "body": "İskitler ve Altındağ'ı sokak sokak bilen yerel bir danışmanla çalışmak; doğru fiyatlandırma, eksiksiz evrak takibi ve hızlı sonuçlanan bir alım süreci için en büyük avantajınız olur. İbrahim Yılmaz Gayrimenkul olarak bu süreçte adım adım yanınızdayız." }
+    ]
+  },
+  {
+    "id": "kiralik-daire-sozlesme-rehberi",
+    "title": "Kiralık Daire Tutarken Depozito ve Sözleşme Rehberi",
+    "category": "Kiralama Rehberi",
+    "excerpt": "Kiralık daire tutarken depozito tutarı, kira sözleşmesinde bulunması gereken maddeler ve tahliye sürecinde dikkat edilmesi gerekenler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-2/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-07-10",
+    "sections": [
+      { "heading": "Depozito Ne Kadar Olmalı?", "body": "İskitler ve Altındağ bölgesinde depozito genellikle 1-2 aylık kira bedeli tutarındadır. Depozitonun makbuz karşılığında ve mümkünse banka havalesi ile ödenmesi, ileride yaşanabilecek anlaşmazlıklarda ispat kolaylığı sağlar." },
+      { "heading": "Sözleşmede Olması Gereken Maddeler", "body": "Kira bedeli, artış oranı (TÜFE'ye bağlı), ödeme tarihi, demirbaş listesi, kimin hangi bakım-onarımdan sorumlu olduğu ve tahliye şartları sözleşmede açıkça yazılmalıdır. Sözlü anlaşmalar yerine her zaman yazılı, imzalı sözleşme yapılmasını öneririz." },
+      { "heading": "Demirbaş Tespit Tutanağı", "body": "Daireye taşınırken mevcut demirbaşların (kombi, mutfak dolabı, bataryalar vb.) durumunu fotoğraflarla belgeleyen bir tutanak hazırlamak, çıkışta depozito iadesinde yaşanabilecek tartışmaların önüne geçer." },
+      { "heading": "Kira Artış Oranı ve Süre", "body": "Türkiye'de konut kiralarında yıllık artış oranı, bir önceki kira yılının Tüketici Fiyat Endeksi (TÜFE) on iki aylık ortalamalarına göre belirlenir. Sözleşmenizde bu oranın açıkça belirtildiğinden emin olun." },
+      { "heading": "Tahliye Süreci", "body": "Belirli süreli kira sözleşmelerinde, süre bitiminden en az 15 gün önce yazılı bildirimde bulunulması genel bir uygulamadır; sözleşmenizdeki özel şartları mutlaka kontrol edin. Anlaşmazlık yaşanmaması için tahliye tarihini ve dairenin teslim şeklini önceden netleştirin." }
+    ]
+  },
+  {
+    "id": "arsa-imar-durumu-kontrolu",
+    "title": "Altındağ'da Arsa Alırken İmar Durumu Nasıl Kontrol Edilir?",
+    "category": "Yatırım Rehberi",
+    "excerpt": "Arsa yatırımı yapmadan önce imar durumu, kaks/emsal değeri ve altyapı bilgisinin nasıl sorgulanacağı adım adım.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-3/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-06-15",
+    "sections": [
+      { "heading": "İmar Durum Belgesi Nedir?", "body": "İlgili belediyeden (Altındağ Belediyesi) alınan imar durum belgesi; parselin konut, ticaret ya da yeşil alan gibi hangi kullanım amacına ayrıldığını, emsal (KAKS) değerini ve yapılaşma koşullarını gösterir. Arsa almadan önce bu belgeyi mutlaka temin edin." },
+      { "heading": "Emsal (KAKS) Değerine Dikkat", "body": "Emsal değeri, parsel üzerine inşa edilebilecek toplam kapalı alanı belirler. Örneğin 350 m² bir parselde emsal 1.5 ise, toplam 525 m² inşaat hakkı var demektir. Bu rakam, arsanın gerçek yatırım potansiyelini fiyatından çok daha net anlatır." },
+      { "heading": "Kat Karşılığı mı, Nakit Satış mı?", "body": "Arsa sahipleri için kat karşılığı inşaat anlaşmaları, sermaye koymadan gayrimenkul sahibi olmanın bir yolu olabilir. Ancak müteahhit seçimi, sözleşme şartları ve teslim süresi konusunda titiz davranmak, süreç boyunca hak kaybı yaşamamak için kritiktir." },
+      { "heading": "Altyapı ve Yol Durumu", "body": "Parselin yola cephesi olup olmadığı, elektrik-su-doğalgaz altyapısının bulunup bulunmadığı ve kadastral yola tescilli olup olmadığı, inşaat maliyetini doğrudan etkileyen unsurlardır. Bu bilgiler yerinde inceleme ve belediye kayıtlarıyla teyit edilmelidir." },
+      { "heading": "Köşe Parsel Avantajı", "body": "İki cepheli köşe parseller, hem daha fazla doğal ışık/manzara imkânı hem de genellikle daha yüksek yeniden satış değeri sunar. Ofisimizde imar durumu net, yatırıma hazır köşe parsel seçenekleri için bize ulaşabilirsiniz." }
+    ]
+  },
+  {
+    "id": "tapu-devri-adimlari",
+    "title": "Tapu Devri Sürecinde İzlenmesi Gereken Adımlar",
+    "category": "İşlem Rehberi",
+    "excerpt": "Satış vaadinden tapu devrine kadar emlak alım-satım sürecinin resmi adımları ve hazırlanması gereken belgeler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-4/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-05-28",
+    "sections": [
+      { "heading": "1. Ön Anlaşma ve Kapora", "body": "Alıcı ve satıcı fiyatta anlaştıktan sonra, genellikle noter onaylı bir gayrimenkul satış vaadi sözleşmesi veya yazılı bir kapora anlaşmasıyla süreç başlatılır. Kapora tutarı ve iade/cayma şartları net biçimde belirtilmelidir." },
+      { "heading": "2. Gerekli Belgelerin Hazırlanması", "body": "Tapu Müdürlüğü'nde işlem için kimlik belgeleri, güncel tapu senedi, emlak vergisi borcu yoktur yazısı (belediyeden), zorunlu deprem sigortası (DASK) poliçesi ve varsa vekaletname hazır bulundurulmalıdır." },
+      { "heading": "3. Değerleme ve Banka Süreci", "body": "Krediyle alımda banka, gayrimenkule ekspertiz uzmanı gönderir ve kredi tutarını bu rapora göre belirler. Bu aşama, tapu randevusundan önce tamamlanmalıdır." },
+      { "heading": "4. Tapu Müdürlüğü'nde Devir", "body": "Randevu alınan Tapu Müdürlüğü'nde alıcı ve satıcı (veya vekilleri) hazır bulunarak resmi senet imzalanır, harç ve döner sermaye ödemeleri yapılır ve tapu alıcı adına devredilir. Emlak danışmanınızın bu aşamada yanınızda olması işlemleri hızlandırır." },
+      { "heading": "5. Devir Sonrası Yapılacaklar", "body": "Tapu devri sonrası abonelikler (elektrik, su, doğalgaz) yeni malik adına devredilmeli, DASK poliçesi güncellenmeli ve dilerse ilgili belediyeye emlak vergisi bildirimi yapılmalıdır." }
+    ]
+  },
+  {
+    "id": "konut-kredisi-rehberi",
+    "title": "2026'da Konut Kredisi Başvurusunda Bilmeniz Gerekenler",
+    "category": "Finansman Rehberi",
+    "excerpt": "Konut kredisi başvurusunda ekspertiz süreci, kredi-değer oranı ve başvuru öncesi hazırlanması gereken belgeler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-5/1000/560",
+    "readMinutes": 3,
+    "publishedAt": "2026-08-05",
+    "sections": [
+      { "heading": "Kredi-Değer Oranı (LTV)", "body": "Bankalar genellikle gayrimenkul değerinin belirli bir yüzdesini kredi olarak kullandırır; kalan tutarı peşinat olarak hazır bulundurmanız gerekir. Bu oran bankadan bankaya ve konut tipine göre değişebilir, birden fazla bankadan teklif almanızı öneririz." },
+      { "heading": "Ekspertiz Raporu", "body": "Kredi başvurusunda bağımsız bir ekspertiz şirketi, gayrimenkulün piyasa değerini raporlar. Banka, kredi tutarını satış bedeli değil bu ekspertiz değeri üzerinden belirler; bu nedenle bölgedeki emsal satış fiyatlarını önceden bilmek önemlidir." },
+      { "heading": "Gerekli Belgeler", "body": "Gelir belgesi (maaş bordrosu, vergi levhası vb.), kimlik belgesi, tapu bilgileri ve DASK poliçesi başvuru sürecinde standart olarak istenir. Serbest meslek sahipleri için ek gelir belgeleri talep edilebilir." },
+      { "heading": "Bölgeye Uygun Danışmanlık", "body": "İskitler ve Altındağ'da krediye uygun, tapusu ve imar durumu net ilanları önceden filtreleyerek zaman kaybını en aza indiriyoruz; kredi sürecinde hangi ilanların bankalarca daha hızlı onaylandığını da paylaşabiliyoruz." }
+    ]
+  }
+]

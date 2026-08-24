@@ -21,6 +21,51 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/hizmetler.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/degerleme.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehberler.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/sss.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=iskitler-ev-alma-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=kiralik-daire-sozlesme-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=arsa-imar-durumu-kontrolu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=tapu-devri-adimlari</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=konut-kredisi-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1001</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

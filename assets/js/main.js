@@ -10,6 +10,7 @@
   IYG.STORAGE_KEY = "iyg_listings_v1";
   IYG.SETTINGS_KEY = "iyg_settings_override_v1";
   IYG.DATA_URL = "data/listings.json";
+  IYG.GUIDES_URL = "data/guides.json";
 
   // ----------------------------------------------------------------------
   // Yardımcılar
@@ -322,6 +323,15 @@
   // ----------------------------------------------------------------------
   // Mobil menü
   // ----------------------------------------------------------------------
+  IYG.markCurrentNavLink = function () {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".main-nav a[href]").forEach(function (a) {
+      var href = a.getAttribute("href").split("/").pop();
+      if (href === here) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+  };
+
   IYG.initNav = function () {
     var toggle = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".main-nav");
@@ -658,6 +668,110 @@
   };
 
   // ----------------------------------------------------------------------
+  // REHBERLER / BLOG
+  // ----------------------------------------------------------------------
+  IYG.getGuides = async function () {
+    try {
+      var res = await fetch(relPrefix() + IYG.GUIDES_URL, { cache: "no-store" });
+      return await res.json();
+    } catch (e) {
+      console.error("Rehber verisi yüklenemedi:", e);
+      return [];
+    }
+  };
+
+  IYG.guideCardHTML = function (g) {
+    return (
+      '<article class="guide-card">' +
+      '<a class="guide-thumb" href="rehber-detay.html?id=' + encodeURIComponent(g.id) + '">' +
+      '<img src="' + g.coverImage + '" alt="" loading="lazy"></a>' +
+      '<div class="guide-body">' +
+      '<span class="eyebrow">' + escapeHtml(g.category) + '</span>' +
+      '<h3><a href="rehber-detay.html?id=' + encodeURIComponent(g.id) + '">' + escapeHtml(g.title) + '</a></h3>' +
+      '<p>' + escapeHtml(g.excerpt) + '</p>' +
+      '<div class="guide-meta">' + (g.readMinutes || 4) + ' dk okuma</div>' +
+      '</div></article>'
+    );
+  };
+
+  IYG.initGuidesPage = async function () {
+    var guides = await IYG.getGuides();
+    var grid = document.getElementById("guides-grid");
+    if (grid) grid.innerHTML = guides.map(IYG.guideCardHTML).join("");
+  };
+
+  IYG.initGuideDetailPage = async function () {
+    var id = IYG.qs("id");
+    var guides = await IYG.getGuides();
+    var guide = guides.find(function (g) { return g.id === id; });
+    var wrap = document.getElementById("guide-wrap");
+    var notFound = document.getElementById("guide-not-found");
+    if (!guide) {
+      if (notFound) notFound.classList.remove("hidden");
+      if (wrap) wrap.classList.add("hidden");
+      return;
+    }
+    var cfg = IYG.getConfig();
+    document.title = guide.title + " | " + cfg.companyName;
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", guide.excerpt);
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", guide.title);
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", guide.excerpt);
+
+    document.getElementById("breadcrumb-current").textContent = guide.title;
+    document.getElementById("guide-category").textContent = guide.category;
+    document.getElementById("guide-title").textContent = guide.title;
+    document.getElementById("guide-meta").textContent = guide.readMinutes + " dk okuma · " + new Date(guide.publishedAt).toLocaleDateString("tr-TR");
+    document.getElementById("guide-cover").src = guide.coverImage;
+    document.getElementById("guide-cover").alt = guide.title;
+
+    var body = document.getElementById("guide-content");
+    body.innerHTML = (guide.sections || [])
+      .map(function (s) { return "<h2>" + escapeHtml(s.heading) + "</h2><p>" + escapeHtml(s.body) + "</p>"; })
+      .join("");
+
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.excerpt,
+      image: guide.coverImage,
+      datePublished: guide.publishedAt,
+      author: { "@type": "Organization", name: cfg.companyName },
+      publisher: { "@type": "Organization", name: cfg.companyName }
+    };
+    var script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    var related = guides.filter(function (g) { return g.id !== guide.id; }).slice(0, 3);
+    var relatedEl = document.getElementById("related-guides");
+    if (relatedEl) relatedEl.innerHTML = related.map(IYG.guideCardHTML).join("");
+  };
+
+  // ----------------------------------------------------------------------
+  // DEĞERLEME TALEP FORMU
+  // ----------------------------------------------------------------------
+  IYG.initValuationPage = function () {
+    var form = document.getElementById("valuation-form");
+    IYG.wireWhatsAppForm(form, function (data) {
+      return (
+        "Merhaba, gayrimenkulümün değerlemesini talep etmek istiyorum.\n" +
+        "Ad Soyad: " + (data.name || "-") + "\n" +
+        "Telefon: " + (data.phone || "-") + "\n" +
+        "Gayrimenkul Türü: " + (data.type || "-") + "\n" +
+        "İşlem: " + (data.operation || "-") + "\n" +
+        "Adres/Bölge: " + (data.address || "-") + "\n" +
+        "Yaklaşık m²: " + (data.area || "-") + "\n" +
+        "Not: " + (data.message || "-")
+      );
+    });
+  };
+
+  // ----------------------------------------------------------------------
   // Sayfa açılışında ortak kurulum
   // ----------------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", function () {
@@ -665,11 +779,15 @@
     IYG.loadGoogleIntegrations();
     IYG.injectLocalBusinessSchema();
     IYG.initNav();
+    IYG.markCurrentNavLink();
 
     var page = document.body.getAttribute("data-page");
     if (page === "home") IYG.initHomePage();
     if (page === "listings") IYG.initListingsPage();
     if (page === "detail") IYG.initDetailPage();
     if (page === "contact") IYG.initContactPage();
+    if (page === "guides") IYG.initGuidesPage();
+    if (page === "guide-detail") IYG.initGuideDetailPage();
+    if (page === "valuation") IYG.initValuationPage();
   });
 })();

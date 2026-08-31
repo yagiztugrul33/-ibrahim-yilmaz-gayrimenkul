@@ -79,5 +79,39 @@
       { "heading": "Gerekli Belgeler", "body": "Gelir belgesi (maaş bordrosu, vergi levhası vb.), kimlik belgesi, tapu bilgileri ve DASK poliçesi başvuru sürecinde standart olarak istenir. Serbest meslek sahipleri için ek gelir belgeleri talep edilebilir." },
       { "heading": "Bölgeye Uygun Danışmanlık", "body": "İskitler ve Altındağ'da krediye uygun, tapusu ve imar durumu net ilanları önceden filtreleyerek zaman kaybını en aza indiriyoruz; kredi sürecinde hangi ilanların bankalarca daha hızlı onaylandığını da paylaşabiliyoruz." }
     ]
+  },
+  {
+    "id": "iskitler-emlakci-secimi",
+    "title": "İskitler'de Emlakçı Seçerken Nelere Dikkat Etmeli?",
+    "category": "Rehber",
+    "excerpt": "İskitler'de doğru emlak danışmanını seçmek, alım-satım sürecinin hızını ve güvenliğini belirler. İşte dikkat etmeniz gereken 6 kriter.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-6/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-08-31",
+    "sections": [
+      { "heading": "1. Bölgeyi Gerçekten Tanıyor mu?", "body": "İskitler ve Altındağ gibi köklü mahallelerde sokak sokak fiyat farkı, imar geçmişi ve ulaşım avantajı ciddi şekilde değişebilir. Bir danışmanın bölgeyi ne kadar iyi tanıdığını anlamanın en kolay yolu, size ilk görüşmede genel geçer laflar yerine mahalleye özgü somut detaylar (hangi sokakta otopark sıkıntısı var, hangi bina eski, hangi cadde yatırım için öne çıkıyor gibi) anlatıp anlatmadığına bakmaktır." },
+      { "heading": "2. Yetki Belgesi ve Kayıtlılık", "body": "Türkiye'de emlak danışmanlığı yapabilmek için Taşınmaz Ticareti Yetki Belgesi zorunludur. Çalışacağınız ofisin bu belgeye sahip olup olmadığını, işyerinde asılı belgeyi görerek ya da doğrudan sorarak teyit edebilirsiniz. Bu, hem sizi hem de işlemin hukuki geçerliliğini korur." },
+      { "heading": "3. Şeffaf Komisyon ve Sözleşme Süreci", "body": "Güvenilir bir danışman, hizmet bedelini ve sözleşme şartlarını süreç başında açıkça belirtir; sürpriz ek ücret talep etmez. İlk görüşmede komisyon oranını ve neyi kapsadığını yazılı olarak netleştirmek, ilerleyen dönemde anlaşmazlık yaşamamanızı sağlar." },
+      { "heading": "4. Gerçek Referanslar ve Yorumlar", "body": "Bir emlakçının Google İşletme Profili üzerindeki yorumları, geçmiş müşterilerin deneyimini görmenin en pratik yoludur. Sadece yıldız sayısına değil, yorumların içeriğine (iletişim hızı, süreç yönetimi, dürüstlük gibi) de dikkat edin." },
+      { "heading": "5. İletişim Hızı ve Erişilebilirlik", "body": "Emlak piyasasında fırsatlar hızlı değerlendirilir. WhatsApp veya telefon üzerinden ne kadar hızlı geri dönüş aldığınız, danışmanın işine ne kadar bağlı olduğunun önemli bir göstergesidir." },
+      { "heading": "6. Süreç Sonuna Kadar Takip Ediyor mu?", "body": "İyi bir danışmanlık, sadece alıcı ve satıcıyı bir araya getirmekle bitmez; tapu devri, kredi süreci ve devir sonrası abonelik işlemlerine kadar yanınızda olmalıdır. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'da bu yaklaşımla, sürecin her adımında sizinle birlikte ilerliyoruz." }
+    ]
+  },
+  {
+    "id": "iskitler-altindag-emlak-yatirimi",
+    "title": "İskitler ve Altındağ'da Emlak Yatırımı Yaparken Nelere Bakılır?",
+    "category": "Yatırım Rehberi",
+    "excerpt": "İskitler ve Altındağ'da daire, dükkan veya arsa yatırımı öncesi bölgeyi değerlendirirken göz önünde bulundurmanız gereken temel faktörler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-7/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-08-31",
+    "sections": [
+      { "heading": "Konum İçinde Konum: Ana Cadde mi, Ara Sokak mı?", "body": "İskitler ve Altındağ'da aynı mahalle içinde bile ana cadde cephesi ile ara sokak arasında hem fiyat hem de kiralanabilirlik açısından belirgin fark olabilir. Dükkan ve iş yeri yatırımlarında yaya trafiği yoğunluğu, konut yatırımlarında ise sessizlik ve otopark imkânı öncelikli kriterlerdir." },
+      { "heading": "Ulaşım Ağının Gelişimi", "body": "Toplu taşıma hatlarına yakınlık, hem oturmak için hem de kiraya vermek için talebi doğrudan etkiler. Bölgedeki mevcut ve planlanan ulaşım yatırımlarını takip etmek, orta-uzun vadeli değer artışı beklentisi için önemli bir göstergedir." },
+      { "heading": "Kentsel Dönüşüm Potansiyeli", "body": "Ankara'nın köklü mahallelerinde kentsel dönüşüm süreçleri zaman zaman gündeme gelir. Eski yapı stoğuna sahip bir binada yatırım yapmadan önce, bölgedeki dönüşüm planlarını ve binanın bu sürece uygunluğunu araştırmak, yatırımın geleceğini şekillendirebilir." },
+      { "heading": "Kira Getirisi ve Boş Kalma Riski", "body": "Bir gayrimenkulü yatırım amaçlı değerlendirirken sadece satış fiyatına değil, bölgedeki benzer nitelikteki mülklerin ortalama kira getirisine de bakılmalıdır. Ulaşıma ve sosyal donatıya yakın daireler genellikle daha kısa sürede kiracı bulur." },
+      { "heading": "Arsa Yatırımında İmar Durumu Önceliklidir", "body": "Arsa yatırımı düşünüyorsanız, imar durumu net ve emsal değeri yüksek köşe parseller genellikle daha hızlı değer kazanır. İmar durum belgesi almadan, sadece metrekare fiyatına bakarak karar vermek risklidir." },
+      { "heading": "Yerel Uzmanlıkla Doğru Zamanlama", "body": "Emlak yatırımında zamanlama kadar doğru bilgiye erişim de belirleyicidir. İskitler ve Altındağ'ı yakından takip eden bir ekiple çalışmak, henüz piyasaya yeni çıkmış fırsatlardan ilk siz haberdar olmanızı sağlar." }
+    ]
   }
 ]

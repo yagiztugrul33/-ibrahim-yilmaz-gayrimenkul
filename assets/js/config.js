@@ -81,7 +81,7 @@ window.SITE_CONFIG = {
   // ------------------------------------------------------------------
   // GOOGLE ENTEGRASYONLARI — dolu ise otomatik yüklenir, "yok"/boş ise atlanır
   // ------------------------------------------------------------------
-  ga4Id: "", // TODO: "G-XXXXXXXXXX" ya da boş bırakın ("yok")
+  ga4Id: "G-EF23Z5VLBC", // TODO: "G-XXXXXXXXXX" ya da boş bırakın ("yok")
   searchConsoleVerify: "", // TODO: Search Console HTML tag content değeri ya da boş ("yok")
   gtmId: "", // TODO: "GTM-XXXXXXX" ya da boş bırakın ("yok")
 

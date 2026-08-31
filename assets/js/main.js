@@ -302,7 +302,7 @@
       "@type": "Product",
       name: listing.title,
       description: listing.description,
-      image: (listing.images || []).map(function (i) { return cfg.siteUrl + "/" + i; }),
+      image: (listing.images || []).map(function (i) { return cfg.siteUrl + i; }),
       brand: cfg.companyName,
       offers: {
         "@type": "Offer",
@@ -358,7 +358,7 @@
   // Kart render
   // ----------------------------------------------------------------------
   IYG.listingCardHTML = function (l) {
-    var img = (l.images && l.images[0]) || "assets/img/placeholder.svg";
+    var img = (l.images && l.images[0]) || "/assets/img/placeholder.svg";
     return (
       '<article class="listing-card">' +
       '<a class="thumb" href="ilan-detay.html?id=' + encodeURIComponent(l.id) + '">' +
@@ -560,7 +560,7 @@
     var ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", descText);
     var ogImg = document.querySelector('meta[property="og:image"]');
-    if (ogImg && listing.images && listing.images[0]) ogImg.setAttribute("content", cfg.siteUrl + "/" + listing.images[0]);
+    if (ogImg && listing.images && listing.images[0]) ogImg.setAttribute("content", cfg.siteUrl + listing.images[0]);
 
     IYG.injectListingSchema(listing);
 

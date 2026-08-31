@@ -33,7 +33,7 @@
   };
 
   IYG.categoryLabel = function (cat) {
-    var map = { daire: "Daire", dukkan: "Dükkan", isyeri: "İş Yeri", arsa: "Arsa" };
+    var map = { daire: "Daire", dukkan: "Dükkan", isyeri: "İş Yeri", arsa: "Arsa", devren: "Devren", sanayi: "Fabrika / Sanayi" };
     return map[cat] || cat;
   };
 

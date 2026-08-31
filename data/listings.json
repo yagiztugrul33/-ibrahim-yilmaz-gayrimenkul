@@ -24,9 +24,9 @@
     "description": "İskitler'in merkezi ve ulaşımı kolay bir noktasında, aileler için ideal, güneş gören, bakımlı 3+1 daire. Ana caddeye yürüme mesafesinde, okul, pazar yeri ve toplu taşımaya yakın. Site içerisinde otopark imkânı bulunmaktadır.",
     "features": ["Otopark", "Asansör", "Doğalgaz Kombi", "PVC Pencere", "Güvenlik Kapısı", "Pazar Yerine Yakın", "Okula Yakın"],
     "images": [
-      "https://picsum.photos/seed/iyg-daire-salon-1/900/650",
-      "https://picsum.photos/seed/iyg-daire-mutfak-1/900/650",
-      "https://picsum.photos/seed/iyg-daire-yatak-1/900/650"
+      "assets/img/listings/iyg-1001-a.svg",
+      "assets/img/listings/iyg-1001-b.svg",
+      "assets/img/listings/iyg-1001-c.svg"
     ],
     "lat": 39.9612,
     "lng": 32.8262,
@@ -59,9 +59,9 @@
     "description": "Ana yola yakın, dolmuş ve otobüs güzergâhı üzerinde, ferah salonlu 2+1 kiralık daire. Depozito 2 aydır, çalışan/aile önceliklidir. Boş, hemen teslim.",
     "features": ["Doğalgaz Kombi", "Boş (Hemen Teslim)", "Ulaşıma Yakın", "PVC Pencere", "Geniş Balkon"],
     "images": [
-      "https://picsum.photos/seed/iyg-kiralik-salon-1/900/650",
-      "https://picsum.photos/seed/iyg-kiralik-balkon-1/900/650",
-      "https://picsum.photos/seed/iyg-kiralik-yatak-1/900/650"
+      "assets/img/listings/iyg-1002-a.svg",
+      "assets/img/listings/iyg-1002-b.svg",
+      "assets/img/listings/iyg-1002-c.svg"
     ],
     "lat": 39.9598,
     "lng": 32.8241,
@@ -94,9 +94,9 @@
     "description": "Yoğun yaya trafiğine sahip ana cadde üzerinde, vitrin cepheli, her türlü ticarete uygun satılık dükkan. Esnaf ve toptancı hattına yakın, devren de değerlendirilebilir.",
     "features": ["Ana Cadde Cephe", "Vitrin", "Tuvalet", "Elektrik/Su Aboneliği Aktif", "Yaya Trafiği Yoğun"],
     "images": [
-      "https://picsum.photos/seed/iyg-dukkan-vitrin-1/900/650",
-      "https://picsum.photos/seed/iyg-dukkan-ic-1/900/650",
-      "https://picsum.photos/seed/iyg-dukkan-cephe-1/900/650"
+      "assets/img/listings/iyg-1003-a.svg",
+      "assets/img/listings/iyg-1003-b.svg",
+      "assets/img/listings/iyg-1003-c.svg"
     ],
     "lat": 39.9553,
     "lng": 32.8536,
@@ -129,9 +129,9 @@
     "description": "İmar durumu net, konut imarlı, köşe parsel satılık arsa. Kat karşılığı görüşmeye açık, yatırımlık ve inşaata hazır konumda. İmar durum belgesi ofisimizde mevcuttur.",
     "features": ["Konut İmarlı", "Köşe Parsel", "Kat Karşılığı Görüşülür", "İmar Durumu Net", "Yatırıma Uygun"],
     "images": [
-      "https://picsum.photos/seed/iyg-arsa-genel-1/900/650",
-      "https://picsum.photos/seed/iyg-arsa-sinir-1/900/650",
-      "https://picsum.photos/seed/iyg-arsa-konum-1/900/650"
+      "assets/img/listings/iyg-1004-a.svg",
+      "assets/img/listings/iyg-1004-b.svg",
+      "assets/img/listings/iyg-1004-c.svg"
     ],
     "lat": 39.9522,
     "lng": 32.8477,

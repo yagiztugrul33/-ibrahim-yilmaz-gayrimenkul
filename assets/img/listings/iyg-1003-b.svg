@@ -1,18 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Altındağ Satılık Dükkan">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="900" height="650" role="img" aria-label="Altındağ Satılık Dükkan - Dükkan İçi">
   <defs>
-    <linearGradient id="g8" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#10233f"/>
-      <stop offset="100%" stop-color="#16294a"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a36"/>
+      <stop offset="100%" stop-color="#13294f"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003da5"/>
+      <stop offset="100%" stop-color="#dc1c2e"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#g8)"/>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="0" y="0" width="8" height="600" fill="url(#stripe)"/>
   
-    <g transform="translate(400,300) scale(3.2)" fill="none" stroke="#d8b06a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity="0.35">
-      <path d="M -40 10 L 0 -30 L 40 10" />
-      <rect x="-28" y="10" width="56" height="34" />
-      <rect x="-8" y="26" width="16" height="18" />
-    </g>
-  <rect x="0" y="500" width="800" height="100" fill="rgba(10,16,30,0.55)"/>
-  <text x="40" y="550" font-family="Georgia, serif" font-size="34" fill="#d8b06a" font-weight="700">Altındağ Satılık Dükkan</text>
-  <text x="40" y="580" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#cdd6e3">İç Mekan</text>
+      <g transform="translate(400,280) scale(2.4)" fill="none" stroke="#dc1c2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="-60" y="-45" width="120" height="90" rx="3"/>
+        <line x1="-60" y1="-15" x2="60" y2="-15"/>
+        <line x1="-60" y1="15" x2="60" y2="15"/>
+        <line x1="-20" y1="-45" x2="-20" y2="45"/>
+        <line x1="20" y1="-45" x2="20" y2="45"/>
+      </g>
+  <rect x="0" y="500" width="800" height="100" fill="rgba(5,13,29,0.72)"/>
+  <text x="40" y="548" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#f4f6fa" font-weight="700">Altındağ Satılık Dükkan</text>
+  <text x="40" y="578" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#dc1c2e" font-weight="600">Dükkan İçi</text>
 </svg>

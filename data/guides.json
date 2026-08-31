@@ -113,5 +113,22 @@
       { "heading": "Arsa Yatırımında İmar Durumu Önceliklidir", "body": "Arsa yatırımı düşünüyorsanız, imar durumu net ve emsal değeri yüksek köşe parseller genellikle daha hızlı değer kazanır. İmar durum belgesi almadan, sadece metrekare fiyatına bakarak karar vermek risklidir." },
       { "heading": "Yerel Uzmanlıkla Doğru Zamanlama", "body": "Emlak yatırımında zamanlama kadar doğru bilgiye erişim de belirleyicidir. İskitler ve Altındağ'ı yakından takip eden bir ekiple çalışmak, henüz piyasaya yeni çıkmış fırsatlardan ilk siz haberdar olmanızı sağlar." }
     ]
+  },
+  {
+    "id": "kentsel-donusum-rehberi",
+    "title": "Kentsel Dönüşüm Süreci: Ev Sahipleri İçin Adım Adım Rehber",
+    "category": "Kentsel Dönüşüm",
+    "excerpt": "6306 sayılı Kanun kapsamında riskli yapı tespiti, hak sahipliği ve kentsel dönüşüm sürecinin aşamaları — İskitler ve Altındağ'daki eski yapı stoğu sahipleri için pratik bilgiler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-8/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-08-31",
+    "sections": [
+      { "heading": "Kentsel Dönüşüm Nedir?", "body": "Kentsel dönüşüm, deprem riski taşıyan veya yapı ömrünü tamamlamış binaların, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında yıkılıp yeniden, günümüz deprem yönetmeliğine uygun şekilde inşa edilmesi sürecidir. Ankara'nın İskitler ve Altındağ gibi köklü mahallelerinde, yapı yaşı ortalamanın üzerinde olan binalar bu sürecin potansiyel adaylarıdır." },
+      { "heading": "Riskli Yapı Tespiti Nasıl Yapılır?", "body": "Süreç, Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nca lisanslandırılmış kurumlarca yapılan teknik incelemeyle başlar. Bina malikleri veya kanuni temsilcileri, lisanslı bir kuruma başvurarak yapının riskli olup olmadığının tespitini talep edebilir. Rapor olumlu çıkarsa (riskli yapı kararı), süreç resmi olarak başlamış olur." },
+      { "heading": "Hak Sahipliği ve Paylaşım Oranları", "body": "Riskli yapı kararı kesinleştikten sonra, kat maliklerinin en az üçte iki çoğunluğuyla yıkım ve yeniden yapım kararı alınır. Müteahhitle yapılacak kat karşılığı anlaşmasında, arsa payı ve yeni binadaki daire/dükkan paylaşım oranı, sözleşmenin en kritik maddesidir — bu konuda bağımsız bir danışmandan görüş almak hak kaybını önler." },
+      { "heading": "Kira Yardımı ve Geçici Süreç", "body": "Riskli yapı kararı alınan binalarda oturan malikler ve kiracılar, yıkım-yapım süresince belirli şartlarla devlet kira yardımından faydalanabilir. Başvuru, e-Devlet üzerinden veya ilgili belediye/bakanlık birimlerinden yapılabilir." },
+      { "heading": "Müteahhit Seçiminde Dikkat Edilmesi Gerekenler", "body": "Kat karşılığı anlaşma yapılacak müteahhitin geçmiş projeleri, mali durumu ve teslim süresi taahhütleri araştırılmalıdır. Sözleşmede teslim tarihi, gecikme cezası ve teminat mektubu gibi maddelerin bulunması, kat maliklerini süreç boyunca korur." },
+      { "heading": "Eski Binanız İçin Doğru Zamanlama", "body": "Kentsel dönüşüm sürecine girecek bir binanız varsa, hem mevcut değerini hem de dönüşüm sonrası potansiyelini doğru değerlendirmek önemlidir. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'daki eski yapı stoğunu yakından takip ediyor, süreç öncesi ve sonrası değerleme konusunda danışmanlık sunuyoruz." }
+    ]
   }
 ]

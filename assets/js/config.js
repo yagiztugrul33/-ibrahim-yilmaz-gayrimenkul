@@ -28,7 +28,7 @@ window.SITE_CONFIG = {
   phoneHref: "905054583838",
   // WhatsApp numarası — SADECE RAKAM, başında + veya 0 OLMADAN (90 ile başlasın)
   whatsappNumber: "905054583838", // TODO: WhatsApp numarası telefonla aynı değilse güncelleyin
-  email: "info@ibrahimyilmazgayrimenkul.com",
+  email: "ibrahim3806@ibrahimyilmazgayrimenkul.com",
 
   // Açık adres
   addressLine: "Zübeyde Hanım Mahallesi, Aslanbey Caddesi No: 46/C, Altındağ/Ankara",

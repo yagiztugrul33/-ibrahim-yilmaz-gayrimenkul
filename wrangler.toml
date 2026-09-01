@@ -1,0 +1,15 @@
+# Cloudflare Worker yapılandırması — statik siteye ek olarak
+# /api/haberler adresinde canlı kentsel dönüşüm haberleri servis eder.
+#
+# ÖNEMLİ: "name" alanını Cloudflare panelindeki MEVCUT Worker adıyla
+# birebir aynı yapın (Workers & Pages > ilgili proje > üstteki isim).
+# Farklı bir isimle deploy edilirse yeni/ayrı bir Worker oluşur ve
+# ibrahimyilmazgayrimenkul.com'a bağlı olan mevcut Worker güncellenmez.
+name = "ibrahim-yilmaz-gayrimenkul"
+main = "worker/index.js"
+compatibility_date = "2024-09-23"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+not_found_handling = "404-page"

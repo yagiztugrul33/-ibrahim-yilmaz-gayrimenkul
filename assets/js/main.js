@@ -712,6 +712,34 @@
       if (heading) heading.textContent = "İskitler'de Kentsel Dönüşüm Haberleri";
       if (lead) lead.textContent = "İskitler ve Altındağ'da kentsel dönüşüm süreciyle ilgili güncel bilgilendirmeler; riskli yapı tespiti, kira yardımı, harç muafiyeti ve süreç adımları.";
       document.title = "Kentsel Dönüşüm Haberleri | İbrahim Yılmaz Gayrimenkul";
+      IYG.loadLiveHaberler();
+    }
+  };
+
+  // /api/haberler ucu yalnızca wrangler.toml + worker/index.js deploy edildiğinde
+  // vardır; yoksa fetch sessizce başarısız olur ve bölüm gizli kalır.
+  IYG.loadLiveHaberler = async function () {
+    var wrap = document.getElementById("live-haberler-wrap");
+    var list = document.getElementById("live-haberler-list");
+    if (!wrap || !list) return;
+    try {
+      var res = await fetch("/api/haberler", { cache: "no-store" });
+      if (!res.ok) return;
+      var data = await res.json();
+      var items = data && data.items ? data.items : [];
+      if (!items.length) return;
+      list.innerHTML = items.map(function (it) {
+        var tarih = it.pubDate ? new Date(it.pubDate).toLocaleDateString("tr-TR") : "";
+        return (
+          '<li style="padding:10px 0;border-bottom:1px solid var(--color-border);">' +
+          '<a href="' + escapeHtml(it.link) + '" target="_blank" rel="noopener noreferrer" style="font-weight:600;">' + escapeHtml(it.title) + '</a>' +
+          '<div class="text-muted" style="font-size:.78rem;margin-top:2px;">' + escapeHtml(it.source || "") + (tarih ? " · " + tarih : "") + '</div>' +
+          '</li>'
+        );
+      }).join("");
+      wrap.classList.remove("hidden");
+    } catch (e) {
+      // Worker endpoint deploy edilmemiş veya erişilemiyor — sessizce geç.
     }
   };
 

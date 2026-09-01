@@ -63,7 +63,9 @@ async function handleHaberler(request, ctx) {
         continue;
       }
       const xml = await rssResp.text();
-      const bulunan = parseRss(xml).slice(0, HABER_SAYISI);
+      const bulunan = parseRss(xml)
+        .sort(function (a, b) { return new Date(b.pubDate) - new Date(a.pubDate); })
+        .slice(0, HABER_SAYISI);
       if (bulunan.length) {
         items = bulunan;
         kaynak = k.ad;
@@ -143,10 +145,13 @@ function stripTags(s) {
 
 function decodeEntities(s) {
   return String(s || "")
+    .replace(/&#x([0-9a-fA-F]+);/g, function (_, hex) { return String.fromCodePoint(parseInt(hex, 16)); })
+    .replace(/&#(\d+);/g, function (_, dec) { return String.fromCodePoint(parseInt(dec, 10)); })
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&");
 }
 

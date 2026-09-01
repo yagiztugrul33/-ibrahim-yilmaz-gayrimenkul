@@ -14,7 +14,8 @@ const HABER_CACHE_SANIYE = 3600; // 1 saat
 // Parse/format mantığı değiştiğinde bu sürümü artırın — aksi halde eski
 // (bozuk) yanıt, yeni kod deploy edilse bile TTL dolana kadar önbellekten
 // gelmeye devam eder.
-const HABER_CACHE_SURUMU = "v2";
+const HABER_CACHE_SURUMU = "v3";
+const HABER_MAKS_YAS_GUN = 365; // bu süreden eski haberler "güncel" listede gösterilmez
 
 const TARAYICI_BASLIKLARI = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
@@ -75,7 +76,12 @@ async function handleHaberler(request, ctx) {
         continue;
       }
       const xml = await rssResp.text();
+      const simdi = Date.now();
       const bulunan = parseRss(xml)
+        .filter(function (it) {
+          const t = new Date(it.pubDate).getTime();
+          return !isNaN(t) && (simdi - t) <= HABER_MAKS_YAS_GUN * 86400000;
+        })
         .sort(function (a, b) { return new Date(b.pubDate) - new Date(a.pubDate); })
         .slice(0, HABER_SAYISI);
       if (bulunan.length) {

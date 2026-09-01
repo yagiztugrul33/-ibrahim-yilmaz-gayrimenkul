@@ -81,6 +81,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=ev-satarken-deger-artirma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=isyeri-kiralama-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=dask-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1001</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

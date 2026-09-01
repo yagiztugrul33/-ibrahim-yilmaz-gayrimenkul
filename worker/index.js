@@ -1,15 +1,35 @@
 /*
  * Cloudflare Worker — statik siteyi olduğu gibi sunar, ek olarak
- * /api/haberler adresinde Google News RSS'den canlı "kentsel dönüşüm"
- * haberlerini çekip JSON olarak döner (kenarda önbelleklenir).
+ * /api/haberler adresinde canlı "kentsel dönüşüm" haberlerini çekip
+ * JSON olarak döner (kenarda önbelleklenir).
  *
- * Bu dosya sandbox'ta test edilemedi (ağ erişimi yok) — canlıya çıkışta
- * gerçek RSS yanıtıyla bir kez kontrol edilmesi önerilir.
+ * Google Haberler RSS'i bulut/veri merkezi IP'lerinden gelen istekleri
+ * zaman zaman 503 ile reddediyor; bu yüzden önce Google, başarısız
+ * olursa Bing Haberler RSS'i denenir.
  */
 
 const HABER_SORGUSU = "kentsel dönüşüm Ankara Altındağ İskitler";
 const HABER_SAYISI = 10;
 const HABER_CACHE_SANIYE = 3600; // 1 saat
+
+const TARAYICI_BASLIKLARI = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+  "Accept": "application/rss+xml, text/xml, application/xml;q=0.9, */*;q=0.8",
+  "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.5"
+};
+
+function haberKaynaklari(sorgu) {
+  return [
+    {
+      ad: "google",
+      url: "https://news.google.com/rss/search?q=" + encodeURIComponent(sorgu) + "&hl=tr&gl=TR&ceid=TR:tr"
+    },
+    {
+      ad: "bing",
+      url: "https://www.bing.com/news/search?q=" + encodeURIComponent(sorgu) + "&format=rss&setlang=tr-TR&cc=TR"
+    }
+  ];
+}
 
 export default {
   async fetch(request, env, ctx) {
@@ -22,36 +42,45 @@ export default {
 };
 
 async function handleHaberler(request, ctx) {
-  const feedUrl =
-    "https://news.google.com/rss/search?q=" +
-    encodeURIComponent(HABER_SORGUSU) +
-    "&hl=tr&gl=TR&ceid=TR:tr";
-
   const cache = caches.default;
-  const cacheKey = new Request(feedUrl, { method: "GET" });
+  const cacheKey = new Request("https://cache.internal/haberler/" + encodeURIComponent(HABER_SORGUSU), { method: "GET" });
 
   let cached = await cache.match(cacheKey);
   if (cached) return withCors(cached);
 
   let items = [];
-  let hata = null;
-  try {
-    const rssResp = await fetch(feedUrl, {
-      cf: { cacheTtl: HABER_CACHE_SANIYE, cacheEverything: true },
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; IYGHaberBot/1.0)" }
-    });
-    if (!rssResp.ok) throw new Error("RSS yanıt kodu: " + rssResp.status);
-    const xml = await rssResp.text();
-    items = parseRss(xml).slice(0, HABER_SAYISI);
-  } catch (e) {
-    hata = String((e && e.message) || e);
+  let kaynak = null;
+  const hatalar = [];
+
+  for (const k of haberKaynaklari(HABER_SORGUSU)) {
+    try {
+      const rssResp = await fetch(k.url, {
+        cf: { cacheTtl: HABER_CACHE_SANIYE, cacheEverything: true },
+        headers: TARAYICI_BASLIKLARI
+      });
+      if (!rssResp.ok) {
+        hatalar.push(k.ad + ": HTTP " + rssResp.status);
+        continue;
+      }
+      const xml = await rssResp.text();
+      const bulunan = parseRss(xml).slice(0, HABER_SAYISI);
+      if (bulunan.length) {
+        items = bulunan;
+        kaynak = k.ad;
+        break;
+      }
+      hatalar.push(k.ad + ": 0 haber bulundu");
+    } catch (e) {
+      hatalar.push(k.ad + ": " + String((e && e.message) || e));
+    }
   }
 
   const body = JSON.stringify({
     updatedAt: new Date().toISOString(),
     query: HABER_SORGUSU,
+    source: kaynak,
     items: items,
-    error: hata
+    error: items.length ? null : hatalar.join(" | ")
   });
 
   const response = new Response(body, {
@@ -62,7 +91,9 @@ async function handleHaberler(request, ctx) {
     }
   });
 
-  ctx.waitUntil(cache.put(cacheKey, response.clone()));
+  if (items.length) {
+    ctx.waitUntil(cache.put(cacheKey, response.clone()));
+  }
   return withCors(response);
 }
 

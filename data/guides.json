@@ -490,5 +490,130 @@
         "body": "Model ne olursa olsun, sözleşmede teslim tarihi, gecikme cezası, teminat mektubu, malzeme/malzeme kalitesi şartnamesi ve kat irtifakı/tapu devri koşullarının açıkça yazılması, ev sahibinin haklarını korur. İskitler ve Altındağ'da kat karşılığı görüşmelerine girecek ev sahiplerine, sözleşme öncesi bağımsız danışmanlık almalarını öneriyoruz."
       }
     ]
+  },
+  {
+    "id": "ev-alirken-teknik-kontrol-listesi",
+    "title": "Ev Alırken Dikkat Edilmesi Gereken 10 Teknik Nokta",
+    "category": "Satın Alma Rehberi",
+    "excerpt": "Fiyat ve konum dışında, bir daireyi almadan önce yerinde kontrol etmeniz gereken yapısal ve teknik detaylar — nem, tesisat, bina yaşı, aidat ve daha fazlası.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-16/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-09-01",
+    "sections": [
+      {
+        "heading": "1. Bina Yaşı ve Deprem Yönetmeliği",
+        "body": "Binanın ruhsat tarihi, hangi deprem yönetmeliğine göre inşa edildiğini gösterir. Özellikle 1999 öncesi yapılarda taşıyıcı sistem hakkında ek bilgi almak, gerekirse bir inşaat mühendisinden görüş istemek faydalı olur."
+      },
+      {
+        "heading": "2. Nem ve Su Kaçağı İzleri",
+        "body": "Tavan köşeleri, banyo/mutfak duvar dipleri ve balkon kapı eşiklerinde nem lekesi, küf kokusu veya boya kabarması olup olmadığına dikkatle bakın. Bu izler, gizli bir su tesisatı sorununun habercisi olabilir."
+      },
+      {
+        "heading": "3. Elektrik ve Su Tesisatının Durumu",
+        "body": "Priz sayısının yeterliliği, sigorta kutusunun güncelliği (kaçak akım rölesi var mı) ve su basıncı gibi detaylar, taşınma sonrası ek maliyet çıkmasını önler. Mümkünse musluk açıp kapatarak su basıncını, birkaç prize cihaz takarak elektrik tesisatını test edin."
+      },
+      {
+        "heading": "4. Kat İrtifakı mı, Kat Mülkiyeti mi?",
+        "body": "Kat mülkiyeti, binanın tamamlanıp iskân aldığını gösterir; kat irtifakı ise bina henüz bu aşamada değildir. Tapu senedinde bu ayrımı mutlaka kontrol edin, sürecin neresinde olduğunuzu bilmeniz önemlidir."
+      },
+      {
+        "heading": "5. Aidat ve Ortak Gider Yükü",
+        "body": "Aylık aidat tutarını, neyi kapsadığını (kapıcı, asansör bakımı, ortak alan temizliği, ısı yalıtımı gibi) ve varsa biriken borç olup olmadığını yönetimden öğrenin. Yüksek aidat, aylık bütçenizi etkileyen kalıcı bir gider kalemidir."
+      },
+      {
+        "heading": "6. Güneş Yönü, Isınma ve Yalıtım",
+        "body": "Dairenin güneş alma yönü kışın ısıtma, yazın soğutma maliyetini doğrudan etkiler. Kombi/merkezi ısıtma tercihine göre doğalgaz aboneliği ve dış cephe yalıtımının varlığı da uzun vadeli maliyeti belirler."
+      },
+      {
+        "heading": "7. Site/Apartman Yönetimi ve Komşuluk İlişkileri",
+        "body": "Mümkünse birkaç komşuyla veya site yöneticisiyle kısa bir sohbet edin; bina içi anlaşmazlıklar, gürültü sorunları veya yönetim kalitesi hakkında fikir edinirsiniz."
+      },
+      {
+        "heading": "8. Ulaşım ve Altyapıya Yakınlık",
+        "body": "Toplu taşıma durağına, ana yola, okul ve pazar yerine mesafe, günlük yaşam kalitenizi doğrudan etkiler. İskitler ve Altındağ'da bu kriterler mahalleden mahalleye önemli ölçüde değişebilir."
+      },
+      {
+        "heading": "9. Otopark ve Depo Alanı",
+        "body": "Aracınız varsa kapalı/açık otopark imkânı, yoksa cadde parkının yoğunluğu göz önünde bulundurulmalı. Bodrum kat depo veya kiler gibi ek alanlar da günlük kullanım açısından değerlidir."
+      },
+      {
+        "heading": "10. Bağımsız Danışmanla Yerinde İnceleme",
+        "body": "Tüm bu noktaları tek başınıza değerlendirmek zor olabilir. Bölgeyi iyi tanıyan bir emlak danışmanıyla birlikte yerinde inceleme yapmak, gözden kaçabilecek detayları görmenizi ve doğru fiyat-değer dengesini kurmanızı kolaylaştırır."
+      }
+    ]
+  },
+  {
+    "id": "emlakcinin-gorevleri-nelerdir",
+    "title": "Bir Emlak Danışmanı Sizin İçin Ne Yapar? Emlakçının Görevleri",
+    "category": "Rehber",
+    "excerpt": "Emlak danışmanına neden ihtiyaç duyarsınız? Doğru fiyatlandırmadan evrak kontrolüne, pazarlıktan tapu sürecine kadar bir emlakçının üstlendiği görevler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-17/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-09-01",
+    "sections": [
+      {
+        "heading": "Doğru Fiyatlandırma ve Piyasa Analizi",
+        "body": "Bir emlak danışmanı, bölgedeki emsal satış ve kiralama verilerini takip ederek gayrimenkulün gerçekçi piyasa değerini belirler. Bu, satıcının malını ne çok düşük ne de satılamayacak kadar yüksek fiyata koymasını önler; alıcı için de piyasa üstü fiyatlarla karşılaşma riskini azaltır."
+      },
+      {
+        "heading": "Evrak ve Tapu Kontrolü",
+        "body": "Tapu üzerinde ipotek, haciz veya şerh olup olmadığı, imar durumu, iskân belgesi gibi teknik/hukuki detayların kontrolü, sürecin en kritik ve en çok göz ardı edilen adımlarındandır. Danışman bu kontrolleri süreç başında yaparak ilerleyen bir hak kaybını önler."
+      },
+      {
+        "heading": "Doğru Alıcı/Kiracı ile Eşleştirme",
+        "body": "Emlakçı, ilana gelen talepleri filtreleyerek gerçekten ciddi ve uygun alıcı/kiracı adaylarını mülk sahibine yönlendirir. Bu, mülk sahibinin sayısız gösterimle zaman kaybetmesini önler."
+      },
+      {
+        "heading": "Pazarlık ve Müzakere Süreci",
+        "body": "Fiyat, ödeme planı veya teslim tarihi gibi konularda taraflar arasında tarafsız bir köprü görevi görür; her iki tarafın da makul bir noktada anlaşmasını kolaylaştırır."
+      },
+      {
+        "heading": "Sözleşme ve Süreç Takibi",
+        "body": "Kira sözleşmesi hazırlığından tapu randevusuna, kredi ekspertiz sürecinden teslim tarihine kadar tüm adımların zamanında ve eksiksiz ilerlemesini takip eder — bu, özellikle işlerini bu konulara ayıracak vakti olmayan müşteriler için önemli bir kolaylıktır."
+      },
+      {
+        "heading": "Bölge Uzmanlığı",
+        "body": "İskitler ve Altındağ gibi köklü bir bölgede yıllara dayanan yerel bilgi (hangi sokakta hangi imar durumu geçerli, hangi bina kentsel dönüşüm kapsamında, hangi mahalle yatırım için öne çıkıyor gibi) bir dışarıdan araştırmayla kolayca elde edilemez."
+      }
+    ]
+  },
+  {
+    "id": "arsa-hakkinda-bilinmesi-gerekenler",
+    "title": "Arsa Alırken Bilinmesi Gereken Her Şey",
+    "category": "Yatırım Rehberi",
+    "excerpt": "Tapu türünden imar durumuna, kaks/emsal hesabından altyapıya kadar arsa alımında karşınıza çıkacak tüm kavramlar ve dikkat edilmesi gereken noktalar.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-18/1000/560",
+    "readMinutes": 6,
+    "publishedAt": "2026-09-01",
+    "sections": [
+      {
+        "heading": "Müstakil Tapu mu, Hisseli Tapu mu?",
+        "body": "Müstakil tapuda parselin tamamı size aittir; hisseli tapuda ise parsel birden fazla malik arasında paylaşılmıştır ve üzerinde tek başınıza tasarruf yetkiniz sınırlı olabilir. Hisseli bir arsada inşaat yapmak veya satmak, diğer hissedarların onayını gerektirebilir — alım öncesi tapu senedindeki hisse durumunu mutlaka netleştirin."
+      },
+      {
+        "heading": "İmar Durumu: Konut mu, Ticari mi, Tarım mı?",
+        "body": "Belediyeden alınacak imar durum belgesi, parselin hangi amaçla kullanılabileceğini (konut, ticaret, sanayi) ve üzerine ne büyüklükte bir yapı yapılabileceğini gösterir. İmarsız veya tarım arazisi niteliğindeki bir parselde inşaat izni almak mümkün olmayabilir."
+      },
+      {
+        "heading": "KAKS (Emsal) ve TAKS Nedir?",
+        "body": "KAKS (Kat Alanı Kat Sayısı / emsal), parsel alanına göre yapılabilecek toplam inşaat alanını; TAKS (Taban Alanı Kat Sayısı) ise zemin katın kaplayabileceği alanı belirler. Örneğin 0.60 TAKS, 500 m²'lik bir parselde zeminde en fazla 300 m² inşaat yapılabileceği anlamına gelir. Bu oranlar, arsanın gerçek yatırım potansiyelini fiyatından çok daha net gösterir."
+      },
+      {
+        "heading": "İfraz ve Tevhit İşlemleri",
+        "body": "İfraz, büyük bir parselin birden fazla küçük parsele bölünmesi; tevhit ise birden fazla parselin tek bir parselde birleştirilmesidir. Bir arsayı bölerek satmayı veya komşu parselle birleştirmeyi düşünüyorsanız, bu işlemlerin belediye ve tapu nezdinde ayrı bir süreç ve maliyet gerektirdiğini bilmelisiniz."
+      },
+      {
+        "heading": "Altyapı: Yol, Su, Elektrik Bağlantısı",
+        "body": "Parselin resmi bir yola cephesi olup olmadığı, elektrik ve su şebekesine ne kadar uzaklıkta bulunduğu, inşaat sürecinin maliyetini doğrudan etkiler. Yola cephesi olmayan (kapalı/mahsur) parseller, komşu parsel üzerinden geçiş hakkı gerektirebilir."
+      },
+      {
+        "heading": "Cephe, Yön ve Kot Farkı",
+        "body": "Parselin ana caddeye veya köşeye cephesi, ticari değerini artırır. Ayrıca arsanın bulunduğu sokakla arasındaki kot (yükseklik) farkı, inşaat maliyetini ve bodrum kat kullanım imkânını etkiler — eğimli parsellerde bu detay özellikle önemlidir."
+      },
+      {
+        "heading": "Kat Karşılığı Değerlendirme Potansiyeli",
+        "body": "İmar durumu uygun ve talep gören bir bölgede bulunan arsalar, doğrudan satış dışında müteahhitlerle kat karşılığı anlaşma yaparak da değerlendirilebilir. Bu seçeneğin cazip olup olmadığı; bölgedeki emsal paylaşım oranları ve müteahhit talebiyle doğrudan ilişkilidir."
+      }
+    ]
   }
 ]

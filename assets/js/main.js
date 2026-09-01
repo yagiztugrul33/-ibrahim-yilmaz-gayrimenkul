@@ -696,8 +696,23 @@
 
   IYG.initGuidesPage = async function () {
     var guides = await IYG.getGuides();
+    var konu = IYG.qs("konu");
+    var filtered = konu
+      ? guides.filter(function (g) { return (g.tags || []).indexOf(konu) !== -1; })
+      : guides;
+    filtered = filtered.slice().sort(function (a, b) {
+      return new Date(b.publishedAt) - new Date(a.publishedAt);
+    });
     var grid = document.getElementById("guides-grid");
-    if (grid) grid.innerHTML = guides.map(IYG.guideCardHTML).join("");
+    if (grid) grid.innerHTML = filtered.map(IYG.guideCardHTML).join("");
+
+    if (konu === "kentsel-donusum") {
+      var heading = document.getElementById("guides-heading");
+      var lead = document.getElementById("guides-lead");
+      if (heading) heading.textContent = "İskitler'de Kentsel Dönüşüm Haberleri";
+      if (lead) lead.textContent = "İskitler ve Altındağ'da kentsel dönüşüm süreciyle ilgili güncel bilgilendirmeler; riskli yapı tespiti, kira yardımı, harç muafiyeti ve süreç adımları.";
+      document.title = "Kentsel Dönüşüm Haberleri | İbrahim Yılmaz Gayrimenkul";
+    }
   };
 
   IYG.initGuideDetailPage = async function () {

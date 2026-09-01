@@ -8,13 +8,34 @@
     "readMinutes": 5,
     "publishedAt": "2026-07-20",
     "sections": [
-      { "heading": "1. Tapu Durumunu Mutlaka Kontrol Edin", "body": "Kat mülkiyeti mi kat irtifakı mı olduğunu, üzerinde ipotek/haciz olup olmadığını Tapu Müdürlüğü'nden ya da e-Devlet üzerinden mutlaka teyit edin. İskitler'in eski yapı stoğunda zaman zaman kat irtifaklı, henüz kat mülkiyetine geçmemiş binalarla karşılaşılabiliyor; bu durum krediye uygunluğu doğrudan etkiler." },
-      { "heading": "2. Bina Yaşı ve Deprem Yönetmeliği", "body": "İskitler, Ankara'nın köklü mahallelerinden biri olduğu için bina yaşı bölgeye göre değişkenlik gösterir. 1999 sonrası yönetmeliğe göre inşa edilmiş binaları tercih etmek, hem güvenlik hem de ileride yapılacak kentsel dönüşüm süreçleri açısından avantaj sağlar. Bina ruhsatını ve varsa güçlendirme raporunu talep edin." },
-      { "heading": "3. Ulaşım ve Sosyal Donatıya Yakınlık", "body": "İskitler'in avantajı, ana caddeye ve toplu taşımaya kolay erişim sunması. Daireyi gezerken gündüz ve akşam saatlerinde ayrı ayrı ziyaret ederek trafik, gürültü ve otopark durumunu değerlendirin. Okul, pazar yeri ve sağlık ocağına mesafe aile yaşamı için önemlidir." },
-      { "heading": "4. Aidat ve Ortak Gider Geçmişi", "body": "Apartman yönetiminden son 12 aya ait aidat ödeme geçmişini ve varsa biriken borç olup olmadığını isteyin. Devraldığınız dairenin geçmiş dönem ortak gider borcu bazı durumlarda yeni malike de yansıyabilir." },
-      { "heading": "5. Isıtma Sistemi ve Enerji Kimlik Belgesi", "body": "Doğalgaz kombili dairelerde kombinin bakım geçmişini, kat kaloriferi sistemi olan binalarda ise ortak yakıt giderinin nasıl paylaşıldığını sorun. Enerji kimlik belgesi (EKB) sınıfı, aylık ısınma giderinizi doğrudan etkiler." },
-      { "heading": "6. Kredi Değerleme ve Ekspertiz", "body": "Krediyle alım planlıyorsanız, bankanın atayacağı ekspertiz raporu satış bedelini onaylamayabilir. Bölgedeki emsal satış fiyatlarını önceden araştırmak, pazarlık gücünüzü artırır ve sürpriz yaşamanızı engeller." },
-      { "heading": "7. Güvenilir Bir Danışmanla İlerleyin", "body": "İskitler ve Altındağ'ı sokak sokak bilen yerel bir danışmanla çalışmak; doğru fiyatlandırma, eksiksiz evrak takibi ve hızlı sonuçlanan bir alım süreci için en büyük avantajınız olur. İbrahim Yılmaz Gayrimenkul olarak bu süreçte adım adım yanınızdayız." }
+      {
+        "heading": "1. Tapu Durumunu Mutlaka Kontrol Edin",
+        "body": "Kat mülkiyeti mi kat irtifakı mı olduğunu, üzerinde ipotek/haciz olup olmadığını Tapu Müdürlüğü'nden ya da e-Devlet üzerinden mutlaka teyit edin. İskitler'in eski yapı stoğunda zaman zaman kat irtifaklı, henüz kat mülkiyetine geçmemiş binalarla karşılaşılabiliyor; bu durum krediye uygunluğu doğrudan etkiler."
+      },
+      {
+        "heading": "2. Bina Yaşı ve Deprem Yönetmeliği",
+        "body": "İskitler, Ankara'nın köklü mahallelerinden biri olduğu için bina yaşı bölgeye göre değişkenlik gösterir. 1999 sonrası yönetmeliğe göre inşa edilmiş binaları tercih etmek, hem güvenlik hem de ileride yapılacak kentsel dönüşüm süreçleri açısından avantaj sağlar. Bina ruhsatını ve varsa güçlendirme raporunu talep edin."
+      },
+      {
+        "heading": "3. Ulaşım ve Sosyal Donatıya Yakınlık",
+        "body": "İskitler'in avantajı, ana caddeye ve toplu taşımaya kolay erişim sunması. Daireyi gezerken gündüz ve akşam saatlerinde ayrı ayrı ziyaret ederek trafik, gürültü ve otopark durumunu değerlendirin. Okul, pazar yeri ve sağlık ocağına mesafe aile yaşamı için önemlidir."
+      },
+      {
+        "heading": "4. Aidat ve Ortak Gider Geçmişi",
+        "body": "Apartman yönetiminden son 12 aya ait aidat ödeme geçmişini ve varsa biriken borç olup olmadığını isteyin. Devraldığınız dairenin geçmiş dönem ortak gider borcu bazı durumlarda yeni malike de yansıyabilir."
+      },
+      {
+        "heading": "5. Isıtma Sistemi ve Enerji Kimlik Belgesi",
+        "body": "Doğalgaz kombili dairelerde kombinin bakım geçmişini, kat kaloriferi sistemi olan binalarda ise ortak yakıt giderinin nasıl paylaşıldığını sorun. Enerji kimlik belgesi (EKB) sınıfı, aylık ısınma giderinizi doğrudan etkiler."
+      },
+      {
+        "heading": "6. Kredi Değerleme ve Ekspertiz",
+        "body": "Krediyle alım planlıyorsanız, bankanın atayacağı ekspertiz raporu satış bedelini onaylamayabilir. Bölgedeki emsal satış fiyatlarını önceden araştırmak, pazarlık gücünüzü artırır ve sürpriz yaşamanızı engeller."
+      },
+      {
+        "heading": "7. Güvenilir Bir Danışmanla İlerleyin",
+        "body": "İskitler ve Altındağ'ı sokak sokak bilen yerel bir danışmanla çalışmak; doğru fiyatlandırma, eksiksiz evrak takibi ve hızlı sonuçlanan bir alım süreci için en büyük avantajınız olur. İbrahim Yılmaz Gayrimenkul olarak bu süreçte adım adım yanınızdayız."
+      }
     ]
   },
   {
@@ -26,11 +47,26 @@
     "readMinutes": 4,
     "publishedAt": "2026-07-10",
     "sections": [
-      { "heading": "Depozito Ne Kadar Olmalı?", "body": "İskitler ve Altındağ bölgesinde depozito genellikle 1-2 aylık kira bedeli tutarındadır. Depozitonun makbuz karşılığında ve mümkünse banka havalesi ile ödenmesi, ileride yaşanabilecek anlaşmazlıklarda ispat kolaylığı sağlar." },
-      { "heading": "Sözleşmede Olması Gereken Maddeler", "body": "Kira bedeli, artış oranı (TÜFE'ye bağlı), ödeme tarihi, demirbaş listesi, kimin hangi bakım-onarımdan sorumlu olduğu ve tahliye şartları sözleşmede açıkça yazılmalıdır. Sözlü anlaşmalar yerine her zaman yazılı, imzalı sözleşme yapılmasını öneririz." },
-      { "heading": "Demirbaş Tespit Tutanağı", "body": "Daireye taşınırken mevcut demirbaşların (kombi, mutfak dolabı, bataryalar vb.) durumunu fotoğraflarla belgeleyen bir tutanak hazırlamak, çıkışta depozito iadesinde yaşanabilecek tartışmaların önüne geçer." },
-      { "heading": "Kira Artış Oranı ve Süre", "body": "Türkiye'de konut kiralarında yıllık artış oranı, bir önceki kira yılının Tüketici Fiyat Endeksi (TÜFE) on iki aylık ortalamalarına göre belirlenir. Sözleşmenizde bu oranın açıkça belirtildiğinden emin olun." },
-      { "heading": "Tahliye Süreci", "body": "Belirli süreli kira sözleşmelerinde, süre bitiminden en az 15 gün önce yazılı bildirimde bulunulması genel bir uygulamadır; sözleşmenizdeki özel şartları mutlaka kontrol edin. Anlaşmazlık yaşanmaması için tahliye tarihini ve dairenin teslim şeklini önceden netleştirin." }
+      {
+        "heading": "Depozito Ne Kadar Olmalı?",
+        "body": "İskitler ve Altındağ bölgesinde depozito genellikle 1-2 aylık kira bedeli tutarındadır. Depozitonun makbuz karşılığında ve mümkünse banka havalesi ile ödenmesi, ileride yaşanabilecek anlaşmazlıklarda ispat kolaylığı sağlar."
+      },
+      {
+        "heading": "Sözleşmede Olması Gereken Maddeler",
+        "body": "Kira bedeli, artış oranı (TÜFE'ye bağlı), ödeme tarihi, demirbaş listesi, kimin hangi bakım-onarımdan sorumlu olduğu ve tahliye şartları sözleşmede açıkça yazılmalıdır. Sözlü anlaşmalar yerine her zaman yazılı, imzalı sözleşme yapılmasını öneririz."
+      },
+      {
+        "heading": "Demirbaş Tespit Tutanağı",
+        "body": "Daireye taşınırken mevcut demirbaşların (kombi, mutfak dolabı, bataryalar vb.) durumunu fotoğraflarla belgeleyen bir tutanak hazırlamak, çıkışta depozito iadesinde yaşanabilecek tartışmaların önüne geçer."
+      },
+      {
+        "heading": "Kira Artış Oranı ve Süre",
+        "body": "Türkiye'de konut kiralarında yıllık artış oranı, bir önceki kira yılının Tüketici Fiyat Endeksi (TÜFE) on iki aylık ortalamalarına göre belirlenir. Sözleşmenizde bu oranın açıkça belirtildiğinden emin olun."
+      },
+      {
+        "heading": "Tahliye Süreci",
+        "body": "Belirli süreli kira sözleşmelerinde, süre bitiminden en az 15 gün önce yazılı bildirimde bulunulması genel bir uygulamadır; sözleşmenizdeki özel şartları mutlaka kontrol edin. Anlaşmazlık yaşanmaması için tahliye tarihini ve dairenin teslim şeklini önceden netleştirin."
+      }
     ]
   },
   {
@@ -42,11 +78,26 @@
     "readMinutes": 4,
     "publishedAt": "2026-06-15",
     "sections": [
-      { "heading": "İmar Durum Belgesi Nedir?", "body": "İlgili belediyeden (Altındağ Belediyesi) alınan imar durum belgesi; parselin konut, ticaret ya da yeşil alan gibi hangi kullanım amacına ayrıldığını, emsal (KAKS) değerini ve yapılaşma koşullarını gösterir. Arsa almadan önce bu belgeyi mutlaka temin edin." },
-      { "heading": "Emsal (KAKS) Değerine Dikkat", "body": "Emsal değeri, parsel üzerine inşa edilebilecek toplam kapalı alanı belirler. Örneğin 350 m² bir parselde emsal 1.5 ise, toplam 525 m² inşaat hakkı var demektir. Bu rakam, arsanın gerçek yatırım potansiyelini fiyatından çok daha net anlatır." },
-      { "heading": "Kat Karşılığı mı, Nakit Satış mı?", "body": "Arsa sahipleri için kat karşılığı inşaat anlaşmaları, sermaye koymadan gayrimenkul sahibi olmanın bir yolu olabilir. Ancak müteahhit seçimi, sözleşme şartları ve teslim süresi konusunda titiz davranmak, süreç boyunca hak kaybı yaşamamak için kritiktir." },
-      { "heading": "Altyapı ve Yol Durumu", "body": "Parselin yola cephesi olup olmadığı, elektrik-su-doğalgaz altyapısının bulunup bulunmadığı ve kadastral yola tescilli olup olmadığı, inşaat maliyetini doğrudan etkileyen unsurlardır. Bu bilgiler yerinde inceleme ve belediye kayıtlarıyla teyit edilmelidir." },
-      { "heading": "Köşe Parsel Avantajı", "body": "İki cepheli köşe parseller, hem daha fazla doğal ışık/manzara imkânı hem de genellikle daha yüksek yeniden satış değeri sunar. Ofisimizde imar durumu net, yatırıma hazır köşe parsel seçenekleri için bize ulaşabilirsiniz." }
+      {
+        "heading": "İmar Durum Belgesi Nedir?",
+        "body": "İlgili belediyeden (Altındağ Belediyesi) alınan imar durum belgesi; parselin konut, ticaret ya da yeşil alan gibi hangi kullanım amacına ayrıldığını, emsal (KAKS) değerini ve yapılaşma koşullarını gösterir. Arsa almadan önce bu belgeyi mutlaka temin edin."
+      },
+      {
+        "heading": "Emsal (KAKS) Değerine Dikkat",
+        "body": "Emsal değeri, parsel üzerine inşa edilebilecek toplam kapalı alanı belirler. Örneğin 350 m² bir parselde emsal 1.5 ise, toplam 525 m² inşaat hakkı var demektir. Bu rakam, arsanın gerçek yatırım potansiyelini fiyatından çok daha net anlatır."
+      },
+      {
+        "heading": "Kat Karşılığı mı, Nakit Satış mı?",
+        "body": "Arsa sahipleri için kat karşılığı inşaat anlaşmaları, sermaye koymadan gayrimenkul sahibi olmanın bir yolu olabilir. Ancak müteahhit seçimi, sözleşme şartları ve teslim süresi konusunda titiz davranmak, süreç boyunca hak kaybı yaşamamak için kritiktir."
+      },
+      {
+        "heading": "Altyapı ve Yol Durumu",
+        "body": "Parselin yola cephesi olup olmadığı, elektrik-su-doğalgaz altyapısının bulunup bulunmadığı ve kadastral yola tescilli olup olmadığı, inşaat maliyetini doğrudan etkileyen unsurlardır. Bu bilgiler yerinde inceleme ve belediye kayıtlarıyla teyit edilmelidir."
+      },
+      {
+        "heading": "Köşe Parsel Avantajı",
+        "body": "İki cepheli köşe parseller, hem daha fazla doğal ışık/manzara imkânı hem de genellikle daha yüksek yeniden satış değeri sunar. Ofisimizde imar durumu net, yatırıma hazır köşe parsel seçenekleri için bize ulaşabilirsiniz."
+      }
     ]
   },
   {
@@ -58,11 +109,26 @@
     "readMinutes": 4,
     "publishedAt": "2026-05-28",
     "sections": [
-      { "heading": "1. Ön Anlaşma ve Kapora", "body": "Alıcı ve satıcı fiyatta anlaştıktan sonra, genellikle noter onaylı bir gayrimenkul satış vaadi sözleşmesi veya yazılı bir kapora anlaşmasıyla süreç başlatılır. Kapora tutarı ve iade/cayma şartları net biçimde belirtilmelidir." },
-      { "heading": "2. Gerekli Belgelerin Hazırlanması", "body": "Tapu Müdürlüğü'nde işlem için kimlik belgeleri, güncel tapu senedi, emlak vergisi borcu yoktur yazısı (belediyeden), zorunlu deprem sigortası (DASK) poliçesi ve varsa vekaletname hazır bulundurulmalıdır." },
-      { "heading": "3. Değerleme ve Banka Süreci", "body": "Krediyle alımda banka, gayrimenkule ekspertiz uzmanı gönderir ve kredi tutarını bu rapora göre belirler. Bu aşama, tapu randevusundan önce tamamlanmalıdır." },
-      { "heading": "4. Tapu Müdürlüğü'nde Devir", "body": "Randevu alınan Tapu Müdürlüğü'nde alıcı ve satıcı (veya vekilleri) hazır bulunarak resmi senet imzalanır, harç ve döner sermaye ödemeleri yapılır ve tapu alıcı adına devredilir. Emlak danışmanınızın bu aşamada yanınızda olması işlemleri hızlandırır." },
-      { "heading": "5. Devir Sonrası Yapılacaklar", "body": "Tapu devri sonrası abonelikler (elektrik, su, doğalgaz) yeni malik adına devredilmeli, DASK poliçesi güncellenmeli ve dilerse ilgili belediyeye emlak vergisi bildirimi yapılmalıdır." }
+      {
+        "heading": "1. Ön Anlaşma ve Kapora",
+        "body": "Alıcı ve satıcı fiyatta anlaştıktan sonra, genellikle noter onaylı bir gayrimenkul satış vaadi sözleşmesi veya yazılı bir kapora anlaşmasıyla süreç başlatılır. Kapora tutarı ve iade/cayma şartları net biçimde belirtilmelidir."
+      },
+      {
+        "heading": "2. Gerekli Belgelerin Hazırlanması",
+        "body": "Tapu Müdürlüğü'nde işlem için kimlik belgeleri, güncel tapu senedi, emlak vergisi borcu yoktur yazısı (belediyeden), zorunlu deprem sigortası (DASK) poliçesi ve varsa vekaletname hazır bulundurulmalıdır."
+      },
+      {
+        "heading": "3. Değerleme ve Banka Süreci",
+        "body": "Krediyle alımda banka, gayrimenkule ekspertiz uzmanı gönderir ve kredi tutarını bu rapora göre belirler. Bu aşama, tapu randevusundan önce tamamlanmalıdır."
+      },
+      {
+        "heading": "4. Tapu Müdürlüğü'nde Devir",
+        "body": "Randevu alınan Tapu Müdürlüğü'nde alıcı ve satıcı (veya vekilleri) hazır bulunarak resmi senet imzalanır, harç ve döner sermaye ödemeleri yapılır ve tapu alıcı adına devredilir. Emlak danışmanınızın bu aşamada yanınızda olması işlemleri hızlandırır."
+      },
+      {
+        "heading": "5. Devir Sonrası Yapılacaklar",
+        "body": "Tapu devri sonrası abonelikler (elektrik, su, doğalgaz) yeni malik adına devredilmeli, DASK poliçesi güncellenmeli ve dilerse ilgili belediyeye emlak vergisi bildirimi yapılmalıdır."
+      }
     ]
   },
   {
@@ -74,10 +140,22 @@
     "readMinutes": 3,
     "publishedAt": "2026-08-05",
     "sections": [
-      { "heading": "Kredi-Değer Oranı (LTV)", "body": "Bankalar genellikle gayrimenkul değerinin belirli bir yüzdesini kredi olarak kullandırır; kalan tutarı peşinat olarak hazır bulundurmanız gerekir. Bu oran bankadan bankaya ve konut tipine göre değişebilir, birden fazla bankadan teklif almanızı öneririz." },
-      { "heading": "Ekspertiz Raporu", "body": "Kredi başvurusunda bağımsız bir ekspertiz şirketi, gayrimenkulün piyasa değerini raporlar. Banka, kredi tutarını satış bedeli değil bu ekspertiz değeri üzerinden belirler; bu nedenle bölgedeki emsal satış fiyatlarını önceden bilmek önemlidir." },
-      { "heading": "Gerekli Belgeler", "body": "Gelir belgesi (maaş bordrosu, vergi levhası vb.), kimlik belgesi, tapu bilgileri ve DASK poliçesi başvuru sürecinde standart olarak istenir. Serbest meslek sahipleri için ek gelir belgeleri talep edilebilir." },
-      { "heading": "Bölgeye Uygun Danışmanlık", "body": "İskitler ve Altındağ'da krediye uygun, tapusu ve imar durumu net ilanları önceden filtreleyerek zaman kaybını en aza indiriyoruz; kredi sürecinde hangi ilanların bankalarca daha hızlı onaylandığını da paylaşabiliyoruz." }
+      {
+        "heading": "Kredi-Değer Oranı (LTV)",
+        "body": "Bankalar genellikle gayrimenkul değerinin belirli bir yüzdesini kredi olarak kullandırır; kalan tutarı peşinat olarak hazır bulundurmanız gerekir. Bu oran bankadan bankaya ve konut tipine göre değişebilir, birden fazla bankadan teklif almanızı öneririz."
+      },
+      {
+        "heading": "Ekspertiz Raporu",
+        "body": "Kredi başvurusunda bağımsız bir ekspertiz şirketi, gayrimenkulün piyasa değerini raporlar. Banka, kredi tutarını satış bedeli değil bu ekspertiz değeri üzerinden belirler; bu nedenle bölgedeki emsal satış fiyatlarını önceden bilmek önemlidir."
+      },
+      {
+        "heading": "Gerekli Belgeler",
+        "body": "Gelir belgesi (maaş bordrosu, vergi levhası vb.), kimlik belgesi, tapu bilgileri ve DASK poliçesi başvuru sürecinde standart olarak istenir. Serbest meslek sahipleri için ek gelir belgeleri talep edilebilir."
+      },
+      {
+        "heading": "Bölgeye Uygun Danışmanlık",
+        "body": "İskitler ve Altındağ'da krediye uygun, tapusu ve imar durumu net ilanları önceden filtreleyerek zaman kaybını en aza indiriyoruz; kredi sürecinde hangi ilanların bankalarca daha hızlı onaylandığını da paylaşabiliyoruz."
+      }
     ]
   },
   {
@@ -89,12 +167,30 @@
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "1. Bölgeyi Gerçekten Tanıyor mu?", "body": "İskitler ve Altındağ gibi köklü mahallelerde sokak sokak fiyat farkı, imar geçmişi ve ulaşım avantajı ciddi şekilde değişebilir. Bir danışmanın bölgeyi ne kadar iyi tanıdığını anlamanın en kolay yolu, size ilk görüşmede genel geçer laflar yerine mahalleye özgü somut detaylar (hangi sokakta otopark sıkıntısı var, hangi bina eski, hangi cadde yatırım için öne çıkıyor gibi) anlatıp anlatmadığına bakmaktır." },
-      { "heading": "2. Yetki Belgesi ve Kayıtlılık", "body": "Türkiye'de emlak danışmanlığı yapabilmek için Taşınmaz Ticareti Yetki Belgesi zorunludur. Çalışacağınız ofisin bu belgeye sahip olup olmadığını, işyerinde asılı belgeyi görerek ya da doğrudan sorarak teyit edebilirsiniz. Bu, hem sizi hem de işlemin hukuki geçerliliğini korur." },
-      { "heading": "3. Şeffaf Komisyon ve Sözleşme Süreci", "body": "Güvenilir bir danışman, hizmet bedelini ve sözleşme şartlarını süreç başında açıkça belirtir; sürpriz ek ücret talep etmez. İlk görüşmede komisyon oranını ve neyi kapsadığını yazılı olarak netleştirmek, ilerleyen dönemde anlaşmazlık yaşamamanızı sağlar." },
-      { "heading": "4. Gerçek Referanslar ve Yorumlar", "body": "Bir emlakçının Google İşletme Profili üzerindeki yorumları, geçmiş müşterilerin deneyimini görmenin en pratik yoludur. Sadece yıldız sayısına değil, yorumların içeriğine (iletişim hızı, süreç yönetimi, dürüstlük gibi) de dikkat edin." },
-      { "heading": "5. İletişim Hızı ve Erişilebilirlik", "body": "Emlak piyasasında fırsatlar hızlı değerlendirilir. WhatsApp veya telefon üzerinden ne kadar hızlı geri dönüş aldığınız, danışmanın işine ne kadar bağlı olduğunun önemli bir göstergesidir." },
-      { "heading": "6. Süreç Sonuna Kadar Takip Ediyor mu?", "body": "İyi bir danışmanlık, sadece alıcı ve satıcıyı bir araya getirmekle bitmez; tapu devri, kredi süreci ve devir sonrası abonelik işlemlerine kadar yanınızda olmalıdır. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'da bu yaklaşımla, sürecin her adımında sizinle birlikte ilerliyoruz." }
+      {
+        "heading": "1. Bölgeyi Gerçekten Tanıyor mu?",
+        "body": "İskitler ve Altındağ gibi köklü mahallelerde sokak sokak fiyat farkı, imar geçmişi ve ulaşım avantajı ciddi şekilde değişebilir. Bir danışmanın bölgeyi ne kadar iyi tanıdığını anlamanın en kolay yolu, size ilk görüşmede genel geçer laflar yerine mahalleye özgü somut detaylar (hangi sokakta otopark sıkıntısı var, hangi bina eski, hangi cadde yatırım için öne çıkıyor gibi) anlatıp anlatmadığına bakmaktır."
+      },
+      {
+        "heading": "2. Yetki Belgesi ve Kayıtlılık",
+        "body": "Türkiye'de emlak danışmanlığı yapabilmek için Taşınmaz Ticareti Yetki Belgesi zorunludur. Çalışacağınız ofisin bu belgeye sahip olup olmadığını, işyerinde asılı belgeyi görerek ya da doğrudan sorarak teyit edebilirsiniz. Bu, hem sizi hem de işlemin hukuki geçerliliğini korur."
+      },
+      {
+        "heading": "3. Şeffaf Komisyon ve Sözleşme Süreci",
+        "body": "Güvenilir bir danışman, hizmet bedelini ve sözleşme şartlarını süreç başında açıkça belirtir; sürpriz ek ücret talep etmez. İlk görüşmede komisyon oranını ve neyi kapsadığını yazılı olarak netleştirmek, ilerleyen dönemde anlaşmazlık yaşamamanızı sağlar."
+      },
+      {
+        "heading": "4. Gerçek Referanslar ve Yorumlar",
+        "body": "Bir emlakçının Google İşletme Profili üzerindeki yorumları, geçmiş müşterilerin deneyimini görmenin en pratik yoludur. Sadece yıldız sayısına değil, yorumların içeriğine (iletişim hızı, süreç yönetimi, dürüstlük gibi) de dikkat edin."
+      },
+      {
+        "heading": "5. İletişim Hızı ve Erişilebilirlik",
+        "body": "Emlak piyasasında fırsatlar hızlı değerlendirilir. WhatsApp veya telefon üzerinden ne kadar hızlı geri dönüş aldığınız, danışmanın işine ne kadar bağlı olduğunun önemli bir göstergesidir."
+      },
+      {
+        "heading": "6. Süreç Sonuna Kadar Takip Ediyor mu?",
+        "body": "İyi bir danışmanlık, sadece alıcı ve satıcıyı bir araya getirmekle bitmez; tapu devri, kredi süreci ve devir sonrası abonelik işlemlerine kadar yanınızda olmalıdır. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'da bu yaklaşımla, sürecin her adımında sizinle birlikte ilerliyoruz."
+      }
     ]
   },
   {
@@ -106,12 +202,30 @@
     "readMinutes": 5,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "Konum İçinde Konum: Ana Cadde mi, Ara Sokak mı?", "body": "İskitler ve Altındağ'da aynı mahalle içinde bile ana cadde cephesi ile ara sokak arasında hem fiyat hem de kiralanabilirlik açısından belirgin fark olabilir. Dükkan ve iş yeri yatırımlarında yaya trafiği yoğunluğu, konut yatırımlarında ise sessizlik ve otopark imkânı öncelikli kriterlerdir." },
-      { "heading": "Ulaşım Ağının Gelişimi", "body": "Toplu taşıma hatlarına yakınlık, hem oturmak için hem de kiraya vermek için talebi doğrudan etkiler. Bölgedeki mevcut ve planlanan ulaşım yatırımlarını takip etmek, orta-uzun vadeli değer artışı beklentisi için önemli bir göstergedir." },
-      { "heading": "Kentsel Dönüşüm Potansiyeli", "body": "Ankara'nın köklü mahallelerinde kentsel dönüşüm süreçleri zaman zaman gündeme gelir. Eski yapı stoğuna sahip bir binada yatırım yapmadan önce, bölgedeki dönüşüm planlarını ve binanın bu sürece uygunluğunu araştırmak, yatırımın geleceğini şekillendirebilir." },
-      { "heading": "Kira Getirisi ve Boş Kalma Riski", "body": "Bir gayrimenkulü yatırım amaçlı değerlendirirken sadece satış fiyatına değil, bölgedeki benzer nitelikteki mülklerin ortalama kira getirisine de bakılmalıdır. Ulaşıma ve sosyal donatıya yakın daireler genellikle daha kısa sürede kiracı bulur." },
-      { "heading": "Arsa Yatırımında İmar Durumu Önceliklidir", "body": "Arsa yatırımı düşünüyorsanız, imar durumu net ve emsal değeri yüksek köşe parseller genellikle daha hızlı değer kazanır. İmar durum belgesi almadan, sadece metrekare fiyatına bakarak karar vermek risklidir." },
-      { "heading": "Yerel Uzmanlıkla Doğru Zamanlama", "body": "Emlak yatırımında zamanlama kadar doğru bilgiye erişim de belirleyicidir. İskitler ve Altındağ'ı yakından takip eden bir ekiple çalışmak, henüz piyasaya yeni çıkmış fırsatlardan ilk siz haberdar olmanızı sağlar." }
+      {
+        "heading": "Konum İçinde Konum: Ana Cadde mi, Ara Sokak mı?",
+        "body": "İskitler ve Altındağ'da aynı mahalle içinde bile ana cadde cephesi ile ara sokak arasında hem fiyat hem de kiralanabilirlik açısından belirgin fark olabilir. Dükkan ve iş yeri yatırımlarında yaya trafiği yoğunluğu, konut yatırımlarında ise sessizlik ve otopark imkânı öncelikli kriterlerdir."
+      },
+      {
+        "heading": "Ulaşım Ağının Gelişimi",
+        "body": "Toplu taşıma hatlarına yakınlık, hem oturmak için hem de kiraya vermek için talebi doğrudan etkiler. Bölgedeki mevcut ve planlanan ulaşım yatırımlarını takip etmek, orta-uzun vadeli değer artışı beklentisi için önemli bir göstergedir."
+      },
+      {
+        "heading": "Kentsel Dönüşüm Potansiyeli",
+        "body": "Ankara'nın köklü mahallelerinde kentsel dönüşüm süreçleri zaman zaman gündeme gelir. Eski yapı stoğuna sahip bir binada yatırım yapmadan önce, bölgedeki dönüşüm planlarını ve binanın bu sürece uygunluğunu araştırmak, yatırımın geleceğini şekillendirebilir."
+      },
+      {
+        "heading": "Kira Getirisi ve Boş Kalma Riski",
+        "body": "Bir gayrimenkulü yatırım amaçlı değerlendirirken sadece satış fiyatına değil, bölgedeki benzer nitelikteki mülklerin ortalama kira getirisine de bakılmalıdır. Ulaşıma ve sosyal donatıya yakın daireler genellikle daha kısa sürede kiracı bulur."
+      },
+      {
+        "heading": "Arsa Yatırımında İmar Durumu Önceliklidir",
+        "body": "Arsa yatırımı düşünüyorsanız, imar durumu net ve emsal değeri yüksek köşe parseller genellikle daha hızlı değer kazanır. İmar durum belgesi almadan, sadece metrekare fiyatına bakarak karar vermek risklidir."
+      },
+      {
+        "heading": "Yerel Uzmanlıkla Doğru Zamanlama",
+        "body": "Emlak yatırımında zamanlama kadar doğru bilgiye erişim de belirleyicidir. İskitler ve Altındağ'ı yakından takip eden bir ekiple çalışmak, henüz piyasaya yeni çıkmış fırsatlardan ilk siz haberdar olmanızı sağlar."
+      }
     ]
   },
   {
@@ -123,12 +237,33 @@
     "readMinutes": 5,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "Kentsel Dönüşüm Nedir?", "body": "Kentsel dönüşüm, deprem riski taşıyan veya yapı ömrünü tamamlamış binaların, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında yıkılıp yeniden, günümüz deprem yönetmeliğine uygun şekilde inşa edilmesi sürecidir. Ankara'nın İskitler ve Altındağ gibi köklü mahallelerinde, yapı yaşı ortalamanın üzerinde olan binalar bu sürecin potansiyel adaylarıdır." },
-      { "heading": "Riskli Yapı Tespiti Nasıl Yapılır?", "body": "Süreç, Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nca lisanslandırılmış kurumlarca yapılan teknik incelemeyle başlar. Bina malikleri veya kanuni temsilcileri, lisanslı bir kuruma başvurarak yapının riskli olup olmadığının tespitini talep edebilir. Rapor olumlu çıkarsa (riskli yapı kararı), süreç resmi olarak başlamış olur." },
-      { "heading": "Hak Sahipliği ve Paylaşım Oranları", "body": "Riskli yapı kararı kesinleştikten sonra, kat maliklerinin en az üçte iki çoğunluğuyla yıkım ve yeniden yapım kararı alınır. Müteahhitle yapılacak kat karşılığı anlaşmasında, arsa payı ve yeni binadaki daire/dükkan paylaşım oranı, sözleşmenin en kritik maddesidir — bu konuda bağımsız bir danışmandan görüş almak hak kaybını önler." },
-      { "heading": "Kira Yardımı ve Geçici Süreç", "body": "Riskli yapı kararı alınan binalarda oturan malikler ve kiracılar, yıkım-yapım süresince belirli şartlarla devlet kira yardımından faydalanabilir. Başvuru, e-Devlet üzerinden veya ilgili belediye/bakanlık birimlerinden yapılabilir." },
-      { "heading": "Müteahhit Seçiminde Dikkat Edilmesi Gerekenler", "body": "Kat karşılığı anlaşma yapılacak müteahhitin geçmiş projeleri, mali durumu ve teslim süresi taahhütleri araştırılmalıdır. Sözleşmede teslim tarihi, gecikme cezası ve teminat mektubu gibi maddelerin bulunması, kat maliklerini süreç boyunca korur." },
-      { "heading": "Eski Binanız İçin Doğru Zamanlama", "body": "Kentsel dönüşüm sürecine girecek bir binanız varsa, hem mevcut değerini hem de dönüşüm sonrası potansiyelini doğru değerlendirmek önemlidir. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'daki eski yapı stoğunu yakından takip ediyor, süreç öncesi ve sonrası değerleme konusunda danışmanlık sunuyoruz." }
+      {
+        "heading": "Kentsel Dönüşüm Nedir?",
+        "body": "Kentsel dönüşüm, deprem riski taşıyan veya yapı ömrünü tamamlamış binaların, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında yıkılıp yeniden, günümüz deprem yönetmeliğine uygun şekilde inşa edilmesi sürecidir. Ankara'nın İskitler ve Altındağ gibi köklü mahallelerinde, yapı yaşı ortalamanın üzerinde olan binalar bu sürecin potansiyel adaylarıdır."
+      },
+      {
+        "heading": "Riskli Yapı Tespiti Nasıl Yapılır?",
+        "body": "Süreç, Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nca lisanslandırılmış kurumlarca yapılan teknik incelemeyle başlar. Bina malikleri veya kanuni temsilcileri, lisanslı bir kuruma başvurarak yapının riskli olup olmadığının tespitini talep edebilir. Rapor olumlu çıkarsa (riskli yapı kararı), süreç resmi olarak başlamış olur."
+      },
+      {
+        "heading": "Hak Sahipliği ve Paylaşım Oranları",
+        "body": "Riskli yapı kararı kesinleştikten sonra, kat maliklerinin en az üçte iki çoğunluğuyla yıkım ve yeniden yapım kararı alınır. Müteahhitle yapılacak kat karşılığı anlaşmasında, arsa payı ve yeni binadaki daire/dükkan paylaşım oranı, sözleşmenin en kritik maddesidir — bu konuda bağımsız bir danışmandan görüş almak hak kaybını önler."
+      },
+      {
+        "heading": "Kira Yardımı ve Geçici Süreç",
+        "body": "Riskli yapı kararı alınan binalarda oturan malikler ve kiracılar, yıkım-yapım süresince belirli şartlarla devlet kira yardımından faydalanabilir. Başvuru, e-Devlet üzerinden veya ilgili belediye/bakanlık birimlerinden yapılabilir."
+      },
+      {
+        "heading": "Müteahhit Seçiminde Dikkat Edilmesi Gerekenler",
+        "body": "Kat karşılığı anlaşma yapılacak müteahhitin geçmiş projeleri, mali durumu ve teslim süresi taahhütleri araştırılmalıdır. Sözleşmede teslim tarihi, gecikme cezası ve teminat mektubu gibi maddelerin bulunması, kat maliklerini süreç boyunca korur."
+      },
+      {
+        "heading": "Eski Binanız İçin Doğru Zamanlama",
+        "body": "Kentsel dönüşüm sürecine girecek bir binanız varsa, hem mevcut değerini hem de dönüşüm sonrası potansiyelini doğru değerlendirmek önemlidir. İbrahim Yılmaz Gayrimenkul olarak İskitler ve Altındağ'daki eski yapı stoğunu yakından takip ediyor, süreç öncesi ve sonrası değerleme konusunda danışmanlık sunuyoruz."
+      }
+    ],
+    "tags": [
+      "kentsel-donusum"
     ]
   },
   {
@@ -140,12 +275,30 @@
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "1. İlk İzlenim: Giriş ve Kapı", "body": "Alıcılar kararlarının büyük bölümünü ilk birkaç dakikada verir. Giriş kapısının boyası, zil ve kapı kolu gibi küçük detayların bakımlı olması, düşük maliyetle büyük fark yaratır." },
-      { "heading": "2. Gereksiz Eşyalardan Arındırma", "body": "Aşırı dolu bir daire, alıcının kendini evde hayal etmesini zorlaştırır. Kişisel eşyaları ve fazla mobilyayı azaltmak, mekanı daha ferah ve büyük gösterir." },
-      { "heading": "3. Küçük Onarımlar Büyük Fark Yaratır", "body": "Damlayan musluk, gıcırdayan kapı, çatlamış fayans gibi küçük sorunlar, alıcıda 'bakımsız daire' algısı yaratıp pazarlık payını artırabilir. Gezi öncesi bu tür ufak onarımları tamamlamak yatırımın kat kat üzerinde getiri sağlar." },
-      { "heading": "4. Doğru Aydınlatma ve Temizlik", "body": "Bol doğal ışık alan, temiz ve kokusuz bir daire her zaman daha çekici görünür. Fotoğraf çekimi ve gezi öncesi perdelerin açık, tüm lambaların çalışır durumda olması önerilir." },
-      { "heading": "5. Profesyonel Fotoğraf ve İlan Metni", "body": "İyi çekilmiş fotoğraflar, online ilan görüntülenme oranını ciddi şekilde artırır. Net, aydınlık ve doğru açılardan çekilmiş görseller kullanmak, telefonun daha hızlı çalmasını sağlar." },
-      { "heading": "6. Doğru Fiyatlandırma", "body": "Bölgedeki emsal satışları bilmeden belirlenen fiyat, ya alıcıyı kaçırır ya da elde para bırakır. İskitler ve Altındağ'daki güncel emsalleri takip eden bir danışmanla çalışmak, evinizi hem doğru fiyattan hem de makul sürede satmanızı sağlar." }
+      {
+        "heading": "1. İlk İzlenim: Giriş ve Kapı",
+        "body": "Alıcılar kararlarının büyük bölümünü ilk birkaç dakikada verir. Giriş kapısının boyası, zil ve kapı kolu gibi küçük detayların bakımlı olması, düşük maliyetle büyük fark yaratır."
+      },
+      {
+        "heading": "2. Gereksiz Eşyalardan Arındırma",
+        "body": "Aşırı dolu bir daire, alıcının kendini evde hayal etmesini zorlaştırır. Kişisel eşyaları ve fazla mobilyayı azaltmak, mekanı daha ferah ve büyük gösterir."
+      },
+      {
+        "heading": "3. Küçük Onarımlar Büyük Fark Yaratır",
+        "body": "Damlayan musluk, gıcırdayan kapı, çatlamış fayans gibi küçük sorunlar, alıcıda 'bakımsız daire' algısı yaratıp pazarlık payını artırabilir. Gezi öncesi bu tür ufak onarımları tamamlamak yatırımın kat kat üzerinde getiri sağlar."
+      },
+      {
+        "heading": "4. Doğru Aydınlatma ve Temizlik",
+        "body": "Bol doğal ışık alan, temiz ve kokusuz bir daire her zaman daha çekici görünür. Fotoğraf çekimi ve gezi öncesi perdelerin açık, tüm lambaların çalışır durumda olması önerilir."
+      },
+      {
+        "heading": "5. Profesyonel Fotoğraf ve İlan Metni",
+        "body": "İyi çekilmiş fotoğraflar, online ilan görüntülenme oranını ciddi şekilde artırır. Net, aydınlık ve doğru açılardan çekilmiş görseller kullanmak, telefonun daha hızlı çalmasını sağlar."
+      },
+      {
+        "heading": "6. Doğru Fiyatlandırma",
+        "body": "Bölgedeki emsal satışları bilmeden belirlenen fiyat, ya alıcıyı kaçırır ya da elde para bırakır. İskitler ve Altındağ'daki güncel emsalleri takip eden bir danışmanla çalışmak, evinizi hem doğru fiyattan hem de makul sürede satmanızı sağlar."
+      }
     ]
   },
   {
@@ -157,12 +310,30 @@
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "İşyeri Açma ve Çalışma Ruhsatı", "body": "Kiralamayı düşündüğünüz mekânın, planladığınız faaliyet türü için ruhsatlandırılabilir olup olmadığını belediyeden önceden teyit edin. Bazı iş kolları (gıda, sağlık vb.) için ek şartlar aranabilir." },
-      { "heading": "Yapı Kullanma İzin Belgesi (İskan)", "body": "Mekânın iskanlı olup olmadığı, ruhsat başvurusunun sorunsuz ilerlemesi açısından önemlidir. İskansız yapılarda işyeri açma ruhsatı alınırken ek prosedürlerle karşılaşılabilir." },
-      { "heading": "Kira Sözleşmesinde Ticari Şartlar", "body": "Kira bedeli ve artış oranının yanı sıra, devir/alt kiralama hakkı, tadilat izinleri ve tahliye şartları ticari kira sözleşmelerinde konut sözleşmelerinden daha detaylı ele alınmalıdır." },
-      { "heading": "Yaya Trafiği ve Görünürlük", "body": "Ana cadde cephesi, vitrin genişliği ve yaya trafiği yoğunluğu, özellikle perakende işletmeler için kira bedelinin üzerinde bir değer taşır. Farklı saat dilimlerinde bölgeyi ziyaret ederek gerçek yoğunluğu gözlemleyin." },
-      { "heading": "Devren Kiralık/Satılık Seçenekleri", "body": "Hazır demirbaş ve mevcut müşteri potansiyeliyle devren bir işletme almak, sıfırdan başlamaya göre zaman kazandırabilir. Ancak devir bedelinin neyi kapsadığını (demirbaş, marka, kira hakkı) sözleşmede netleştirmek gerekir." },
-      { "heading": "Bölge Uzmanlığıyla Doğru Mekân Seçimi", "body": "İskitler ve Altındağ'da işletmenize uygun lokasyonu bulmak, hem başlangıç maliyetlerini hem de uzun vadeli kârlılığı doğrudan etkiler. Devren dükkan ve iş yeri seçeneklerimiz için bize ulaşabilirsiniz." }
+      {
+        "heading": "İşyeri Açma ve Çalışma Ruhsatı",
+        "body": "Kiralamayı düşündüğünüz mekânın, planladığınız faaliyet türü için ruhsatlandırılabilir olup olmadığını belediyeden önceden teyit edin. Bazı iş kolları (gıda, sağlık vb.) için ek şartlar aranabilir."
+      },
+      {
+        "heading": "Yapı Kullanma İzin Belgesi (İskan)",
+        "body": "Mekânın iskanlı olup olmadığı, ruhsat başvurusunun sorunsuz ilerlemesi açısından önemlidir. İskansız yapılarda işyeri açma ruhsatı alınırken ek prosedürlerle karşılaşılabilir."
+      },
+      {
+        "heading": "Kira Sözleşmesinde Ticari Şartlar",
+        "body": "Kira bedeli ve artış oranının yanı sıra, devir/alt kiralama hakkı, tadilat izinleri ve tahliye şartları ticari kira sözleşmelerinde konut sözleşmelerinden daha detaylı ele alınmalıdır."
+      },
+      {
+        "heading": "Yaya Trafiği ve Görünürlük",
+        "body": "Ana cadde cephesi, vitrin genişliği ve yaya trafiği yoğunluğu, özellikle perakende işletmeler için kira bedelinin üzerinde bir değer taşır. Farklı saat dilimlerinde bölgeyi ziyaret ederek gerçek yoğunluğu gözlemleyin."
+      },
+      {
+        "heading": "Devren Kiralık/Satılık Seçenekleri",
+        "body": "Hazır demirbaş ve mevcut müşteri potansiyeliyle devren bir işletme almak, sıfırdan başlamaya göre zaman kazandırabilir. Ancak devir bedelinin neyi kapsadığını (demirbaş, marka, kira hakkı) sözleşmede netleştirmek gerekir."
+      },
+      {
+        "heading": "Bölge Uzmanlığıyla Doğru Mekân Seçimi",
+        "body": "İskitler ve Altındağ'da işletmenize uygun lokasyonu bulmak, hem başlangıç maliyetlerini hem de uzun vadeli kârlılığı doğrudan etkiler. Devren dükkan ve iş yeri seçeneklerimiz için bize ulaşabilirsiniz."
+      }
     ]
   },
   {
@@ -174,11 +345,150 @@
     "readMinutes": 3,
     "publishedAt": "2026-08-31",
     "sections": [
-      { "heading": "DASK Nedir, Neden Zorunludur?", "body": "Doğal Afet Sigortaları Kurumu (DASK) tarafından sunulan Zorunlu Deprem Sigortası, konutları deprem ve deprem kaynaklı yangın, infilak, tsunami gibi risklere karşı belirli bir teminat tutarına kadar güvence altına alır. Tapu devri ve elektrik/su abonelik işlemlerinde geçerli poliçe istenir." },
-      { "heading": "Prim Nasıl Hesaplanır?", "body": "Poliçe primi; binanın yapı tarzı (betonarme/diğer), bulunduğu deprem risk bölgesi ve dairenin brüt metrekaresine göre hesaplanır. Ankara genel olarak orta risk grubunda değerlendirilir, ancak bina özelliklerine göre değişkenlik gösterebilir." },
-      { "heading": "Tapu Devrinde DASK Şartı", "body": "Tapu Müdürlüğü, konut niteliğindeki taşınmazların devrinde geçerli bir DASK poliçesi arar. Devir öncesi poliçenizin güncel ve süresinin dolmamış olduğundan emin olun; poliçe yoksa devir günü hızlıca online olarak da yaptırılabilir." },
-      { "heading": "Yenileme ve Süreklilik", "body": "DASK poliçesi 1 yıl geçerlidir ve süresi dolmadan yenilenmesi gerekir. Kesintisiz sigorta geçmişi, ileride talep edilecek hasar süreçlerinde ve bazı kredi başvurularında avantaj sağlayabilir." },
-      { "heading": "Alım-Satım Sürecinde Danışmanlık", "body": "İskitler ve Altındağ'da ev alım-satım sürecinde DASK dahil tüm zorunlu belgelerin eksiksiz hazırlanmasında danışmanlarımız size yol gösterir, tapu randevusunda sürpriz eksik belge yaşamamanızı sağlarız." }
+      {
+        "heading": "DASK Nedir, Neden Zorunludur?",
+        "body": "Doğal Afet Sigortaları Kurumu (DASK) tarafından sunulan Zorunlu Deprem Sigortası, konutları deprem ve deprem kaynaklı yangın, infilak, tsunami gibi risklere karşı belirli bir teminat tutarına kadar güvence altına alır. Tapu devri ve elektrik/su abonelik işlemlerinde geçerli poliçe istenir."
+      },
+      {
+        "heading": "Prim Nasıl Hesaplanır?",
+        "body": "Poliçe primi; binanın yapı tarzı (betonarme/diğer), bulunduğu deprem risk bölgesi ve dairenin brüt metrekaresine göre hesaplanır. Ankara genel olarak orta risk grubunda değerlendirilir, ancak bina özelliklerine göre değişkenlik gösterebilir."
+      },
+      {
+        "heading": "Tapu Devrinde DASK Şartı",
+        "body": "Tapu Müdürlüğü, konut niteliğindeki taşınmazların devrinde geçerli bir DASK poliçesi arar. Devir öncesi poliçenizin güncel ve süresinin dolmamış olduğundan emin olun; poliçe yoksa devir günü hızlıca online olarak da yaptırılabilir."
+      },
+      {
+        "heading": "Yenileme ve Süreklilik",
+        "body": "DASK poliçesi 1 yıl geçerlidir ve süresi dolmadan yenilenmesi gerekir. Kesintisiz sigorta geçmişi, ileride talep edilecek hasar süreçlerinde ve bazı kredi başvurularında avantaj sağlayabilir."
+      },
+      {
+        "heading": "Alım-Satım Sürecinde Danışmanlık",
+        "body": "İskitler ve Altındağ'da ev alım-satım sürecinde DASK dahil tüm zorunlu belgelerin eksiksiz hazırlanmasında danışmanlarımız size yol gösterir, tapu randevusunda sürpriz eksik belge yaşamamanızı sağlarız."
+      }
+    ]
+  },
+  {
+    "id": "6306-kira-yardimi-guncel",
+    "title": "6306 Sayılı Kanun Kapsamında Kira Yardımı: Şartlar ve Başvuru Adımları",
+    "category": "Kentsel Dönüşüm Haberi",
+    "tags": [
+      "kentsel-donusum"
+    ],
+    "excerpt": "Riskli yapı kararı alınan binalarda oturan malik ve kiracılar için kira yardımının şartları, başvuru mercileri ve süreç boyunca dikkat edilmesi gereken noktalar.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-12/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-08-28",
+    "sections": [
+      {
+        "heading": "Kira Yardımından Kimler Yararlanabilir?",
+        "body": "6306 sayılı Kanun kapsamında riskli yapı kararı kesinleşen binalarda ikamet eden malikler ve kiracılar, yıkım-yeniden yapım süresince belirli şartlarla kira yardımından yararlanabilir. Yardımın kapsamı ve tutarı zaman zaman güncellendiğinden, başvuru öncesi güncel tutarı ilgili birimden teyit etmek önemlidir."
+      },
+      {
+        "heading": "Başvuru Nereye Yapılır?",
+        "body": "Başvurular e-Devlet üzerinden veya Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nın il müdürlüğüne yapılabilir. Riskli yapı tespit raporu, tahliye taahhüdü ve ikametgah belgesi gibi evrakların eksiksiz hazırlanması süreci hızlandırır."
+      },
+      {
+        "heading": "Ödeme Süresi ve Sıklığı",
+        "body": "Kira yardımı, hak sahipliği onaylandıktan sonra periyodik olarak ödenir. Ödeme takviminde yaşanabilecek gecikmeler için ilgili birimle iletişimi sürdürmek, mağduriyeti önler."
+      },
+      {
+        "heading": "İskitler ve Altındağ'daki Eski Yapı Stoku İçin Önemi",
+        "body": "İskitler ve Altındağ'da yapı yaşı ortalamanın üzerinde olan bina sayısı fazladır. Bu bölgede kentsel dönüşüm sürecine giren ev sahiplerinin kira yardımı sürecini doğru yönetmesi, geçiş dönemini finansal açıdan daha rahat atlatmasını sağlar. Sürecin başında bir gayrimenkul danışmanından ön bilgi almak, hangi adımların ne zaman atılması gerektiğini netleştirir."
+      }
+    ]
+  },
+  {
+    "id": "riskli-yapi-tespitinde-sik-hatalar",
+    "title": "Riskli Yapı Tespitinde Sık Yapılan 5 Hata",
+    "category": "Kentsel Dönüşüm Haberi",
+    "tags": [
+      "kentsel-donusum"
+    ],
+    "excerpt": "Kentsel dönüşüm sürecinin ilk ve en kritik adımı olan riskli yapı tespitinde, kat maliklerinin süreci uzatan veya hak kaybına yol açan yaygın hataları.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-13/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-08-29",
+    "sections": [
+      {
+        "heading": "1. Lisanssız Kurumla Çalışmak",
+        "body": "Riskli yapı tespiti, yalnızca Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nca lisanslandırılmış kurumlarca yapılabilir. Lisansı olmayan bir firmayla hazırlanan rapor resmi süreçte geçerli kabul edilmez ve zaman kaybına yol açar."
+      },
+      {
+        "heading": "2. Kat Maliklerinin Bilgilendirilmemesi",
+        "body": "Tespit talebi tek bir malik tarafından başlatılabilse de, sürecin ilerleyen aşamalarında diğer kat maliklerinin bilgilendirilmemesi anlaşmazlıklara yol açar. Süreç başında tüm maliklerle şeffaf iletişim kurmak, ilerleyen itiraz ve gecikmeleri azaltır."
+      },
+      {
+        "heading": "3. İtiraz Süresini Kaçırmak",
+        "body": "Riskli yapı raporuna itiraz için yasal bir süre öngörülür. Bu sürenin kaçırılması, itiraz hakkının kaybedilmesine neden olur. Raporun tebliğ tarihini not almak ve gerekirse hukuki danışmanlık almak önemlidir."
+      },
+      {
+        "heading": "4. Paylaşım Oranını Sözleşmeden Önce Netleştirmemek",
+        "body": "Müteahhitle görüşmeye, arsa payı ve yeni binadaki pay oranı netleşmeden başlamak, pazarlık gücünü zayıflatır. Bölgedeki emsal projelerin paylaşım oranlarını önceden araştırmak faydalı olur."
+      },
+      {
+        "heading": "5. Değerleme Yapmadan Karar Vermek",
+        "body": "Riskli yapı kararı sonrası, hem mevcut binanın hem de dönüşüm sonrası potansiyel değerinin bilinmesi, kat karşılığı görüşmelerinde önemli bir avantaj sağlar. İskitler ve Altındağ'da bu konuda güncel emsal verisiyle destek almak, doğru karar vermeyi kolaylaştırır."
+      }
+    ]
+  },
+  {
+    "id": "iskitler-kentsel-donusum-oncelik-kriterleri",
+    "title": "İskitler ve Altındağ'da Kentsel Dönüşümde Öncelik Kriterleri Nelerdir?",
+    "category": "Kentsel Dönüşüm Haberi",
+    "tags": [
+      "kentsel-donusum"
+    ],
+    "excerpt": "Bir binanın kentsel dönüşüm sürecinde öncelikli değerlendirilmesini etkileyen yapı yaşı, zemin durumu ve imar planı gibi faktörler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-14/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-08-30",
+    "sections": [
+      {
+        "heading": "Yapı Yaşı ve İnşaat Yönetmeliği",
+        "body": "1999 depremi öncesi inşaat yönetmeliğine göre yapılmış binalar, güncel deprem yönetmeliğine kıyasla daha düşük dayanım gösterebilir. İskitler ve Altındağ'daki köklü mahallelerde bu yaş aralığındaki bina sayısı fazla olduğundan, riskli yapı tespiti talepleri bu bölgelerde daha sık gündeme gelir."
+      },
+      {
+        "heading": "Zemin Etüdü ve Bölgesel Zemin Durumu",
+        "body": "Binanın taşıyıcı sisteminin durumu kadar, üzerine inşa edildiği zeminin niteliği de değerlendirmede rol oynar. Bölgesel zemin etüt raporları, ilgili belediye ve bakanlık birimlerinden temin edilebilir."
+      },
+      {
+        "heading": "İmar Planındaki Yol ve Yeşil Alan Durumu",
+        "body": "Yeniden yapılanma sürecinde parselin güncel imar planındaki durumu (yol, yeşil alan, kamu hizmet alanı gibi) doğrudan yeni yapının inşaat hakkını etkiler. Süreç başlamadan önce belediyeden güncel imar durum belgesi alınması önerilir."
+      },
+      {
+        "heading": "Bölgedeki Dönüşüm Yoğunluğu",
+        "body": "Bir sokak veya mahallede dönüşüm sürecine giren bina sayısı arttıkça, müteahhitlerin bölgeye ilgisi ve teklif rekabeti de artabilir. Bu durum, kat karşılığı görüşmelerinde ev sahiplerinin pazarlık gücünü olumlu etkileyebilir."
+      }
+    ]
+  },
+  {
+    "id": "kat-karsiligi-mi-anahtar-teslim-mi",
+    "title": "Kat Karşılığı mı, Anahtar Teslim mi? Müteahhit Sözleşme Türleri Karşılaştırması",
+    "category": "Kentsel Dönüşüm Haberi",
+    "tags": [
+      "kentsel-donusum"
+    ],
+    "excerpt": "Kentsel dönüşümde ev sahiplerinin en çok karşılaştığı iki sözleşme modeli — kat karşılığı ve anahtar teslim — arasındaki temel farklar ve avantajlar.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-15/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-09-01",
+    "sections": [
+      {
+        "heading": "Kat Karşılığı Sözleşme Nedir?",
+        "body": "Kat karşılığı modelde ev sahibi, arsasını müteahhide devreder; karşılığında yeni binada belirlenen oranda bağımsız bölüm (daire/dükkan) alır. Müteahhit inşaat maliyetini üstlenir, ev sahibi ise nakit ödeme yapmaz."
+      },
+      {
+        "heading": "Anahtar Teslim Sözleşme Nedir?",
+        "body": "Anahtar teslim modelde ev sahibi, inşaat maliyetinin bir kısmını veya tamamını nakit olarak karşılar; karşılığında daha yüksek m² veya daha iyi konumda bir bağımsız bölüm elde edebilir. Bu model, nakit gücü olan ev sahipleri için daha fazla pay anlamına gelebilir."
+      },
+      {
+        "heading": "Hangi Model Kime Uygun?",
+        "body": "Nakit akışı sınırlı olan ev sahipleri için kat karşılığı modeli daha az riskli görünürken, ek yatırım yapabilecek durumda olanlar anahtar teslim modelle daha yüksek pay elde edebilir. Karar öncesi her iki modelin bölgedeki emsal örnekleriyle karşılaştırılması önerilir."
+      },
+      {
+        "heading": "Sözleşmede Mutlaka Bulunması Gerekenler",
+        "body": "Model ne olursa olsun, sözleşmede teslim tarihi, gecikme cezası, teminat mektubu, malzeme/malzeme kalitesi şartnamesi ve kat irtifakı/tapu devri koşullarının açıkça yazılması, ev sahibinin haklarını korur. İskitler ve Altındağ'da kat karşılığı görüşmelerine girecek ev sahiplerine, sözleşme öncesi bağımsız danışmanlık almalarını öneriyoruz."
+      }
     ]
   }
 ]

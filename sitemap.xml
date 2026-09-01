@@ -96,6 +96,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehberler.html?konu=kentsel-donusum</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=6306-kira-yardimi-guncel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=riskli-yapi-tespitinde-sik-hatalar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=iskitler-kentsel-donusum-oncelik-kriterleri</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=kat-karsiligi-mi-anahtar-teslim-mi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1001</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

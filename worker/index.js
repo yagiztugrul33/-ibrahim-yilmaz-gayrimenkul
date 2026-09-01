@@ -11,6 +11,10 @@
 const HABER_SORGUSU = "kentsel dönüşüm Ankara Altındağ İskitler";
 const HABER_SAYISI = 10;
 const HABER_CACHE_SANIYE = 3600; // 1 saat
+// Parse/format mantığı değiştiğinde bu sürümü artırın — aksi halde eski
+// (bozuk) yanıt, yeni kod deploy edilse bile TTL dolana kadar önbellekten
+// gelmeye devam eder.
+const HABER_CACHE_SURUMU = "v2";
 
 const TARAYICI_BASLIKLARI = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
@@ -42,11 +46,19 @@ export default {
 };
 
 async function handleHaberler(request, ctx) {
-  const cache = caches.default;
-  const cacheKey = new Request("https://cache.internal/haberler/" + encodeURIComponent(HABER_SORGUSU), { method: "GET" });
+  const url = new URL(request.url);
+  const taze = url.searchParams.has("fresh"); // ?fresh=1 -> önbelleği atla (test için)
 
-  let cached = await cache.match(cacheKey);
-  if (cached) return withCors(cached);
+  const cache = caches.default;
+  const cacheKey = new Request(
+    "https://cache.internal/haberler/" + HABER_CACHE_SURUMU + "/" + encodeURIComponent(HABER_SORGUSU),
+    { method: "GET" }
+  );
+
+  if (!taze) {
+    const cached = await cache.match(cacheKey);
+    if (cached) return withCors(cached);
+  }
 
   let items = [];
   let kaynak = null;
@@ -93,7 +105,7 @@ async function handleHaberler(request, ctx) {
     }
   });
 
-  if (items.length) {
+  if (items.length && !taze) {
     ctx.waitUntil(cache.put(cacheKey, response.clone()));
   }
   return withCors(response);

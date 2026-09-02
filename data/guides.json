@@ -4,7 +4,7 @@
     "title": "İskitler'de Ev Alırken Dikkat Edilmesi Gereken 7 Nokta",
     "category": "Satın Alma Rehberi",
     "excerpt": "İskitler'de daire alırken bina yaşı, tapu durumu ve ulaşımdan imar durumuna kadar gözden kaçırılmaması gereken 7 kritik nokta.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-1/1000/560",
+    "coverImage": "/assets/img/guides/iskitler-ev-alma-rehberi.svg",
     "readMinutes": 5,
     "publishedAt": "2026-07-20",
     "sections": [
@@ -43,7 +43,7 @@
     "title": "Kiralık Daire Tutarken Depozito ve Sözleşme Rehberi",
     "category": "Kiralama Rehberi",
     "excerpt": "Kiralık daire tutarken depozito tutarı, kira sözleşmesinde bulunması gereken maddeler ve tahliye sürecinde dikkat edilmesi gerekenler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-2/1000/560",
+    "coverImage": "/assets/img/guides/kiralik-daire-sozlesme-rehberi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-07-10",
     "sections": [
@@ -74,7 +74,7 @@
     "title": "Altındağ'da Arsa Alırken İmar Durumu Nasıl Kontrol Edilir?",
     "category": "Yatırım Rehberi",
     "excerpt": "Arsa yatırımı yapmadan önce imar durumu, kaks/emsal değeri ve altyapı bilgisinin nasıl sorgulanacağı adım adım.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-3/1000/560",
+    "coverImage": "/assets/img/guides/arsa-imar-durumu-kontrolu.svg",
     "readMinutes": 4,
     "publishedAt": "2026-06-15",
     "sections": [
@@ -105,7 +105,7 @@
     "title": "Tapu Devri Sürecinde İzlenmesi Gereken Adımlar",
     "category": "İşlem Rehberi",
     "excerpt": "Satış vaadinden tapu devrine kadar emlak alım-satım sürecinin resmi adımları ve hazırlanması gereken belgeler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-4/1000/560",
+    "coverImage": "/assets/img/guides/tapu-devri-adimlari.svg",
     "readMinutes": 4,
     "publishedAt": "2026-05-28",
     "sections": [
@@ -136,7 +136,7 @@
     "title": "2026'da Konut Kredisi Başvurusunda Bilmeniz Gerekenler",
     "category": "Finansman Rehberi",
     "excerpt": "Konut kredisi başvurusunda ekspertiz süreci, kredi-değer oranı ve başvuru öncesi hazırlanması gereken belgeler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-5/1000/560",
+    "coverImage": "/assets/img/guides/konut-kredisi-rehberi.svg",
     "readMinutes": 3,
     "publishedAt": "2026-08-05",
     "sections": [
@@ -163,7 +163,7 @@
     "title": "İskitler'de Emlakçı Seçerken Nelere Dikkat Etmeli?",
     "category": "Rehber",
     "excerpt": "İskitler'de doğru emlak danışmanını seçmek, alım-satım sürecinin hızını ve güvenliğini belirler. İşte dikkat etmeniz gereken 6 kriter.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-6/1000/560",
+    "coverImage": "/assets/img/guides/iskitler-emlakci-secimi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -198,7 +198,7 @@
     "title": "İskitler ve Altındağ'da Emlak Yatırımı Yaparken Nelere Bakılır?",
     "category": "Yatırım Rehberi",
     "excerpt": "İskitler ve Altındağ'da daire, dükkan veya arsa yatırımı öncesi bölgeyi değerlendirirken göz önünde bulundurmanız gereken temel faktörler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-7/1000/560",
+    "coverImage": "/assets/img/guides/iskitler-altindag-emlak-yatirimi.svg",
     "readMinutes": 5,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -233,7 +233,7 @@
     "title": "Kentsel Dönüşüm Süreci: Ev Sahipleri İçin Adım Adım Rehber",
     "category": "Kentsel Dönüşüm",
     "excerpt": "6306 sayılı Kanun kapsamında riskli yapı tespiti, hak sahipliği ve kentsel dönüşüm sürecinin aşamaları — İskitler ve Altındağ'daki eski yapı stoğu sahipleri için pratik bilgiler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-8/1000/560",
+    "coverImage": "/assets/img/guides/kentsel-donusum-rehberi.svg",
     "readMinutes": 5,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -271,7 +271,7 @@
     "title": "Evinizi Satarken Değerini Artırmanın 6 Yolu",
     "category": "Satış Rehberi",
     "excerpt": "Daireyi listelemeden önce yapılacak küçük dokunuşlar, satış fiyatını ve satış hızını doğrudan etkiler. İşte pratik ve düşük maliyetli 6 öneri.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-9/1000/560",
+    "coverImage": "/assets/img/guides/ev-satarken-deger-artirma.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -306,7 +306,7 @@
     "title": "Dükkan / İş Yeri Kiralarken Dikkat Edilmesi Gerekenler",
     "category": "Kiralama Rehberi",
     "excerpt": "Ticari bir mekân kiralamadan önce ruhsat, işyeri açma izni ve kira sözleşmesi şartları gibi konularda bilmeniz gereken pratik bilgiler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-10/1000/560",
+    "coverImage": "/assets/img/guides/isyeri-kiralama-rehberi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -341,7 +341,7 @@
     "title": "DASK (Zorunlu Deprem Sigortası) Hakkında Bilmeniz Gerekenler",
     "category": "İşlem Rehberi",
     "excerpt": "Tapu devri ve kira sözleşmesi süreçlerinde zorunlu olan DASK poliçesi hakkında kapsam, prim hesaplama ve yenileme konusunda bilinmesi gerekenler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-11/1000/560",
+    "coverImage": "/assets/img/guides/dask-rehberi.svg",
     "readMinutes": 3,
     "publishedAt": "2026-08-31",
     "sections": [
@@ -375,7 +375,7 @@
       "kentsel-donusum"
     ],
     "excerpt": "Riskli yapı kararı alınan binalarda oturan malik ve kiracılar için kira yardımının şartları, başvuru mercileri ve süreç boyunca dikkat edilmesi gereken noktalar.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-12/1000/560",
+    "coverImage": "/assets/img/guides/6306-kira-yardimi-guncel.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-28",
     "sections": [
@@ -405,7 +405,7 @@
       "kentsel-donusum"
     ],
     "excerpt": "Kentsel dönüşüm sürecinin ilk ve en kritik adımı olan riskli yapı tespitinde, kat maliklerinin süreci uzatan veya hak kaybına yol açan yaygın hataları.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-13/1000/560",
+    "coverImage": "/assets/img/guides/riskli-yapi-tespitinde-sik-hatalar.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-29",
     "sections": [
@@ -439,7 +439,7 @@
       "kentsel-donusum"
     ],
     "excerpt": "Bir binanın kentsel dönüşüm sürecinde öncelikli değerlendirilmesini etkileyen yapı yaşı, zemin durumu ve imar planı gibi faktörler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-14/1000/560",
+    "coverImage": "/assets/img/guides/iskitler-kentsel-donusum-oncelik-kriterleri.svg",
     "readMinutes": 4,
     "publishedAt": "2026-08-30",
     "sections": [
@@ -469,7 +469,7 @@
       "kentsel-donusum"
     ],
     "excerpt": "Kentsel dönüşümde ev sahiplerinin en çok karşılaştığı iki sözleşme modeli — kat karşılığı ve anahtar teslim — arasındaki temel farklar ve avantajlar.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-15/1000/560",
+    "coverImage": "/assets/img/guides/kat-karsiligi-mi-anahtar-teslim-mi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-01",
     "sections": [
@@ -496,7 +496,7 @@
     "title": "Ev Alırken Dikkat Edilmesi Gereken 10 Teknik Nokta",
     "category": "Satın Alma Rehberi",
     "excerpt": "Fiyat ve konum dışında, bir daireyi almadan önce yerinde kontrol etmeniz gereken yapısal ve teknik detaylar — nem, tesisat, bina yaşı, aidat ve daha fazlası.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-16/1000/560",
+    "coverImage": "/assets/img/guides/ev-alirken-teknik-kontrol-listesi.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-01",
     "sections": [
@@ -547,7 +547,7 @@
     "title": "Bir Emlak Danışmanı Sizin İçin Ne Yapar? Emlakçının Görevleri",
     "category": "Rehber",
     "excerpt": "Emlak danışmanına neden ihtiyaç duyarsınız? Doğru fiyatlandırmadan evrak kontrolüne, pazarlıktan tapu sürecine kadar bir emlakçının üstlendiği görevler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-17/1000/560",
+    "coverImage": "/assets/img/guides/emlakcinin-gorevleri-nelerdir.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-01",
     "sections": [
@@ -582,7 +582,7 @@
     "title": "Arsa Alırken Bilinmesi Gereken Her Şey",
     "category": "Yatırım Rehberi",
     "excerpt": "Tapu türünden imar durumuna, kaks/emsal hesabından altyapıya kadar arsa alımında karşınıza çıkacak tüm kavramlar ve dikkat edilmesi gereken noktalar.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-18/1000/560",
+    "coverImage": "/assets/img/guides/arsa-hakkinda-bilinmesi-gerekenler.svg",
     "readMinutes": 6,
     "publishedAt": "2026-09-01",
     "sections": [
@@ -621,7 +621,7 @@
     "title": "Kiracı Hakları ve Yükümlülükleri Nelerdir?",
     "category": "Kiralama Rehberi",
     "excerpt": "Kira artışı, tahliye süreci, depozito iadesi ve bakım-onarım sorumluluğu — kiracı olarak bilmeniz gereken temel haklar ve yükümlülükler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-19/1000/560",
+    "coverImage": "/assets/img/guides/kiraci-haklari-ve-yukumlulukleri.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -652,7 +652,7 @@
     "title": "Ev Sahibi Olmanın Yükümlülükleri: Kiraya Verirken Bilinmesi Gerekenler",
     "category": "Kiralama Rehberi",
     "excerpt": "Kira sözleşmesi hazırlığından beyan yükümlülüğüne, bakım sorumluluğundan tahliye sürecine kadar bir ev sahibinin bilmesi gereken temel kurallar.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-20/1000/560",
+    "coverImage": "/assets/img/guides/ev-sahibi-yukumlulukleri-kiraya-verirken.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -683,7 +683,7 @@
     "title": "Gayrimenkulde Vergi Rehberi: Emlak Vergisi, Tapu Harcı ve Değer Artış Kazancı",
     "category": "Finansman Rehberi",
     "excerpt": "Gayrimenkul alım-satımında karşınıza çıkacak üç temel vergi/harç kalemi — emlak vergisi, tapu harcı ve değer artış kazancı vergisi — ne zaman, nasıl ve kim tarafından ödenir?",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-21/1000/560",
+    "coverImage": "/assets/img/guides/gayrimenkul-vergi-rehberi.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -714,7 +714,7 @@
     "title": "Devren Dükkan Alırken Nelere Dikkat Edilmeli?",
     "category": "Satın Alma Rehberi",
     "excerpt": "Demirbaş devrinden kira sözleşmesinin devredilebilirliğine, işletme kayıtlarından müşteri potansiyeline kadar devren dükkan alırken kontrol etmeniz gereken noktalar.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-22/1000/560",
+    "coverImage": "/assets/img/guides/devren-dukkan-alirken-dikkat.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -745,7 +745,7 @@
     "title": "Konut Kredisi Başvurusu Neden Reddedilir? 7 Yaygın Sebep",
     "category": "Finansman Rehberi",
     "excerpt": "Kredi notu düşüklüğünden ekspertiz değerine, gelir belgesi eksikliğinden gayrimenkulün imar durumuna kadar konut kredisi başvurularının en sık reddedilme sebepleri.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-23/1000/560",
+    "coverImage": "/assets/img/guides/konut-kredisi-neden-reddedilir.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -784,7 +784,7 @@
     "title": "2+1 mi 3+1 mi? Aile Büyüklüğüne Göre Doğru Daire Seçimi",
     "category": "Satın Alma Rehberi",
     "excerpt": "Bekar/çift, küçük aile ve büyük aile profillerine göre 1+1'den 4+1'e daire tipi seçiminde göz önünde bulundurulması gereken pratik kriterler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-24/1000/560",
+    "coverImage": "/assets/img/guides/2-1-mi-3-1-mi-daire-secimi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -815,7 +815,7 @@
     "title": "İskitler'de Ev Fiyatları Neye Göre Belirlenir?",
     "category": "Yatırım Rehberi",
     "excerpt": "Konum, bina yaşı, kat, cephe ve ulaşım gibi faktörlerin İskitler'de bir dairenin piyasa değerini nasıl etkilediğini anlamak için pratik bir rehber.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-25/1000/560",
+    "coverImage": "/assets/img/guides/iskitler-ev-fiyatlari-neye-gore-belirlenir.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -850,7 +850,7 @@
     "title": "Site mi Müstakil Bina mı? Daire Alırken Doğru Tercih",
     "category": "Satın Alma Rehberi",
     "excerpt": "Sosyal imkanlar, güvenlik ve aidat maliyeti açısından site içi ile müstakil binadaki bir dairenin artı ve eksilerini karşılaştırdık.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-26/1000/560",
+    "coverImage": "/assets/img/guides/site-mi-mustakil-bina-mi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -884,7 +884,7 @@
       "kentsel-donusum"
     ],
     "excerpt": "Altındağ Belediyesi, ofisimizin de bulunduğu Zübeyde Hanım Mahallesi'nde kentsel dönüşüm sürecini yürütmek üzere bir uzlaşma ofisi açtı. İşte hak sahiplerinin bilmesi gerekenler.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-27/1000/560",
+    "coverImage": "/assets/img/guides/zubeyde-hanim-kentsel-donusum-uzlasma-ofisi.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -915,7 +915,7 @@
     "title": "Kira Artış Oranı Nasıl Hesaplanır? Yasal Sınır ve Formül",
     "category": "Kiralama Rehberi",
     "excerpt": "Kira zammında yasal üst sınır TÜFE'nin 12 aylık ortalamasıdır. Formülü, sözleşmedeki geçersiz maddeleri ve güncel oranı nereden kontrol edeceğinizi anlatıyoruz.",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-28/1000/560",
+    "coverImage": "/assets/img/guides/kira-artis-orani-2026-nasil-hesaplanir.svg",
     "readMinutes": 4,
     "publishedAt": "2026-09-02",
     "sections": [
@@ -946,7 +946,7 @@
     "title": "Ankara'da Emlak Piyasası 2026: Fiyatlar Yükselirken Satışlar Neden Azalıyor?",
     "category": "Yatırım Rehberi",
     "excerpt": "Yerel ekonomi kaynaklarına göre Ankara'da konut fiyatları yıllık bazda güçlü artış gösterirken satış adetlerinin gerilediği bir tablo öne çıkıyor — bunun alıcı ve satıcılar için anlamı nedir?",
-    "coverImage": "https://picsum.photos/seed/iyg-rehber-29/1000/560",
+    "coverImage": "/assets/img/guides/ankara-emlak-piyasasi-2026-analiz.svg",
     "readMinutes": 5,
     "publishedAt": "2026-09-02",
     "sections": [

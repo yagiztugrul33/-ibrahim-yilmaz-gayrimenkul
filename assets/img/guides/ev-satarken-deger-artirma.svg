@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="Evinizi Satarken Değerini Artırmanın 6 Yolu">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a36"/>
+      <stop offset="100%" stop-color="#13294f"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003da5"/>
+      <stop offset="100%" stop-color="#dc1c2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="560" fill="url(#bg)"/>
+  <rect x="0" y="0" width="9" height="560" fill="url(#stripe)"/>
+  <g transform="translate(500,390) scale(3.1)" fill="none" stroke="#dc1c2e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M -50 -6 L -22 -6 L -6 -20 L 14 -2 L 34 -20 L 50 -6"/>
+    <path d="M -22 -6 L -8 8 L 10 -6 L 26 8 L 42 -6"/>
+    <line x1="-50" y1="-6" x2="-50" y2="16"/>
+    <line x1="50" y1="-6" x2="50" y2="16"/>
+  </g>
+  <text x="46" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#dc1c2e" font-weight="700" letter-spacing="1">SATIŞ REHBERI</text>
+  <text x="46" y="210" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#f4f6fa" font-weight="700">Evinizi Satarken Değerini 6</text>
+  <text x="46" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#f4f6fa" font-weight="700">Artırmanın Yolu</text>
+</svg>

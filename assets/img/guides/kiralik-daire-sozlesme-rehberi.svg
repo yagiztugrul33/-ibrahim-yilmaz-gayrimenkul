@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="Kiralık Daire Tutarken Depozito ve Sözleşme Rehberi">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a36"/>
+      <stop offset="100%" stop-color="#13294f"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003da5"/>
+      <stop offset="100%" stop-color="#dc1c2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="560" fill="url(#bg)"/>
+  <rect x="0" y="0" width="9" height="560" fill="url(#stripe)"/>
+  <g transform="translate(500,390) scale(3.1)" fill="none" stroke="#dc1c2e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="-30" cy="0" r="20"/>
+    <circle cx="-30" cy="0" r="7"/>
+    <line x1="-11" y1="14" x2="35" y2="60"/>
+    <line x1="10" y1="35" x2="22" y2="23"/>
+    <line x1="22" y1="47" x2="34" y2="35"/>
+  </g>
+  <text x="46" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#dc1c2e" font-weight="700" letter-spacing="1">KIRALAMA REHBERI</text>
+  <text x="46" y="210" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#f4f6fa" font-weight="700">Kiralık Daire Tutarken ve</text>
+  <text x="46" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#f4f6fa" font-weight="700">Depozito Sözleşme Rehberi</text>
+</svg>

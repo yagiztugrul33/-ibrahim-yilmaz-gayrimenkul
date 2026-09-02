@@ -572,6 +572,11 @@
     if (ogDesc) ogDesc.setAttribute("content", descText);
     var ogImg = document.querySelector('meta[property="og:image"]');
     if (ogImg && listing.images && listing.images[0]) ogImg.setAttribute("content", cfg.siteUrl + listing.images[0]);
+    var pageUrl = cfg.siteUrl + "/ilan-detay.html?id=" + encodeURIComponent(listing.id);
+    var canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) canonicalEl.setAttribute("href", pageUrl);
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", pageUrl);
 
     IYG.injectListingSchema(listing);
 
@@ -773,6 +778,11 @@
     if (ogTitle) ogTitle.setAttribute("content", guide.title);
     var ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", guide.excerpt);
+    var guidePageUrl = cfg.siteUrl + "/rehber-detay.html?id=" + encodeURIComponent(guide.id);
+    var guideCanonicalEl = document.querySelector('link[rel="canonical"]');
+    if (guideCanonicalEl) guideCanonicalEl.setAttribute("href", guidePageUrl);
+    var guideOgUrl = document.querySelector('meta[property="og:url"]');
+    if (guideOgUrl) guideOgUrl.setAttribute("content", guidePageUrl);
 
     document.getElementById("breadcrumb-current").textContent = guide.title;
     document.getElementById("guide-category").textContent = guide.category;

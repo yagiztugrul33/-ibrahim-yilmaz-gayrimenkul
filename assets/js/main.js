@@ -179,6 +179,17 @@
       el.setAttribute("href", "mailto:" + cfg.email);
     });
 
+    document.querySelectorAll("[data-cfg-google-review]").forEach(function (el) {
+      if (cfg.googleReviewUrl) {
+        el.setAttribute("href", cfg.googleReviewUrl);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+        el.classList.remove("hidden");
+      } else {
+        el.classList.add("hidden");
+      }
+    });
+
     document.querySelectorAll("[data-cfg-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
     });

@@ -72,9 +72,12 @@ window.SITE_CONFIG = {
   // SOSYAL MEDYA — TODO: doldurun, boş bırakılırsa site otomatik gizler
   // ------------------------------------------------------------------
   social: {
-    instagram: "", // TODO: örn. https://instagram.com/ibrahimyilmazgayrimenkul
+    instagram: "https://www.instagram.com/ibrahimyilmazgayrimenkul",
     facebook: ""   // TODO
   },
+
+  // Google Business Profile'ın ürettiği kısa yorum linki
+  googleReviewUrl: "https://g.page/r/CY-ZBeQmmDN4EBM/review",
 
   // ------------------------------------------------------------------
   // ALAN ADI

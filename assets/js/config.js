@@ -47,9 +47,12 @@ window.SITE_CONFIG = {
   mapsQuery: "Zübeyde Hanım Mahallesi, Aslanbey Caddesi No:46, Altındağ, Ankara",
 
   // Çalışma saatleri (insan tarafından okunabilir + schema.org için yapılandırılmış)
-  workingHoursDisplay: "Pazartesi - Cumartesi 09:00 - 19:00",
+  // Google Business Profile ile birebir eşleşmeli (NAP tutarlılığı için).
+  workingHoursDisplay: "Pzt-Salı 09:30-19:00, Çar-Cuma 09:00-19:00, Cmt 10:00-17:00",
   workingHoursSchema: [
-    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "09:00", closes: "19:00" }
+    { days: ["Monday", "Tuesday"], opens: "09:30", closes: "19:00" },
+    { days: ["Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "19:00" },
+    { days: ["Saturday"], opens: "10:00", closes: "17:00" }
   ],
 
   // ------------------------------------------------------------------

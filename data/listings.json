@@ -208,5 +208,40 @@
     "featured": false,
     "status": "aktif",
     "createdAt": "2026-08-25"
+  },
+  {
+    "id": "iyg-1007",
+    "title": "İskitler Zübeyde Hanım Mahallesi'nde Kiralık Ofis (3. Kat)",
+    "operation": "kiralik",
+    "category": "isyeri",
+    "price": 35000,
+    "currency": "TRY",
+    "city": "Ankara",
+    "district": "İskitler",
+    "addressText": "Zübeyde Hanım Mahallesi, İskitler, Altındağ / Ankara",
+    "rooms": null,
+    "areaGross": 90,
+    "areaNet": null,
+    "floor": "3. Kat",
+    "buildingFloors": null,
+    "buildingAge": null,
+    "heating": "Doğalgaz Kombi",
+    "bathrooms": 1,
+    "balcony": false,
+    "furnished": false,
+    "creditEligible": false,
+    "titleDeedStatus": "Kat Mülkiyetli",
+    "description": "İskitler Zübeyde Hanım Mahallesi'nde, 3. katta, geniş cepheli ve çok pencereli 90 m² boş ofis. Açık plan kullanım alanı, mutfak/çay ocağı köşesi ve tuvalet mevcut. Doğalgaz kombili, boş teslim.",
+    "features": ["Geniş Cepheli", "Çok Pencereli", "Açık Plan", "Mutfak / Çay Ocağı", "Doğalgaz Kombi", "Boş Teslim"],
+    "images": [
+      "/assets/img/listings/iyg-1007-a.svg",
+      "/assets/img/listings/iyg-1007-b.svg",
+      "/assets/img/listings/iyg-1007-c.svg"
+    ],
+    "lat": 39.9605,
+    "lng": 32.8271,
+    "featured": true,
+    "status": "aktif",
+    "createdAt": "2026-09-02"
   }
 ]

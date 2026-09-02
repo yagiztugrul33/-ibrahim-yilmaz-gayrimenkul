@@ -136,6 +136,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=kiraci-haklari-ve-yukumlulukleri</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=ev-sahibi-yukumlulukleri-kiraya-verirken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=gayrimenkul-vergi-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=devren-dukkan-alirken-dikkat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1001</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

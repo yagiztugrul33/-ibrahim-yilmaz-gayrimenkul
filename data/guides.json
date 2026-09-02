@@ -615,5 +615,129 @@
         "body": "İmar durumu uygun ve talep gören bir bölgede bulunan arsalar, doğrudan satış dışında müteahhitlerle kat karşılığı anlaşma yaparak da değerlendirilebilir. Bu seçeneğin cazip olup olmadığı; bölgedeki emsal paylaşım oranları ve müteahhit talebiyle doğrudan ilişkilidir."
       }
     ]
+  },
+  {
+    "id": "kiraci-haklari-ve-yukumlulukleri",
+    "title": "Kiracı Hakları ve Yükümlülükleri Nelerdir?",
+    "category": "Kiralama Rehberi",
+    "excerpt": "Kira artışı, tahliye süreci, depozito iadesi ve bakım-onarım sorumluluğu — kiracı olarak bilmeniz gereken temel haklar ve yükümlülükler.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-19/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-09-02",
+    "sections": [
+      {
+        "heading": "Kira Artışı Nasıl Belirlenir?",
+        "body": "Türk Borçlar Kanunu'na göre, konut kiralarında yıllık artış oranı sözleşmede belirtilen kira artış oranını veya yasal üst sınırı aşamaz. Güncel yasal artış sınırının her yıl değişebileceğini unutmayın; sözleşme yenileme döneminde ev sahibinizle görüşmeden önce o yılın geçerli oranını ilgili resmi kaynaklardan (Ticaret Bakanlığı, TÜİK duyuruları) teyit etmeniz sağlıklı olur."
+      },
+      {
+        "heading": "Depozito Hakkınız",
+        "body": "Depozito, kiracının olası hasar veya ödenmemiş faturalara karşı ev sahibine bıraktığı bir güvencedir; kira bedeli değildir ve tahliye sırasında hasar/borç yoksa eksiksiz iade edilmelidir. Depozitoyu makbuz karşılığında verin ve mümkünse taşınma öncesi/sonrası fotoğraflarla dairenin durumunu belgeleyin."
+      },
+      {
+        "heading": "Tahliye Süreci ve Bildirim Süresi",
+        "body": "Kiracı, sözleşmede belirtilen sürelere uyarak kira sözleşmesini feshedebilir; ev sahibinin de kiracıyı tahliye edebilmesi için kanunda belirtilen haklı sebeplerden birine dayanması gerekir (örneğin ihtiyaç nedeniyle tahliye, kiracının kira borcunu ödememesi gibi). Belirsiz veya haksız bir tahliye talebiyle karşılaşırsanız, bir hukuk danışmanına başvurmanız önerilir."
+      },
+      {
+        "heading": "Bakım-Onarım Sorumluluğu Kime Ait?",
+        "body": "Genel kural olarak, dairenin yapısal ve büyük onarımları (çatı, tesisat gibi) ev sahibine; günlük kullanımdan kaynaklanan küçük bakım ve tüketim giderleri (ampul, filtre değişimi gibi) kiracıya aittir. Bu ayrımı kira sözleşmesinde net şekilde belirtmek, ilerleyen anlaşmazlıkları önler."
+      },
+      {
+        "heading": "Demirbaş Listesi ve Teslim Tutanağı",
+        "body": "Taşınmadan önce dairedeki demirbaşları (beyaz eşya, mobilya varsa) ve mevcut hasarları listeleyen bir teslim tutanağı hazırlamak, tahliye sırasında \"hasar\" iddialarına karşı en güçlü kanıtınız olur."
+      }
+    ]
+  },
+  {
+    "id": "ev-sahibi-yukumlulukleri-kiraya-verirken",
+    "title": "Ev Sahibi Olmanın Yükümlülükleri: Kiraya Verirken Bilinmesi Gerekenler",
+    "category": "Kiralama Rehberi",
+    "excerpt": "Kira sözleşmesi hazırlığından beyan yükümlülüğüne, bakım sorumluluğundan tahliye sürecine kadar bir ev sahibinin bilmesi gereken temel kurallar.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-20/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-09-02",
+    "sections": [
+      {
+        "heading": "Kira Gelirinin Beyanı",
+        "body": "Elde edilen kira geliri, belirli bir istisna tutarının üzerindeyse yıllık gelir vergisi beyannamesiyle beyan edilmesi gerekir. İstisna tutarı ve vergi dilimleri her yıl güncellendiğinden, güncel rakamları vergi dairesinden veya bir mali müşavirden teyit etmeniz önemlidir."
+      },
+      {
+        "heading": "Yazılı Sözleşme Yapmanın Önemi",
+        "body": "Sözlü anlaşmalar da hukuken geçerli olsa da, kira bedeli, artış oranı, depozito tutarı ve demirbaş listesi gibi detayları içeren yazılı bir sözleşme, olası anlaşmazlıklarda en güçlü delilinizdir."
+      },
+      {
+        "heading": "Yapısal Bakım ve Onarım Yükümlülüğü",
+        "body": "Dairenin oturulabilir durumda tutulması, büyük tesisat ve yapısal sorunların giderilmesi genel olarak ev sahibinin sorumluluğundadır. Bu yükümlülüğü yerine getirmemek, kiracının haklı fesih hakkı doğurabilir."
+      },
+      {
+        "heading": "Kiracıyı Tahliye Etme Hakkının Sınırları",
+        "body": "Ev sahibi, kiracıyı yalnızca kanunda belirtilen haklı sebeplerle (ihtiyaç nedeniyle tahliye, kira borcunun ödenmemesi, sözleşmeye aykırı kullanım gibi) ve öngörülen usule uyarak tahliye edebilir. Usulüne uygun olmayan bir tahliye girişimi, ev sahibi için hukuki risk oluşturur."
+      },
+      {
+        "heading": "Doğru Kiracı Seçiminin Önemi",
+        "body": "Kira ödeme geçmişi, gelir durumu ve referansların değerlendirilmesi, ilerleyen dönemde yaşanabilecek ödeme sorunlarını en aza indirir. Bir emlak danışmanı üzerinden ilerlemek, bu ön değerlendirme sürecini kolaylaştırır ve süreci hukuki açıdan daha güvenli hale getirir."
+      }
+    ]
+  },
+  {
+    "id": "gayrimenkul-vergi-rehberi",
+    "title": "Gayrimenkulde Vergi Rehberi: Emlak Vergisi, Tapu Harcı ve Değer Artış Kazancı",
+    "category": "Finansman Rehberi",
+    "excerpt": "Gayrimenkul alım-satımında karşınıza çıkacak üç temel vergi/harç kalemi — emlak vergisi, tapu harcı ve değer artış kazancı vergisi — ne zaman, nasıl ve kim tarafından ödenir?",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-21/1000/560",
+    "readMinutes": 5,
+    "publishedAt": "2026-09-02",
+    "sections": [
+      {
+        "heading": "Emlak Vergisi Nedir, Ne Zaman Ödenir?",
+        "body": "Emlak vergisi, gayrimenkul sahiplerinin her yıl bağlı bulundukları belediyeye ödediği, gayrimenkulün vergi değerine göre hesaplanan bir vergidir. Genellikle yılda iki taksitte (Mart-Mayıs ve Kasım ayları içinde) ödenir; oranlar konut/işyeri/arsa türüne ve büyükşehir olup olmamasına göre değişir. Güncel oranları bağlı bulunduğunuz belediyenin emlak vergisi biriminden teyit edin."
+      },
+      {
+        "heading": "Tapu Harcı: Alıcı ve Satıcı Nasıl Öder?",
+        "body": "Tapu harcı, satış bedeli üzerinden hesaplanan ve tapu devri sırasında ödenen bir harçtır; uygulamada genellikle alıcı ve satıcı arasında eşit paylaşılır, ancak bu konuda taraflar farklı bir anlaşmaya da varabilir. Tapu devri gerçekleşmeden önce güncel harç oranını tapu müdürlüğünden veya danışmanınızdan öğrenmeniz önerilir."
+      },
+      {
+        "heading": "Değer Artış Kazancı Vergisi",
+        "body": "Bir gayrimenkulü, edinim tarihinden itibaren kanunda belirtilen süre (halihazırda 5 yıl) dolmadan satarsanız, satıştan elde ettiğiniz kazanç üzerinden değer artış kazancı vergisi doğabilir. Bu süre dolduktan sonra yapılan satışlarda genellikle bu vergi söz konusu olmaz. Kesin hesaplama ve istisna tutarları için satış öncesi bir mali müşavire danışmanız, sürpriz bir vergi yüküyle karşılaşmanızı önler."
+      },
+      {
+        "heading": "DASK Zorunlu Deprem Sigortası ile Karışıklık",
+        "body": "Emlak vergisi ve DASK farklı yükümlülüklerdir: emlak vergisi belediyeye, DASK ise sigorta şirketine ödenir ve konut satışı/kiralaması ile tapu işlemlerinde ayrı ayrı talep edilir. DASK hakkında detaylı bilgi için sitemizdeki DASK rehberimize göz atabilirsiniz."
+      },
+      {
+        "heading": "Vergi Sürecinde Danışmanlık Almanın Değeri",
+        "body": "Vergi oranları ve istisna tutarları yıldan yıla güncellenebildiği için, alım-satım öncesi güncel rakamları resmi kaynaklardan veya bir mali müşavirden teyit etmek, işlemin toplam maliyetini doğru öngörmenizi sağlar."
+      }
+    ]
+  },
+  {
+    "id": "devren-dukkan-alirken-dikkat",
+    "title": "Devren Dükkan Alırken Nelere Dikkat Edilmeli?",
+    "category": "Satın Alma Rehberi",
+    "excerpt": "Demirbaş devrinden kira sözleşmesinin devredilebilirliğine, işletme kayıtlarından müşteri potansiyeline kadar devren dükkan alırken kontrol etmeniz gereken noktalar.",
+    "coverImage": "https://picsum.photos/seed/iyg-rehber-22/1000/560",
+    "readMinutes": 4,
+    "publishedAt": "2026-09-02",
+    "sections": [
+      {
+        "heading": "Devren Ne Demektir?",
+        "body": "Devren satış, bir işletmenin demirbaşları, kira sözleşmesi ve bazen işletme kaydıyla birlikte mevcut haliyle yeni sahibine devredilmesidir. Bu, sıfırdan bir dükkan açmaya kıyasla zaman ve kurulum maliyeti avantajı sağlar, ancak devraldığınız işletmenin geçmişini de beraberinde getirir."
+      },
+      {
+        "heading": "Kira Sözleşmesi Devredilebilir mi?",
+        "body": "Devren alımın en kritik noktalarından biri, mevcut kira sözleşmesinin mülk sahibinin onayıyla yeni işletmeciye devredilip devredilemeyeceğidir. Bu onay alınmadan yapılan bir devren anlaşması, yeni işletmeciyi mülk sahibiyle sıfırdan sözleşme yapma zorunluluğuyla karşı karşıya bırakabilir."
+      },
+      {
+        "heading": "Demirbaş ve Ekipman Listesi",
+        "body": "Devir bedeline hangi demirbaşların (raf, vitrin, soğutucu, kasa sistemi gibi) dahil olduğu net şekilde yazılı hale getirilmeli; çalışır durumda olup olmadıkları teslim öncesi kontrol edilmelidir."
+      },
+      {
+        "heading": "Varsa Borç ve Yükümlülüklerin Kontrolü",
+        "body": "İşletmenin elektrik, su, doğalgaz aboneliklerinde birikmiş borç olup olmadığı, varsa tedarikçilere olan ödenmemiş borçlar devir öncesi netleştirilmelidir. Devir sonrası ortaya çıkan eski bir borç, yeni işletmeciye yansıyabilir."
+      },
+      {
+        "heading": "Müşteri Potansiyeli Gerçekten Devrediyor mu?",
+        "body": "\"Hazır müşteri potansiyeli\" vaadi, işin niteliğine göre değişir — bir mahalle bakkalının müşteri sadakati genellikle mekâna bağlıyken, marka bağımlı bir işin müşteri kitlesi eski işletmeciyle birlikte gidebilir. Devir öncesi işletmenin son dönem ciro/yoğunluk bilgisini, mümkünse belgeye dayalı olarak sorun."
+      }
+    ]
   }
 ]

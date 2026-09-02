@@ -234,9 +234,12 @@
     "description": "İskitler Zübeyde Hanım Mahallesi'nde, 3. katta, geniş cepheli ve çok pencereli 90 m² boş ofis. Açık plan kullanım alanı, mutfak/çay ocağı köşesi ve tuvalet mevcut. Doğalgaz kombili, boş teslim.",
     "features": ["Geniş Cepheli", "Çok Pencereli", "Açık Plan", "Mutfak / Çay Ocağı", "Doğalgaz Kombi", "Boş Teslim"],
     "images": [
-      "/assets/img/listings/iyg-1007-a.svg",
-      "/assets/img/listings/iyg-1007-b.svg",
-      "/assets/img/listings/iyg-1007-c.svg"
+      "/assets/img/listings/iyg-1007-1.jpg",
+      "/assets/img/listings/iyg-1007-2.jpg",
+      "/assets/img/listings/iyg-1007-3.jpg",
+      "/assets/img/listings/iyg-1007-4.jpg",
+      "/assets/img/listings/iyg-1007-5.jpg",
+      "/assets/img/listings/iyg-1007-6.jpg"
     ],
     "lat": 39.9605,
     "lng": 32.8271,

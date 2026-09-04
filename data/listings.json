@@ -113,5 +113,42 @@
     "featured": true,
     "status": "aktif",
     "createdAt": "2026-09-02"
+  },
+  {
+    "id": "iyg-1010",
+    "title": "Danişment'te Kentsel Dönüşüm İçinde 2+1 Daire Getirili Fırsat Arsa",
+    "operation": "satilik",
+    "category": "arsa",
+    "price": 3900000,
+    "currency": "TRY",
+    "city": "Ankara",
+    "district": "Danişment",
+    "addressText": "Danişment Mahallesi, Altındağ / Ankara",
+    "rooms": null,
+    "areaGross": 83,
+    "areaNet": 83,
+    "floor": null,
+    "buildingFloors": null,
+    "buildingAge": null,
+    "heating": null,
+    "bathrooms": null,
+    "balcony": false,
+    "furnished": false,
+    "creditEligible": true,
+    "titleDeedStatus": "Müstakil Tapulu",
+    "description": "Danişment Mahallesi'nde, resmi kentsel dönüşüm sınırları içinde yer alan 83 m² fırsat arsa. 1.6 emsal değeriyle, kat karşılığı anlaşmalarda 2+1 daire getirisi sunan yatırımlık bir fırsat. Bölgede kentsel dönüşüm süreci aktif şekilde ilerliyor; çevrede yeni inşa edilen konut projeleri bulunuyor. Değerlenme potansiyeli yüksek, hızlı karar verecek yatırımcılar için avantajlı bir seçenek.",
+    "features": ["1.6 Emsal", "Kentsel Dönüşüm Bölgesi", "2+1 Daire Getirisi", "Kat Karşılığı Değerlendirilebilir", "Yatırıma Uygun"],
+    "images": [
+      "/assets/img/listings/iyg-1010-1.jpg",
+      "/assets/img/listings/iyg-1010-2.jpg",
+      "/assets/img/listings/iyg-1010-3.jpg",
+      "/assets/img/listings/iyg-1010-4.jpg",
+      "/assets/img/listings/iyg-1010-5.jpg"
+    ],
+    "lat": 39.9522,
+    "lng": 32.8477,
+    "featured": true,
+    "status": "aktif",
+    "createdAt": "2026-09-04"
   }
 ]

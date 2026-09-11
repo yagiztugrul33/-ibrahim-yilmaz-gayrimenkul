@@ -161,7 +161,18 @@ async function withLandingItemList(request, env, config) {
   };
 
   const script = '<script type="application/ld+json" id="ld-schema-itemlist">' + safeJsonLd(itemList) + "</script>";
-  return new HTMLRewriter().on("head", new HeadInjector(script)).transform(assetResp);
+  const rewritten = new HTMLRewriter().on("head", new HeadInjector(script)).transform(assetResp);
+  return withNoCache(rewritten);
+}
+
+// Bu dinamik (ilana/bölgeye özel) yanıtların kenarda (edge) veya tarayıcıda
+// bayatlamış/yanlış içerikle önbelleklenmesini engeller — run_worker_first
+// olmadan zaten Worker'a hiç uğramıyorlardı; olsa bile query string'e göre
+// değişen içerik varsayılan asset önbellek anahtarında ayrışmayabilir.
+function withNoCache(response) {
+  const r = new Response(response.body, response);
+  r.headers.set("Cache-Control", "no-cache");
+  return r;
 }
 
 async function fetchJsonAsset(request, env, path) {
@@ -323,7 +334,7 @@ function safeJsonLd(obj) {
 
 function applySeoRewrite(assetResp, meta, schema) {
   var schemaScript = '<script type="application/ld+json" id="ld-schema">' + safeJsonLd(schema) + "</script>";
-  return new HTMLRewriter()
+  var rewritten = new HTMLRewriter()
     .on("title", new TextSetter(meta.title))
     .on('meta[name="description"]', new AttrSetter("content", meta.description))
     .on('link[rel="canonical"]', new AttrSetter("href", meta.url))
@@ -336,6 +347,7 @@ function applySeoRewrite(assetResp, meta, schema) {
     .on('meta[name="twitter:image"]', new AttrSetter("content", meta.image))
     .on("head", new HeadInjector(schemaScript))
     .transform(assetResp);
+  return withNoCache(rewritten);
 }
 
 // ---------------------------------------------------------------------

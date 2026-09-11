@@ -24,12 +24,12 @@
     "description": "İskitler Zübeyde Hanım Mahallesi'nde, 3. katta, geniş cepheli ve çok pencereli 90 m² boş ofis. Açık plan kullanım alanı, mutfak/çay ocağı köşesi ve tuvalet mevcut. Doğalgaz kombili, boş teslim.",
     "features": ["Geniş Cepheli", "Çok Pencereli", "Açık Plan", "Mutfak / Çay Ocağı", "Doğalgaz Kombi", "Boş Teslim"],
     "images": [
-      "/assets/img/listings/iyg-1007-1.jpg",
-      "/assets/img/listings/iyg-1007-2.jpg",
-      "/assets/img/listings/iyg-1007-3.jpg",
-      "/assets/img/listings/iyg-1007-4.jpg",
-      "/assets/img/listings/iyg-1007-5.jpg",
-      "/assets/img/listings/iyg-1007-6.jpg"
+      "/assets/img/listings/iyg-1007-1.webp",
+      "/assets/img/listings/iyg-1007-2.webp",
+      "/assets/img/listings/iyg-1007-3.webp",
+      "/assets/img/listings/iyg-1007-4.webp",
+      "/assets/img/listings/iyg-1007-5.webp",
+      "/assets/img/listings/iyg-1007-6.webp"
     ],
     "lat": 39.9605,
     "lng": 32.8271,
@@ -62,13 +62,13 @@
     "description": "İskitler Zübeyde Hanım Mahallesi'nde, 2. katta, 110 m² kullanım alanlı 3+1 satılık daire. Ferah salon, laminant parke zemin, doğalgaz kombili ve kapalı balkonlu. Sakin bir sokakta, ana yollara ve toplu taşımaya yakın konumda.",
     "features": ["3+1", "Doğalgaz Kombi", "Kapalı Balkon", "Laminant Parke", "Ferah Salon"],
     "images": [
-      "/assets/img/listings/iyg-1008-1.jpg",
-      "/assets/img/listings/iyg-1008-2.jpg",
-      "/assets/img/listings/iyg-1008-3.jpg",
-      "/assets/img/listings/iyg-1008-4.jpg",
-      "/assets/img/listings/iyg-1008-5.jpg",
-      "/assets/img/listings/iyg-1008-6.jpg",
-      "/assets/img/listings/iyg-1008-7.jpg"
+      "/assets/img/listings/iyg-1008-1.webp",
+      "/assets/img/listings/iyg-1008-2.webp",
+      "/assets/img/listings/iyg-1008-3.webp",
+      "/assets/img/listings/iyg-1008-4.webp",
+      "/assets/img/listings/iyg-1008-5.webp",
+      "/assets/img/listings/iyg-1008-6.webp",
+      "/assets/img/listings/iyg-1008-7.webp"
     ],
     "lat": 39.9605,
     "lng": 32.8271,
@@ -101,12 +101,12 @@
     "description": "İskitler Zübeyde Hanım Mahallesi'nde, Nezih Aile Apartmanı'nda, giriş katta 2+1 kiralık daire. Boş teslim, taşınmaya hazır durumda. Eczane ve ana caddeye yürüme mesafesinde, ulaşımı kolay bir konumda.",
     "features": ["Giriş Kat", "Boş Teslim", "Ana Cadde Yakını"],
     "images": [
-      "/assets/img/listings/iyg-1009-1.jpg",
-      "/assets/img/listings/iyg-1009-2.jpg",
-      "/assets/img/listings/iyg-1009-3.jpg",
-      "/assets/img/listings/iyg-1009-4.jpg",
-      "/assets/img/listings/iyg-1009-5.jpg",
-      "/assets/img/listings/iyg-1009-6.jpg"
+      "/assets/img/listings/iyg-1009-1.webp",
+      "/assets/img/listings/iyg-1009-2.webp",
+      "/assets/img/listings/iyg-1009-3.webp",
+      "/assets/img/listings/iyg-1009-4.webp",
+      "/assets/img/listings/iyg-1009-5.webp",
+      "/assets/img/listings/iyg-1009-6.webp"
     ],
     "lat": 39.9605,
     "lng": 32.8271,
@@ -139,11 +139,11 @@
     "description": "Danişment Mahallesi'nde, resmi kentsel dönüşüm sınırları içinde yer alan 83 m² fırsat arsa. 1.6 emsal değeriyle, kat karşılığı anlaşmalarda 2+1 daire getirisi sunan yatırımlık bir fırsat. Bölgede kentsel dönüşüm süreci aktif şekilde ilerliyor; çevrede yeni inşa edilen konut projeleri bulunuyor. Değerlenme potansiyeli yüksek, hızlı karar verecek yatırımcılar için avantajlı bir seçenek.",
     "features": ["1.6 Emsal", "Kentsel Dönüşüm Bölgesi", "2+1 Daire Getirisi", "Kat Karşılığı Değerlendirilebilir", "Yatırıma Uygun"],
     "images": [
-      "/assets/img/listings/iyg-1010-1.jpg",
-      "/assets/img/listings/iyg-1010-2.jpg",
-      "/assets/img/listings/iyg-1010-3.jpg",
-      "/assets/img/listings/iyg-1010-4.jpg",
-      "/assets/img/listings/iyg-1010-5.jpg"
+      "/assets/img/listings/iyg-1010-1.webp",
+      "/assets/img/listings/iyg-1010-2.webp",
+      "/assets/img/listings/iyg-1010-3.webp",
+      "/assets/img/listings/iyg-1010-4.webp",
+      "/assets/img/listings/iyg-1010-5.webp"
     ],
     "lat": 39.9522,
     "lng": 32.8477,

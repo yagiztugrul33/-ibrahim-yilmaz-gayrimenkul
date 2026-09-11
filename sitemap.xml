@@ -46,6 +46,41 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-daire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/iskitler-kiralik-daire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-dukkan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/iskitler-kiralik-dukkan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-arsa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/altindag-satilik-daire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/altindag-kiralik-daire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=iskitler-ev-alma-rehberi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

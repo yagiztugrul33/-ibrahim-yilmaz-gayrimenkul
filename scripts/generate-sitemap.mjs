@@ -18,7 +18,14 @@ const STATIC_PAGES = [
   { loc: "degerleme.html", changefreq: "monthly", priority: "0.7" },
   { loc: "rehberler.html", changefreq: "weekly", priority: "0.7" },
   { loc: "sss.html", changefreq: "monthly", priority: "0.6" },
-  { loc: "rehberler.html?konu=kentsel-donusum", changefreq: "weekly", priority: "0.7" }
+  { loc: "rehberler.html?konu=kentsel-donusum", changefreq: "weekly", priority: "0.7" },
+  { loc: "iskitler-satilik-daire", changefreq: "weekly", priority: "0.9" },
+  { loc: "iskitler-kiralik-daire", changefreq: "weekly", priority: "0.9" },
+  { loc: "iskitler-satilik-dukkan", changefreq: "weekly", priority: "0.8" },
+  { loc: "iskitler-kiralik-dukkan", changefreq: "weekly", priority: "0.8" },
+  { loc: "iskitler-satilik-arsa", changefreq: "weekly", priority: "0.8" },
+  { loc: "altindag-satilik-daire", changefreq: "weekly", priority: "0.9" },
+  { loc: "altindag-kiralik-daire", changefreq: "weekly", priority: "0.9" }
 ];
 
 function xmlEscape(str) {

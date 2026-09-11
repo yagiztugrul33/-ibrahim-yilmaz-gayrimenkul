@@ -266,6 +266,9 @@
   // schema.org yapısal veri — RealEstateAgent / LocalBusiness (her sayfa)
   // ----------------------------------------------------------------------
   IYG.injectLocalBusinessSchema = function () {
+    // index.html'de bu şema zaten statik olarak (id="ld-schema-local")
+    // gömülü — JS çalışmayan botlar da görsün diye. Tekrar eklemeyelim.
+    if (document.getElementById("ld-schema-local")) return;
     var cfg = IYG.getConfig();
     var openingHours = (cfg.workingHoursSchema || []).map(function (row) {
       return {
@@ -597,7 +600,7 @@
     mainImg.src = images[0];
     mainImg.alt = listing.title;
     thumbsWrap.innerHTML = images
-      .map(function (src, i) { return '<img src="' + src + '" alt="Görsel ' + (i + 1) + '" class="' + (i === 0 ? "active" : "") + '">'; })
+      .map(function (src, i) { return '<img src="' + src + '" alt="' + escapeHtml(listing.title) + ' - Görsel ' + (i + 1) + '" class="' + (i === 0 ? "active" : "") + '">'; })
       .join("");
     thumbsWrap.querySelectorAll("img").forEach(function (img) {
       img.addEventListener("click", function () {
@@ -703,7 +706,7 @@
     return (
       '<article class="guide-card">' +
       '<a class="guide-thumb" href="rehber-detay.html?id=' + encodeURIComponent(g.id) + '">' +
-      '<img src="' + g.coverImage + '" alt="" loading="lazy"></a>' +
+      '<img src="' + g.coverImage + '" alt="' + escapeHtml(g.title) + '" loading="lazy"></a>' +
       '<div class="guide-body">' +
       '<span class="eyebrow">' + escapeHtml(g.category) + '</span>' +
       '<h3><a href="rehber-detay.html?id=' + encodeURIComponent(g.id) + '">' + escapeHtml(g.title) + '</a></h3>' +
@@ -843,6 +846,35 @@
   };
 
   // ----------------------------------------------------------------------
+  // BÖLGESEL LANDING SAYFALARI (ör. /iskitler-satilik-daire)
+  // body[data-landing-operation/category/district] üzerinden filtrelenmiş
+  // ilanları listeler. district boş bırakılırsa (ör. Altındağ genel
+  // sayfaları) tüm bölgeler dahil edilir.
+  // ----------------------------------------------------------------------
+  IYG.initLandingPage = async function () {
+    var body = document.body;
+    var operation = body.getAttribute("data-landing-operation") || "";
+    var category = body.getAttribute("data-landing-category") || "";
+    var district = body.getAttribute("data-landing-district") || "";
+
+    var all = await IYG.getListings();
+    var filtered = all.filter(function (l) {
+      if ((l.status || "aktif") !== "aktif") return false;
+      if (operation && l.operation !== operation) return false;
+      if (category && l.category !== category) return false;
+      if (district && l.district !== district) return false;
+      return true;
+    });
+
+    var grid = document.getElementById("landing-listings");
+    var empty = document.getElementById("landing-empty");
+    var countEl = document.getElementById("result-count");
+    if (grid) grid.innerHTML = filtered.map(IYG.listingCardHTML).join("");
+    if (empty) empty.classList.toggle("hidden", filtered.length > 0);
+    if (countEl) countEl.textContent = filtered.length ? filtered.length + " ilan bulundu" : "";
+  };
+
+  // ----------------------------------------------------------------------
   // Sayfa açılışında ortak kurulum
   // ----------------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", function () {
@@ -860,5 +892,6 @@
     if (page === "guides") IYG.initGuidesPage();
     if (page === "guide-detail") IYG.initGuideDetailPage();
     if (page === "valuation") IYG.initValuationPage();
+    if (page === "landing") IYG.initLandingPage();
   });
 })();

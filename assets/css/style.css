@@ -213,11 +213,16 @@ main { display: block; min-height: 60vh; }
 .gallery { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); background: #e9e6dd; }
 .gallery .main-image { aspect-ratio: 16/10; overflow: hidden; }
 .gallery .main-image img { width: 100%; height: 100%; object-fit: cover; }
-.gallery .thumbs { display: flex; gap: 8px; padding: 10px; background: #fff; overflow-x: auto; }
+.gallery .thumbs { display: flex; gap: 8px; padding: 10px; background: #fff; overflow-x: auto; min-height: 80px; }
 .gallery .thumbs img { width: 84px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; }
 .gallery .thumbs img.active { border-color: var(--color-gold); }
 
-.feature-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+/* İlan verisi async yüklendiği için (JSON fetch) bu alanlar başlangıçta
+   boştur; min-height, veri geldiğinde oluşan ani CLS (layout shift)
+   sıçramasını azaltmak için kabaca içerik boyutuna yakın bir alan ayırır. */
+#detail-desc { display: block; min-height: 60px; }
+
+.feature-table { width: 100%; border-collapse: collapse; margin: 16px 0; min-height: 320px; }
 .feature-table th, .feature-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--color-border); font-size: .92rem; }
 .feature-table th { width: 42%; color: var(--color-text-muted); font-weight: 600; }
 .chip-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }

@@ -37,6 +37,24 @@ const OG_FALLBACK_IMAGE = SITE_URL + "/assets/img/og-cover.png";
 const OPERATION_LABELS = { kiralik: "Kiralık", satilik: "Satılık" };
 const CATEGORY_LABELS = { daire: "Daire", dukkan: "Dükkan", isyeri: "İş Yeri", arsa: "Arsa", devren: "Devren", sanayi: "Fabrika / Sanayi" };
 
+// Bölgesel landing sayfaları — /iskitler-satilik-daire vb. Her istekte
+// data/listings.json'daki GÜNCEL ilanlara göre ItemList JSON-LD enjekte
+// edilir; sayfa içeriği statik kalsa da ilan listesi hiç bayatlamaz.
+const LANDING_PAGES = {
+  "/iskitler-satilik-daire": { operation: "satilik", category: "daire", district: "İskitler" },
+  "/iskitler-kiralik-daire": { operation: "kiralik", category: "daire", district: "İskitler" },
+  "/iskitler-satilik-dukkan": { operation: "satilik", category: "dukkan", district: "İskitler" },
+  "/iskitler-kiralik-dukkan": { operation: "kiralik", category: "dukkan", district: "İskitler" },
+  "/iskitler-satilik-arsa": { operation: "satilik", category: "arsa", district: "İskitler" },
+  "/altindag-satilik-daire": { operation: "satilik", category: "daire", district: null },
+  "/altindag-kiralik-daire": { operation: "kiralik", category: "daire", district: null }
+};
+
+function normalizedLandingPath(pathname) {
+  var p = pathname.replace(/\.html$/, "").replace(/\/+$/, "");
+  return p === "" ? "/" : p;
+}
+
 function haberKaynaklari(sorgu) {
   return [
     {
@@ -61,6 +79,10 @@ export default {
     }
     if (url.pathname === "/rehber-detay.html" && url.searchParams.has("id")) {
       return withSeoMeta(request, env, "rehber");
+    }
+    const landingConfig = LANDING_PAGES[normalizedLandingPath(url.pathname)];
+    if (landingConfig) {
+      return withLandingItemList(request, env, landingConfig);
     }
     return env.ASSETS.fetch(request);
   }
@@ -96,6 +118,50 @@ async function withSeoMeta(request, env, kind) {
   const meta = kind === "ilan" ? buildIlanMeta(item) : buildRehberMeta(item);
   const schema = kind === "ilan" ? buildListingSchema(item) : buildGuideSchema(item);
   return applySeoRewrite(assetResp, meta, schema);
+}
+
+// ---------------------------------------------------------------------
+// Bölgesel landing sayfaları — canlı ItemList JSON-LD enjeksiyonu
+// ---------------------------------------------------------------------
+
+async function withLandingItemList(request, env, config) {
+  const assetResp = await env.ASSETS.fetch(request);
+  if (!assetResp.ok) return assetResp; // .html uzantılı istekte auto-trailing-slash redirect'i olduğu gibi döner
+
+  const contentType = assetResp.headers.get("content-type") || "";
+  if (!contentType.includes("text/html")) return assetResp;
+
+  let listings;
+  try {
+    listings = await fetchJsonAsset(request, env, "/data/listings.json");
+  } catch (e) {
+    return assetResp;
+  }
+
+  const filtered = listings.filter(function (l) {
+    if ((l.status || "aktif") !== "aktif") return false;
+    if (config.operation && l.operation !== config.operation) return false;
+    if (config.category && l.category !== config.category) return false;
+    if (config.district && l.district !== config.district) return false;
+    return true;
+  });
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    numberOfItems: filtered.length,
+    itemListElement: filtered.map(function (l, i) {
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        url: SITE_URL + "/ilan-detay.html?id=" + encodeURIComponent(l.id),
+        name: l.title
+      };
+    })
+  };
+
+  const script = '<script type="application/ld+json" id="ld-schema-itemlist">' + safeJsonLd(itemList) + "</script>";
+  return new HTMLRewriter().on("head", new HeadInjector(script)).transform(assetResp);
 }
 
 async function fetchJsonAsset(request, env, path) {
@@ -249,8 +315,14 @@ class HeadInjector {
   }
 }
 
+// JSON-LD'yi <script> içine güvenle gömmek için "<" karakterlerini kaçışlar
+// (ör. bir ilan başlığında "</script>" geçmesi ihtimaline karşı).
+function safeJsonLd(obj) {
+  return JSON.stringify(obj).replace(/</g, "\\u003c");
+}
+
 function applySeoRewrite(assetResp, meta, schema) {
-  var schemaScript = '<script type="application/ld+json" id="ld-schema">' + JSON.stringify(schema) + "</script>";
+  var schemaScript = '<script type="application/ld+json" id="ld-schema">' + safeJsonLd(schema) + "</script>";
   return new HTMLRewriter()
     .on("title", new TextSetter(meta.title))
     .on('meta[name="description"]', new AttrSetter("content", meta.description))
@@ -259,6 +331,9 @@ function applySeoRewrite(assetResp, meta, schema) {
     .on('meta[property="og:description"]', new AttrSetter("content", meta.description))
     .on('meta[property="og:url"]', new AttrSetter("content", meta.url))
     .on('meta[property="og:image"]', new AttrSetter("content", meta.image))
+    .on('meta[name="twitter:title"]', new AttrSetter("content", meta.title))
+    .on('meta[name="twitter:description"]', new AttrSetter("content", meta.description))
+    .on('meta[name="twitter:image"]', new AttrSetter("content", meta.image))
     .on("head", new HeadInjector(schemaScript))
     .transform(assetResp);
 }
@@ -407,5 +482,8 @@ export const __test__ = {
   buildIlanMeta,
   buildListingSchema,
   buildRehberMeta,
-  buildGuideSchema
+  buildGuideSchema,
+  LANDING_PAGES,
+  normalizedLandingPath,
+  safeJsonLd
 };

@@ -93,19 +93,31 @@ function headerSafe(value) {
 async function handleFetch(request, env, ctx, debug) {
     const url = new URL(request.url);
     if (url.pathname === "/api/haberler") {
+      if (debug) debug["x-route"] = "haberler";
       return handleHaberler(request, ctx);
     }
 
     // Kanonik URL: /index.html -> / (301 kalıcı). Ana sayfanın tek adresi
     // kök olsun, iki farklı URL aynı içeriği sunmasın.
     if (url.pathname === "/index.html") {
+      if (debug) debug["x-route"] = "index-redirect";
       return Response.redirect(SITE_URL + "/" + url.search, 301);
     }
 
-    if (url.pathname === "/ilan-detay.html" && url.searchParams.has("id")) {
+    if (url.pathname === "/ilan-detay.html") {
+      if (!url.searchParams.has("id")) {
+        if (debug) debug["x-route"] = "ilan-detay-no-id-param";
+        return env.ASSETS.fetch(request);
+      }
+      if (debug) debug["x-route"] = "ilan-detay";
       return withSeoMeta(request, env, "ilan", debug);
     }
-    if (url.pathname === "/rehber-detay.html" && url.searchParams.has("id")) {
+    if (url.pathname === "/rehber-detay.html") {
+      if (!url.searchParams.has("id")) {
+        if (debug) debug["x-route"] = "rehber-detay-no-id-param";
+        return env.ASSETS.fetch(request);
+      }
+      if (debug) debug["x-route"] = "rehber-detay";
       return withSeoMeta(request, env, "rehber", debug);
     }
 
@@ -115,15 +127,19 @@ async function handleFetch(request, env, ctx, debug) {
       // Kanonik URL: /<slug>.html -> /<slug> (301 kalıcı). Aynı landing
       // sayfası iki farklı URL'den (çift/duplicate content) servis edilmesin.
       if (url.pathname.endsWith(".html")) {
+        if (debug) debug["x-route"] = "landing-redirect:" + landingPath;
         return Response.redirect(SITE_URL + landingPath + url.search, 301);
       }
+      if (debug) debug["x-route"] = "landing:" + landingPath;
       return withLandingItemList(request, env, landingConfig, debug);
     }
 
     if (url.pathname === "/ilanlar.html") {
+      if (debug) debug["x-route"] = "ilanlar";
       return withLandingItemList(request, env, {}, debug);
     }
 
+    if (debug) debug["x-route"] = "asset-passthrough";
     return env.ASSETS.fetch(request);
 }
 
@@ -135,9 +151,11 @@ async function withSeoMeta(request, env, kind, debug) {
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   const assetResp = await env.ASSETS.fetch(request);
+  if (debug) debug["x-asset-status"] = assetResp.status;
   if (!id || !assetResp.ok) return assetResp;
 
   const contentType = assetResp.headers.get("content-type") || "";
+  if (debug) debug["x-content-type"] = contentType;
   if (!contentType.includes("text/html")) return assetResp;
 
   let item = null;
@@ -192,6 +210,7 @@ async function withLandingItemList(request, env, config, debug) {
     if (config.district && l.district !== config.district) return false;
     return true;
   });
+  if (debug) debug["x-price-matched"] = filtered.length;
 
   const itemList = {
     "@context": "https://schema.org",

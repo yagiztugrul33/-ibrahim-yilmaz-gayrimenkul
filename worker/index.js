@@ -70,23 +70,27 @@ function haberKaynaklari(sorgu) {
 
 export default {
   async fetch(request, env, ctx) {
-    const response = await handleFetch(request, env, ctx);
-    // GEÇİCİ TEŞHİS HEADER'I: run_worker_first'ün canlıda gerçekten devrede
-    // olup olmadığını (Worker'ın bu istek için hiç çalışıp çalışmadığını)
-    // kanıtlamak için eklendi. Cloudflare Community'de bilinen bir platform
-    // sorunu var: assets.run_worker_first bazen deploy edilen worker
-    // versiyonuna yanlışlıkla false olarak kaydediliyor (config doğru olsa
-    // bile). Bu header varsa Worker çalışmış demektir; yoksa (aynı domain'e
-    // run_worker_first'te OLMAYAN bir path'le karşılaştırınca da yoksa)
-    // asset katmanı Worker'ı hiç çağırmadan cevap veriyor demektir.
-    // Doğrulama sonrası kaldırılacak.
+    // GEÇİCİ TEŞHİS: bu isteğe özel, module-level DEĞİL (concurrent
+    // isteklerin birbirine karışmaması için) bir debug header çantası.
+    // Alt fonksiyonlar buraya data/listings.json ve data/guides.json'un
+    // kaç öğe döndürdüğünü (veya hata mesajını) yazıyor; en sonda hepsi
+    // yanıta header olarak ekleniyor. Doğrulama sonrası kaldırılacak.
+    const debug = {};
+    const response = await handleFetch(request, env, ctx, debug);
     const withDebugHeader = new Response(response.body, response);
     withDebugHeader.headers.set("x-worker-ran", "1");
+    for (const key of Object.keys(debug)) {
+      withDebugHeader.headers.set(key, headerSafe(debug[key]));
+    }
     return withDebugHeader;
   }
 };
 
-async function handleFetch(request, env, ctx) {
+function headerSafe(value) {
+  return String(value).replace(/[\r\n]+/g, " ").slice(0, 180);
+}
+
+async function handleFetch(request, env, ctx, debug) {
     const url = new URL(request.url);
     if (url.pathname === "/api/haberler") {
       return handleHaberler(request, ctx);
@@ -99,10 +103,10 @@ async function handleFetch(request, env, ctx) {
     }
 
     if (url.pathname === "/ilan-detay.html" && url.searchParams.has("id")) {
-      return withSeoMeta(request, env, "ilan");
+      return withSeoMeta(request, env, "ilan", debug);
     }
     if (url.pathname === "/rehber-detay.html" && url.searchParams.has("id")) {
-      return withSeoMeta(request, env, "rehber");
+      return withSeoMeta(request, env, "rehber", debug);
     }
 
     const landingPath = normalizedLandingPath(url.pathname);
@@ -113,11 +117,11 @@ async function handleFetch(request, env, ctx) {
       if (url.pathname.endsWith(".html")) {
         return Response.redirect(SITE_URL + landingPath + url.search, 301);
       }
-      return withLandingItemList(request, env, landingConfig);
+      return withLandingItemList(request, env, landingConfig, debug);
     }
 
     if (url.pathname === "/ilanlar.html") {
-      return withLandingItemList(request, env, {});
+      return withLandingItemList(request, env, {}, debug);
     }
 
     return env.ASSETS.fetch(request);
@@ -127,7 +131,7 @@ async function handleFetch(request, env, ctx) {
 // İlan/rehber detay sayfaları — sunucu taraflı SEO meta enjeksiyonu
 // ---------------------------------------------------------------------
 
-async function withSeoMeta(request, env, kind) {
+async function withSeoMeta(request, env, kind, debug) {
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   const assetResp = await env.ASSETS.fetch(request);
@@ -140,15 +144,21 @@ async function withSeoMeta(request, env, kind) {
   try {
     if (kind === "ilan") {
       const listings = await fetchJsonAsset(request, env, "/data/listings.json");
+      if (debug) debug["x-listings-count"] = listings.length;
       item = listings.find(function (l) { return l.id === id; }) || null;
     } else {
       const guides = await fetchJsonAsset(request, env, "/data/guides.json");
+      if (debug) debug["x-guides-count"] = guides.length;
       item = guides.find(function (g) { return g.id === id; }) || null;
     }
   } catch (e) {
+    if (debug) debug["x-data-error"] = (e && e.message) || String(e);
     return assetResp; // veri okunamadıysa statik (jenerik) içeriği aynen döndür
   }
-  if (!item) return assetResp;
+  if (!item) {
+    if (debug) debug["x-item-found"] = "0";
+    return assetResp;
+  }
 
   const meta = kind === "ilan" ? buildIlanMeta(item) : buildRehberMeta(item);
   const schema = kind === "ilan" ? buildListingSchema(item) : buildGuideSchema(item);
@@ -159,7 +169,7 @@ async function withSeoMeta(request, env, kind) {
 // Bölgesel landing sayfaları — canlı ItemList JSON-LD enjeksiyonu
 // ---------------------------------------------------------------------
 
-async function withLandingItemList(request, env, config) {
+async function withLandingItemList(request, env, config, debug) {
   const assetResp = await env.ASSETS.fetch(request);
   if (!assetResp.ok) return assetResp; // .html uzantılı istekte auto-trailing-slash redirect'i olduğu gibi döner
 
@@ -169,7 +179,9 @@ async function withLandingItemList(request, env, config) {
   let listings;
   try {
     listings = await fetchJsonAsset(request, env, "/data/listings.json");
+    if (debug) debug["x-listings-count"] = listings.length;
   } catch (e) {
+    if (debug) debug["x-data-error"] = (e && e.message) || String(e);
     return assetResp;
   }
 
@@ -246,8 +258,10 @@ function withNoCache(response) {
 
 async function fetchJsonAsset(request, env, path) {
   const assetUrl = new URL(path, request.url);
-  const resp = await env.ASSETS.fetch(new Request(assetUrl));
-  if (!resp.ok) throw new Error("asset fetch failed: " + path);
+  const resp = await env.ASSETS.fetch(new Request(assetUrl.toString()));
+  if (!resp.ok) {
+    throw new Error("asset fetch failed: " + path + " status=" + resp.status);
+  }
   return resp.json();
 }
 

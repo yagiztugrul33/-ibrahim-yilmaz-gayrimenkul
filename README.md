@@ -34,7 +34,9 @@ ve **admin panel şifresi** (`adminPasswordHash` — bkz. aşağıdaki "Panel
 ├── iletisim.html            İletişim (form + harita)
 ├── 404.html                 Sayfa bulunamadı
 ├── robots.txt                Arama motoru tarama kuralları (admin/ disallow)
-├── sitemap.xml                Site haritası
+├── sitemap.xml                Site haritası (elle değil, `scripts/generate-sitemap.mjs` ile üretilir)
+├── scripts/
+│   └── generate-sitemap.mjs   data/listings.json + data/guides.json'dan sitemap.xml üretir
 ├── .htaccess                 HTTPS yönlendirme, güvenlik başlıkları, sıkıştırma, önbellek
 ├── admin/
 │   └── index.html            Şifreli yönetim paneli (giriş + ilan/ayar/veri yönetimi)
@@ -187,8 +189,11 @@ Değiştirmek için:
 Site zaten şunları otomatik yapar: her sayfada benzersiz `<title>` ve meta
 açıklama, `canonical` etiketi, Open Graph etiketleri, mobil uyumlu tasarım,
 `schema.org` `RealEstateAgent`/`LocalBusiness` yapısal verisi (her sayfada,
-`config.js`'teki bilgilerden otomatik üretilir) ve ilan detay sayfasında
-`Product`/`Offer` yapısal verisi.
+`config.js`'teki bilgilerden otomatik üretilir), ilan detay sayfasında
+`Product`/`RealEstateListing`/`Offer` yapısal verisi ve rehber detay
+sayfasında `Article` yapısal verisi. Cloudflare Workers'a deploy edildiğinde
+(bkz. "Bilinen Sınırlamalar") bu ilana/rehbere özel etiketler JavaScript
+beklemeden, sunucu tarafında da uygulanır.
 
 Yayına aldıktan sonra şu adımları izleyin:
 
@@ -207,9 +212,21 @@ Yayına aldıktan sonra şu adımları izleyin:
    olarak ekler).
 5. Search Console'da **"Doğrula"** butonuna basın.
 6. Sol menüden **"Site Haritaları (Sitemaps)"**a gidin, `sitemap.xml` yazıp
-   **"Gönder"**e basın.
+   **"Gönder"**e basın. Yandex Webmaster'da da (varsa) aynı `sitemap.xml`
+   adresini "İndeksleme → Site Haritaları" bölümünden ekleyin.
 7. İlk indekslemenin birkaç gün sürebileceğini unutmayın; "URL Denetimi"
    aracıyla ana sayfanızın dizine eklenmesini manuel olarak da isteyebilirsiniz.
+
+**`sitemap.xml` artık elle düzenlenmez.** İlan ekleyip/çıkardıktan
+(`data/listings.json` güncellendikten) veya yeni bir rehber
+(`data/guides.json`) eklendikten sonra, deploy etmeden önce çalıştırın:
+
+```
+node scripts/generate-sitemap.mjs
+```
+
+Bu betik, `status: "pasif"` olan ilanları sitemap'e dahil etmez; tüm aktif
+ilanları, rehberleri ve sabit sayfaları otomatik olarak yeniden yazar.
 
 ### (b) Google İşletme Profili (Google Business Profile) Oluşturma
 
@@ -268,12 +285,20 @@ etkilemez).
 
 ## Bilinen Sınırlamalar
 
-- `ilan-detay.html` tek bir dosyadır ve `?id=...` parametresiyle ilgili
-  ilanı JavaScript ile yükler; sayfa başlığı/meta açıklaması JS çalıştıktan
-  sonra güncellenir. Modern Google bunu tarayıp indeksleyebilir, ancak
-  ölçekte çok sayıda ilan için ideal SEO, her ilana özel statik HTML dosyası
-  üretmektir (ör. basit bir derleme betiği ile). Mevcut ilan sayısı için
-  bu yaklaşım yeterlidir.
+- `ilan-detay.html` ve `rehber-detay.html` tek bir dosyadır ve `?id=...`
+  parametresiyle ilgili ilanı/rehberi istemci tarafında (JavaScript ile)
+  yükler. **Cloudflare Workers üzerinde** (`wrangler deploy`, bkz.
+  `worker/index.js`) bu sınırlama aşılmıştır: Worker, bu iki yol için gelen
+  isteklerde `<title>`, meta açıklama, canonical, Open Graph etiketlerini ve
+  JSON-LD yapılandırılmış veriyi (`RealEstateListing`/`Product`, `Article`)
+  **sunucu tarafında**, HTML tarayıcıya ulaşmadan önce ilgili ilana/rehbere
+  özel değerlerle değiştirir — JavaScript çalıştırmayan botlar (ör.
+  YandexBot) bile ilana özel içeriği görür. Bu davranış yalnızca Cloudflare
+  Worker etkin şekilde deploy edildiğinde geçerlidir; site salt statik
+  (cPanel, Worker'sız) barındırılırsa meta etiketler yine yalnızca JS
+  çalıştıktan sonra güncellenir (istemci tarafı mantık `assets/js/main.js`
+  içinde hâlâ mevcuttur, bu yüzden Worker'sız barındırmada da devre dışı
+  kalmaz, sadece JS'e bağımlı kalır).
 - Google Haritalar yerleştirmesi (embed) API anahtarı gerektirmeyen genel
   `maps?q=...&output=embed` biçimini kullanır; interaktif kontroller
   (yol tarifi vb.) sınırlıdır. Daha zengin bir harita için ücretli bir

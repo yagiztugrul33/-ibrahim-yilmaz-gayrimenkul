@@ -41,6 +41,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ibrahimyilmazgayrimenkul.com/rehberler.html?konu=kentsel-donusum</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=iskitler-ev-alma-rehberi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,11 +99,6 @@
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=dask-rehberi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ibrahimyilmazgayrimenkul.com/rehberler.html?konu=kentsel-donusum</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=6306-kira-yardimi-guncel</loc>
@@ -177,13 +177,13 @@
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=zubeyde-hanim-kentsel-donusum-uzlasma-ofisi</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=kira-artis-orani-2026-nasil-hesaplanir</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/rehber-detay.html?id=ankara-emlak-piyasasi-2026-analiz</loc>
@@ -192,22 +192,22 @@
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1007</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1008</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1009</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ibrahimyilmazgayrimenkul.com/ilan-detay.html?id=iyg-1010</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

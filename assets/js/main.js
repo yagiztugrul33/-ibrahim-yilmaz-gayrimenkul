@@ -307,6 +307,9 @@
   };
 
   IYG.injectListingSchema = function (listing) {
+    // Cloudflare Worker /ilan-detay.html isteğinde bu şemayı zaten sunucu
+    // tarafında (id="ld-schema") eklemiş olabilir — tekrar eklemeyelim.
+    if (document.getElementById("ld-schema")) return;
     var cfg = IYG.getConfig();
     var data = {
       "@context": "https://schema.org",
@@ -796,20 +799,24 @@
       .map(function (s) { return "<h2>" + escapeHtml(s.heading) + "</h2><p>" + escapeHtml(s.body) + "</p>"; })
       .join("");
 
-    var schema = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      headline: guide.title,
-      description: guide.excerpt,
-      image: guide.coverImage,
-      datePublished: guide.publishedAt,
-      author: { "@type": "Organization", name: cfg.companyName },
-      publisher: { "@type": "Organization", name: cfg.companyName }
-    };
-    var script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
+    if (!document.getElementById("ld-schema")) {
+      // Cloudflare Worker /rehber-detay.html isteğinde bu şemayı zaten
+      // sunucu tarafında (id="ld-schema") eklemiş olabilir — tekrar eklemeyelim.
+      var schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.excerpt,
+        image: guide.coverImage,
+        datePublished: guide.publishedAt,
+        author: { "@type": "Organization", name: cfg.companyName },
+        publisher: { "@type": "Organization", name: cfg.companyName }
+      };
+      var script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
 
     var related = guides.filter(function (g) { return g.id !== guide.id; }).slice(0, 3);
     var relatedEl = document.getElementById("related-guides");

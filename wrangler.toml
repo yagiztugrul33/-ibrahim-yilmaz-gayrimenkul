@@ -23,8 +23,10 @@ not_found_handling = "404-page"
 # katmanından ÖNCE çalışmasını zorunlu kılar; Worker içeride yine
 # env.ASSETS.fetch() ile asıl HTML'i çekip HTMLRewriter ile değiştiriyor.
 run_worker_first = [
+  "/index.html",
   "/ilan-detay.html",
   "/rehber-detay.html",
+  "/ilanlar.html",
   "/iskitler-satilik-daire",
   "/iskitler-satilik-daire.html",
   "/iskitler-kiralik-daire",

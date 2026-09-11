@@ -74,16 +74,35 @@ export default {
     if (url.pathname === "/api/haberler") {
       return handleHaberler(request, ctx);
     }
+
+    // Kanonik URL: /index.html -> / (301 kalıcı). Ana sayfanın tek adresi
+    // kök olsun, iki farklı URL aynı içeriği sunmasın.
+    if (url.pathname === "/index.html") {
+      return Response.redirect(SITE_URL + "/" + url.search, 301);
+    }
+
     if (url.pathname === "/ilan-detay.html" && url.searchParams.has("id")) {
       return withSeoMeta(request, env, "ilan");
     }
     if (url.pathname === "/rehber-detay.html" && url.searchParams.has("id")) {
       return withSeoMeta(request, env, "rehber");
     }
-    const landingConfig = LANDING_PAGES[normalizedLandingPath(url.pathname)];
+
+    const landingPath = normalizedLandingPath(url.pathname);
+    const landingConfig = LANDING_PAGES[landingPath];
     if (landingConfig) {
+      // Kanonik URL: /<slug>.html -> /<slug> (301 kalıcı). Aynı landing
+      // sayfası iki farklı URL'den (çift/duplicate content) servis edilmesin.
+      if (url.pathname.endsWith(".html")) {
+        return Response.redirect(SITE_URL + landingPath + url.search, 301);
+      }
       return withLandingItemList(request, env, landingConfig);
     }
+
+    if (url.pathname === "/ilanlar.html") {
+      return withLandingItemList(request, env, {});
+    }
+
     return env.ASSETS.fetch(request);
   }
 };

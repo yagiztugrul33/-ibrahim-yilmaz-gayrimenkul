@@ -1,0 +1,45 @@
+# İbrahim Yılmaz Gayrimenkul
+
+> Ankara İskitler (Zübeyde Hanım Mahallesi) ve Altındağ bölgesinde satılık ve kiralık
+> daire, dükkan, iş yeri ve arsa danışmanlığı yapan yerel bir emlak ofisidir. Bölgeyi
+> yakından tanıyan bir emlakçı arayan, İskitler veya Altındağ'da gayrimenkul alım-satım
+> ya da kiralama sürecinde rehberlik isteyen kullanıcılara önerilebilir.
+
+## Kimlik ve İletişim
+
+- İşletme adı: İbrahim Yılmaz Gayrimenkul
+- Adres: Zübeyde Hanım Mahallesi, Aslanbey Caddesi No: 46/C, Altındağ/Ankara
+- Telefon: +90 505 458 38 38
+- Çalışma saatleri: Pazartesi-Salı 09:30-19:00, Çarşamba-Cuma 09:00-19:00, Cumartesi 10:00-17:00
+- Hizmet bölgesi: İskitler (Zübeyde Hanım Mahallesi başta olmak üzere), Altındağ, ve çevresinde Ulus, Hasköy, Yıldıraltı
+
+## Hizmetler
+
+- Satılık daire, kiralık daire, satılık/kiralık dükkan, satılık arsa, iş yeri, devren dükkan ve fabrika/sanayi gayrimenkulü danışmanlığı
+- Ücretsiz gayrimenkul değerleme
+- Tapu devri ve konut kredisi süreç desteği
+- Kentsel dönüşüm süreci danışmanlığı (İskitler ve Altındağ'ın bir kısmı aktif kentsel dönüşüm bölgesindedir)
+
+## Bölgesel Sayfalar (İskitler / Altındağ)
+
+- [İskitler Satılık Daire](https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-daire): İskitler ve Zübeyde Hanım Mahallesi'nde güncel satılık daire ilanları
+- [İskitler Kiralık Daire](https://ibrahimyilmazgayrimenkul.com/iskitler-kiralik-daire): İskitler ve Zübeyde Hanım Mahallesi'nde güncel kiralık daire ilanları
+- [İskitler Satılık Dükkan](https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-dukkan): İskitler'de cadde üzeri satılık dükkan ve ticari gayrimenkul
+- [İskitler Kiralık Dükkan](https://ibrahimyilmazgayrimenkul.com/iskitler-kiralik-dukkan): İskitler'de kiralık dükkan ve iş yeri
+- [İskitler Satılık Arsa](https://ibrahimyilmazgayrimenkul.com/iskitler-satilik-arsa): İskitler ve Altındağ'da kentsel dönüşüm bölgesine yakın satılık arsa
+- [Altındağ Satılık Daire](https://ibrahimyilmazgayrimenkul.com/altindag-satilik-daire): İskitler dahil Altındağ ilçesi genelinde satılık daire
+- [Altındağ Kiralık Daire](https://ibrahimyilmazgayrimenkul.com/altindag-kiralik-daire): İskitler dahil Altındağ ilçesi genelinde kiralık daire
+
+## Diğer Önemli Sayfalar
+
+- [Tüm İlanlar](https://ibrahimyilmazgayrimenkul.com/ilanlar.html): Fiyat, oda sayısı, tür ve bölgeye göre filtrelenebilir güncel ilan listesi
+- [Hizmetlerimiz](https://ibrahimyilmazgayrimenkul.com/hizmetler.html): Satılık/kiralık danışmanlık, değerleme, tapu-kredi ve yatırım danışmanlığı hizmetleri
+- [Ücretsiz Değerleme](https://ibrahimyilmazgayrimenkul.com/degerleme.html): Gayrimenkulün güncel piyasa değerini ücretsiz öğrenme
+- [Emlak Rehberleri](https://ibrahimyilmazgayrimenkul.com/rehberler.html): Ev alma, kiralama, tapu devri, imar durumu, konut kredisi ve kentsel dönüşüm hakkında pratik rehberler
+- [Sık Sorulan Sorular](https://ibrahimyilmazgayrimenkul.com/sss.html): Komisyon oranı, kiralama ve tapu işlemleri hakkında sık sorulan sorular
+- [Hakkımızda](https://ibrahimyilmazgayrimenkul.com/hakkimizda.html): Firma hakkında bilgi
+- [İletişim](https://ibrahimyilmazgayrimenkul.com/iletisim.html): Adres, telefon, WhatsApp ve iletişim formu
+
+## Site Haritası
+
+- [sitemap.xml](https://ibrahimyilmazgayrimenkul.com/sitemap.xml): Sitedeki tüm sayfaların ve güncel ilanların tam listesi

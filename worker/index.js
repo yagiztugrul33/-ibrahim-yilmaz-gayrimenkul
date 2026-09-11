@@ -180,8 +180,42 @@ async function withLandingItemList(request, env, config) {
   };
 
   const script = '<script type="application/ld+json" id="ld-schema-itemlist">' + safeJsonLd(itemList) + "</script>";
-  const rewritten = new HTMLRewriter().on("head", new HeadInjector(script)).transform(assetResp);
+  var rewriter = new HTMLRewriter().on("head", new HeadInjector(script));
+  // Bölgesel landing sayfalarındaki (operation+category filtreli) "güncel
+  // fiyat aralığı" SSS cevabı — AI motorlarının doğrudan alıntılayabileceği
+  // kısa, olgusal, konum+fiyat içeren bir cümle. #landing-price-range
+  // elementi olmayan sayfalarda (ör. /ilanlar.html) bu seçici sessizce
+  // hiçbir şeyi eşleştirmez.
+  if (config.operation && config.category) {
+    rewriter = rewriter.on("#landing-price-range", new TextSetter(buildPriceRangeText(config, filtered)));
+  }
+  const rewritten = rewriter.transform(assetResp);
   return withNoCache(rewritten);
+}
+
+function buildPriceRangeText(config, filtered) {
+  const bolgeAdi = config.district || "Altındağ (İskitler dahil)";
+  const islem = operationLabel(config.operation);
+  const tur = categoryLabel(config.category);
+  const suffix = config.operation === "kiralik" ? "/ay" : "";
+  const prices = filtered
+    .map(function (l) { return Number(l.price); })
+    .filter(function (p) { return !isNaN(p); });
+
+  if (!prices.length) {
+    return bolgeAdi + "'de şu anda bu kritere (" + islem.toLowerCase() + " " + tur.toLowerCase() + ") uygun aktif ilanımız yok; güncel fiyat bilgisi ve benzer bölgedeki emsaller için WhatsApp'tan bize ulaşın.";
+  }
+
+  const min = Math.min.apply(null, prices);
+  const max = Math.max.apply(null, prices);
+  const minStr = formatPriceNumber(min) + " TL" + suffix;
+  const maxStr = formatPriceNumber(max) + " TL" + suffix;
+  const ilanIfadesi = prices.length + (prices.length === 1 ? " güncel ilan" : " güncel ilan");
+
+  if (min === max) {
+    return bolgeAdi + "'de güncel " + islem.toLowerCase() + " " + tur.toLowerCase() + " fiyatı yaklaşık " + minStr + " (" + ilanIfadesi + "). Güncel ilanlar zamanla değişir; en son durumu bu sayfadaki ilan listesinden görebilirsiniz.";
+  }
+  return bolgeAdi + "'de güncel " + islem.toLowerCase() + " " + tur.toLowerCase() + " fiyatları yaklaşık " + minStr + " ile " + maxStr + " arasında değişiyor (" + ilanIfadesi + "). Güncel ilanlar zamanla değişir; en son durumu bu sayfadaki ilan listesinden görebilirsiniz.";
 }
 
 // Bu dinamik (ilana/bölgeye özel) yanıtların kenarda (edge) veya tarayıcıda
@@ -516,5 +550,6 @@ export const __test__ = {
   buildGuideSchema,
   LANDING_PAGES,
   normalizedLandingPath,
-  safeJsonLd
+  safeJsonLd,
+  buildPriceRangeText
 };

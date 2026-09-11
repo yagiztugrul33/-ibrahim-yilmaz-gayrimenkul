@@ -70,6 +70,23 @@ function haberKaynaklari(sorgu) {
 
 export default {
   async fetch(request, env, ctx) {
+    const response = await handleFetch(request, env, ctx);
+    // GEÇİCİ TEŞHİS HEADER'I: run_worker_first'ün canlıda gerçekten devrede
+    // olup olmadığını (Worker'ın bu istek için hiç çalışıp çalışmadığını)
+    // kanıtlamak için eklendi. Cloudflare Community'de bilinen bir platform
+    // sorunu var: assets.run_worker_first bazen deploy edilen worker
+    // versiyonuna yanlışlıkla false olarak kaydediliyor (config doğru olsa
+    // bile). Bu header varsa Worker çalışmış demektir; yoksa (aynı domain'e
+    // run_worker_first'te OLMAYAN bir path'le karşılaştırınca da yoksa)
+    // asset katmanı Worker'ı hiç çağırmadan cevap veriyor demektir.
+    // Doğrulama sonrası kaldırılacak.
+    const withDebugHeader = new Response(response.body, response);
+    withDebugHeader.headers.set("x-worker-ran", "1");
+    return withDebugHeader;
+  }
+};
+
+async function handleFetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/api/haberler") {
       return handleHaberler(request, ctx);
@@ -104,8 +121,7 @@ export default {
     }
 
     return env.ASSETS.fetch(request);
-  }
-};
+}
 
 // ---------------------------------------------------------------------
 // İlan/rehber detay sayfaları — sunucu taraflı SEO meta enjeksiyonu

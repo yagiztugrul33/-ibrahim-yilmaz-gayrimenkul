@@ -13,32 +13,18 @@ compatibility_date = "2024-09-23"
 directory = "./"
 binding = "ASSETS"
 not_found_handling = "404-page"
-# ÖNEMLİ: Bu liste olmadan, aşağıdaki path'ler birer statik dosyaya karşılık
-# geldiği için Cloudflare Assets platformu bunları Worker'ı (worker/index.js)
-# HİÇ ÇALIŞTIRMADAN doğrudan kenardan (edge) servis eder/cache'ler — bu da
-# worker/index.js içindeki ilana/rehbere/bölgeye özel SEO meta + JSON-LD
-# enjeksiyonunun (withSeoMeta, withLandingItemList) production'da asla
-# devreye girmemesine yol açar (jenerik statik içerik + cf-cache-status: HIT
-# olarak gözlemlendi). run_worker_first, bu path'lerde Worker'ın asset
-# katmanından ÖNCE çalışmasını zorunlu kılar; Worker içeride yine
-# env.ASSETS.fetch() ile asıl HTML'i çekip HTMLRewriter ile değiştiriyor.
-run_worker_first = [
-  "/index.html",
-  "/ilan-detay.html",
-  "/rehber-detay.html",
-  "/ilanlar.html",
-  "/iskitler-satilik-daire",
-  "/iskitler-satilik-daire.html",
-  "/iskitler-kiralik-daire",
-  "/iskitler-kiralik-daire.html",
-  "/iskitler-satilik-dukkan",
-  "/iskitler-satilik-dukkan.html",
-  "/iskitler-kiralik-dukkan",
-  "/iskitler-kiralik-dukkan.html",
-  "/iskitler-satilik-arsa",
-  "/iskitler-satilik-arsa.html",
-  "/altindag-satilik-daire",
-  "/altindag-satilik-daire.html",
-  "/altindag-kiralik-daire",
-  "/altindag-kiralik-daire.html"
-]
+# TEŞHİS AMAÇLI GEÇİCİ DEĞİŞİKLİK: run_worker_first önceden path listesi
+# (array) olarak tanımlıydı ama canlıda hiçbir path'te devreye girmediği
+# gözlemlendi (jenerik içerik + cf-cache-status: HIT, x-worker-ran header'ı
+# gelmiyor). Cloudflare Community'de bilinen bir platform sorunu var:
+# "assets.run_worker_first: true is recorded as raw_run_worker_first: false
+# on upload" — yani config doğru olsa bile deploy edilen worker versiyonuna
+# bazen yanlış kaydediliyor. Bunu ayırt etmek için geçici olarak TÜM
+# istekleri Worker'a yönlendiren boolean forma geçildi (en geniş, en
+# kesin teşhis testi): eğer bu da devreye girmezse sorun kesinlikle
+# Cloudflare platformu tarafında demektir, path listesi sözdiziminde değil.
+# worker/index.js içindeki fetch() handler'ı zaten run_worker_first
+# kapsamına girmeyen tüm path'leri env.ASSETS.fetch(request) ile normal
+# şekilde geçiriyor, dolayısıyla statik dosyalar (CSS/JS/görsel) yine
+# doğru servis edilir. Teyit sonrası tekrar path listesine daraltılacak.
+run_worker_first = true

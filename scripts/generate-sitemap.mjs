@@ -10,7 +10,7 @@ const ROOT = join(__dirname, "..");
 const SITE_URL = "https://ibrahimyilmazgayrimenkul.com";
 
 const STATIC_PAGES = [
-  { loc: "index.html", changefreq: "weekly", priority: "1.0" },
+  { loc: "", changefreq: "weekly", priority: "1.0" }, // kök: https://.../ (index.html değil — 301 ile köke yönleniyor)
   { loc: "ilanlar.html", changefreq: "daily", priority: "0.9" },
   { loc: "hakkimizda.html", changefreq: "monthly", priority: "0.6" },
   { loc: "iletisim.html", changefreq: "monthly", priority: "0.6" },

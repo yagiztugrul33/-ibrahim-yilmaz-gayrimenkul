@@ -104,18 +104,29 @@ async function handleFetch(request, env, ctx, debug) {
       return Response.redirect(SITE_URL + "/" + url.search, 301);
     }
 
-    if (url.pathname === "/ilan-detay.html") {
+    if (url.pathname === "/ilan-detay.html" || url.pathname === "/ilan-detay") {
       if (!url.searchParams.has("id")) {
         if (debug) debug["x-route"] = "ilan-detay-no-id-param";
-        return env.ASSETS.fetch(request);
+        return env.ASSETS.fetch(assetFetchRequest(request));
+      }
+      // Kanonik URL ".html" ile: assets binding'in varsayılan html_handling
+      // davranışı (auto-trailing-slash) uzantısız forma 30x ile yönlendirir;
+      // bunu burada açıkça yapıp uzantısız girişleri kanonik forma toplarız.
+      if (url.pathname === "/ilan-detay") {
+        if (debug) debug["x-route"] = "ilan-detay-canonical-redirect";
+        return Response.redirect(SITE_URL + "/ilan-detay.html" + url.search, 301);
       }
       if (debug) debug["x-route"] = "ilan-detay";
       return withSeoMeta(request, env, "ilan", debug);
     }
-    if (url.pathname === "/rehber-detay.html") {
+    if (url.pathname === "/rehber-detay.html" || url.pathname === "/rehber-detay") {
       if (!url.searchParams.has("id")) {
         if (debug) debug["x-route"] = "rehber-detay-no-id-param";
-        return env.ASSETS.fetch(request);
+        return env.ASSETS.fetch(assetFetchRequest(request));
+      }
+      if (url.pathname === "/rehber-detay") {
+        if (debug) debug["x-route"] = "rehber-detay-canonical-redirect";
+        return Response.redirect(SITE_URL + "/rehber-detay.html" + url.search, 301);
       }
       if (debug) debug["x-route"] = "rehber-detay";
       return withSeoMeta(request, env, "rehber", debug);
@@ -134,7 +145,11 @@ async function handleFetch(request, env, ctx, debug) {
       return withLandingItemList(request, env, landingConfig, debug);
     }
 
-    if (url.pathname === "/ilanlar.html") {
+    if (url.pathname === "/ilanlar.html" || url.pathname === "/ilanlar") {
+      if (url.pathname === "/ilanlar") {
+        if (debug) debug["x-route"] = "ilanlar-canonical-redirect";
+        return Response.redirect(SITE_URL + "/ilanlar.html" + url.search, 301);
+      }
       if (debug) debug["x-route"] = "ilanlar";
       return withLandingItemList(request, env, {}, debug);
     }
@@ -150,7 +165,7 @@ async function handleFetch(request, env, ctx, debug) {
 async function withSeoMeta(request, env, kind, debug) {
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
-  const assetResp = await env.ASSETS.fetch(request);
+  const assetResp = await env.ASSETS.fetch(assetFetchRequest(request));
   if (debug) debug["x-asset-status"] = assetResp.status;
   if (!id || !assetResp.ok) return assetResp;
 
@@ -188,8 +203,8 @@ async function withSeoMeta(request, env, kind, debug) {
 // ---------------------------------------------------------------------
 
 async function withLandingItemList(request, env, config, debug) {
-  const assetResp = await env.ASSETS.fetch(request);
-  if (!assetResp.ok) return assetResp; // .html uzantılı istekte auto-trailing-slash redirect'i olduğu gibi döner
+  const assetResp = await env.ASSETS.fetch(assetFetchRequest(request));
+  if (!assetResp.ok) return assetResp; // gerçek bir 404/hata ise olduğu gibi döner
 
   const contentType = assetResp.headers.get("content-type") || "";
   if (!contentType.includes("text/html")) return assetResp;
@@ -278,6 +293,22 @@ function withNoCache(response) {
   const r = new Response(response.body, response);
   r.headers.set("Cache-Control", "no-cache");
   return r;
+}
+
+// env.ASSETS.fetch() varsayılan html_handling ("auto-trailing-slash")
+// davranışı yüzünden ".html" ile biten isteklerde 30x redirect DÖNÜYOR
+// (asıl dosya içeriğini değil) — assetResp.ok false olduğu için SEO
+// enjeksiyonu hiç çalışmadan bu redirect istemciye aynen geri gidiyordu.
+// Uzantısız formu isteyerek bu redirect'i tamamen atlıyoruz; platform
+// uzantısız istekleri doğrudan 200 ile ilgili .html dosyasının içeriğini
+// döndürüyor.
+function assetFetchRequest(request) {
+  const u = new URL(request.url);
+  if (u.pathname.endsWith(".html") && u.pathname !== "/index.html") {
+    u.pathname = u.pathname.slice(0, -".html".length);
+    return new Request(u.toString(), request);
+  }
+  return request;
 }
 
 async function fetchJsonAsset(request, env, path) {

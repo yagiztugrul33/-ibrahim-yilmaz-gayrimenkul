@@ -234,7 +234,12 @@ async function withLandingItemList(request, env, config, debug) {
   // elementi olmayan sayfalarda (ör. /ilanlar.html) bu seçici sessizce
   // hiçbir şeyi eşleştirmez.
   if (config.operation && config.category) {
-    rewriter = rewriter.on("#landing-price-range", new TextSetter(buildPriceRangeText(config, filtered)));
+    const priceText = buildPriceRangeText(config, filtered);
+    rewriter = rewriter.on("#landing-price-range", new TextSetter(priceText));
+    // Sayfadaki görünen SSS metni yukarıda güncelleniyor, ama arama motorlarının/
+    // AI'ın asıl okuduğu FAQPage JSON-LD'deki statik "WhatsApp'tan bize ulaşın"
+    // cevabı bu olmadan güncellenmiyordu — ikisi arasında tutarsızlık oluyordu.
+    rewriter = rewriter.on("script#ld-schema-faq", new FaqPriceAnswerReplacer(priceText));
   }
   const rewritten = rewriter.transform(assetResp);
   return withNoCache(rewritten);
@@ -426,6 +431,33 @@ class HeadInjector {
   element(el) {
     el.append(this.html, { html: true });
   }
+}
+
+// FAQPage JSON-LD içindeki statik "Güncel fiyat aralığı için WhatsApp'tan bize
+// ulaşın..." cevap metnini canlı fiyat metniyle değiştirir. HTMLRewriter script
+// içeriğini birden fazla parça (chunk) halinde verebildiği için tüm metni
+// biriktirip yalnızca son parçada tek seferlik arama/değiştirme yapıyoruz.
+class FaqPriceAnswerReplacer {
+  constructor(priceText) {
+    this.priceText = priceText;
+    this.buffer = "";
+  }
+  text(chunk) {
+    this.buffer += chunk.text;
+    if (chunk.lastInTextNode) {
+      const replaced = this.buffer.replace(
+        /"text":\s*"Güncel fiyat aralığı için WhatsApp'tan bize ulaşın[^"]*"/,
+        '"text": "' + jsonStringEscape(this.priceText) + '"'
+      );
+      chunk.replace(replaced, { html: false });
+    } else {
+      chunk.remove();
+    }
+  }
+}
+
+function jsonStringEscape(str) {
+  return JSON.stringify(str).slice(1, -1).replace(/</g, "\\u003c");
 }
 
 // JSON-LD'yi <script> içine güvenle gömmek için "<" karakterlerini kaçışlar

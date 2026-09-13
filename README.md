@@ -212,8 +212,7 @@ Yayına aldıktan sonra şu adımları izleyin:
    olarak ekler).
 5. Search Console'da **"Doğrula"** butonuna basın.
 6. Sol menüden **"Site Haritaları (Sitemaps)"**a gidin, `sitemap.xml` yazıp
-   **"Gönder"**e basın. Yandex Webmaster'da da (varsa) aynı `sitemap.xml`
-   adresini "İndeksleme → Site Haritaları" bölümünden ekleyin.
+   **"Gönder"**e basın.
 7. İlk indekslemenin birkaç gün sürebileceğini unutmayın; "URL Denetimi"
    aracıyla ana sayfanızın dizine eklenmesini manuel olarak da isteyebilirsiniz.
 
@@ -227,6 +226,21 @@ node scripts/generate-sitemap.mjs
 
 Bu betik, `status: "pasif"` olan ilanları sitemap'e dahil etmez; tüm aktif
 ilanları, rehberleri ve sabit sayfaları otomatik olarak yeniden yazar.
+
+**Yandex + Bing için Google Search Console'daki gibi bir "Webmaster"
+paneline manuel sitemap eklemeye gerek yok** — IndexNow protokolü bu işi
+otomatikleştirir. Deploy sonrası (veya yeni ilan/rehber eklendiğinde) şunu
+çalıştırın:
+
+```
+node scripts/submit-indexnow.mjs
+```
+
+Bu, `sitemap.xml`'deki tüm URL'leri tek istekte Yandex + Bing + IndexNow'a
+katılan diğer motorlara bildirir; anahtar doğrulama dosyası
+(`/1d6836b689ca76b19bb939ed9a00dc76.txt`) sitede zaten mevcuttur. Google bu
+protokolü desteklemez, o yüzden (a) adımındaki Search Console gönderimi
+ayrıca gereklidir.
 
 ### (b) Google İşletme Profili (Google Business Profile) Oluşturma
 

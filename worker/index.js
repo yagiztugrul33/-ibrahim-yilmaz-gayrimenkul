@@ -70,66 +70,42 @@ function haberKaynaklari(sorgu) {
 
 export default {
   async fetch(request, env, ctx) {
-    // GEÇİCİ TEŞHİS: bu isteğe özel, module-level DEĞİL (concurrent
-    // isteklerin birbirine karışmaması için) bir debug header çantası.
-    // Alt fonksiyonlar buraya data/listings.json ve data/guides.json'un
-    // kaç öğe döndürdüğünü (veya hata mesajını) yazıyor; en sonda hepsi
-    // yanıta header olarak ekleniyor. Doğrulama sonrası kaldırılacak.
-    const debug = {};
-    const response = await handleFetch(request, env, ctx, debug);
-    const withDebugHeader = new Response(response.body, response);
-    withDebugHeader.headers.set("x-worker-ran", "1");
-    for (const key of Object.keys(debug)) {
-      withDebugHeader.headers.set(key, headerSafe(debug[key]));
-    }
-    return withDebugHeader;
+    return handleFetch(request, env, ctx);
   }
 };
 
-function headerSafe(value) {
-  return String(value).replace(/[\r\n]+/g, " ").slice(0, 180);
-}
-
-async function handleFetch(request, env, ctx, debug) {
+async function handleFetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/api/haberler") {
-      if (debug) debug["x-route"] = "haberler";
       return handleHaberler(request, ctx);
     }
 
     // Kanonik URL: /index.html -> / (301 kalıcı). Ana sayfanın tek adresi
     // kök olsun, iki farklı URL aynı içeriği sunmasın.
     if (url.pathname === "/index.html") {
-      if (debug) debug["x-route"] = "index-redirect";
       return Response.redirect(SITE_URL + "/" + url.search, 301);
     }
 
     if (url.pathname === "/ilan-detay.html" || url.pathname === "/ilan-detay") {
       if (!url.searchParams.has("id")) {
-        if (debug) debug["x-route"] = "ilan-detay-no-id-param";
         return env.ASSETS.fetch(assetFetchRequest(request));
       }
       // Kanonik URL ".html" ile: assets binding'in varsayılan html_handling
       // davranışı (auto-trailing-slash) uzantısız forma 30x ile yönlendirir;
       // bunu burada açıkça yapıp uzantısız girişleri kanonik forma toplarız.
       if (url.pathname === "/ilan-detay") {
-        if (debug) debug["x-route"] = "ilan-detay-canonical-redirect";
         return Response.redirect(SITE_URL + "/ilan-detay.html" + url.search, 301);
       }
-      if (debug) debug["x-route"] = "ilan-detay";
-      return withSeoMeta(request, env, "ilan", debug);
+      return withSeoMeta(request, env, "ilan");
     }
     if (url.pathname === "/rehber-detay.html" || url.pathname === "/rehber-detay") {
       if (!url.searchParams.has("id")) {
-        if (debug) debug["x-route"] = "rehber-detay-no-id-param";
         return env.ASSETS.fetch(assetFetchRequest(request));
       }
       if (url.pathname === "/rehber-detay") {
-        if (debug) debug["x-route"] = "rehber-detay-canonical-redirect";
         return Response.redirect(SITE_URL + "/rehber-detay.html" + url.search, 301);
       }
-      if (debug) debug["x-route"] = "rehber-detay";
-      return withSeoMeta(request, env, "rehber", debug);
+      return withSeoMeta(request, env, "rehber");
     }
 
     const landingPath = normalizedLandingPath(url.pathname);
@@ -138,23 +114,18 @@ async function handleFetch(request, env, ctx, debug) {
       // Kanonik URL: /<slug>.html -> /<slug> (301 kalıcı). Aynı landing
       // sayfası iki farklı URL'den (çift/duplicate content) servis edilmesin.
       if (url.pathname.endsWith(".html")) {
-        if (debug) debug["x-route"] = "landing-redirect:" + landingPath;
         return Response.redirect(SITE_URL + landingPath + url.search, 301);
       }
-      if (debug) debug["x-route"] = "landing:" + landingPath;
-      return withLandingItemList(request, env, landingConfig, debug);
+      return withLandingItemList(request, env, landingConfig);
     }
 
     if (url.pathname === "/ilanlar.html" || url.pathname === "/ilanlar") {
       if (url.pathname === "/ilanlar") {
-        if (debug) debug["x-route"] = "ilanlar-canonical-redirect";
         return Response.redirect(SITE_URL + "/ilanlar.html" + url.search, 301);
       }
-      if (debug) debug["x-route"] = "ilanlar";
-      return withLandingItemList(request, env, {}, debug);
+      return withLandingItemList(request, env, {});
     }
 
-    if (debug) debug["x-route"] = "asset-passthrough";
     return env.ASSETS.fetch(request);
 }
 
@@ -162,34 +133,28 @@ async function handleFetch(request, env, ctx, debug) {
 // İlan/rehber detay sayfaları — sunucu taraflı SEO meta enjeksiyonu
 // ---------------------------------------------------------------------
 
-async function withSeoMeta(request, env, kind, debug) {
+async function withSeoMeta(request, env, kind) {
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   const assetResp = await env.ASSETS.fetch(assetFetchRequest(request));
-  if (debug) debug["x-asset-status"] = assetResp.status;
   if (!id || !assetResp.ok) return assetResp;
 
   const contentType = assetResp.headers.get("content-type") || "";
-  if (debug) debug["x-content-type"] = contentType;
   if (!contentType.includes("text/html")) return assetResp;
 
   let item = null;
   try {
     if (kind === "ilan") {
       const listings = await fetchJsonAsset(request, env, "/data/listings.json");
-      if (debug) debug["x-listings-count"] = listings.length;
       item = listings.find(function (l) { return l.id === id; }) || null;
     } else {
       const guides = await fetchJsonAsset(request, env, "/data/guides.json");
-      if (debug) debug["x-guides-count"] = guides.length;
       item = guides.find(function (g) { return g.id === id; }) || null;
     }
-  } catch (e) {
-    if (debug) debug["x-data-error"] = (e && e.message) || String(e);
+  } catch {
     return assetResp; // veri okunamadıysa statik (jenerik) içeriği aynen döndür
   }
   if (!item) {
-    if (debug) debug["x-item-found"] = "0";
     return assetResp;
   }
 
@@ -202,7 +167,7 @@ async function withSeoMeta(request, env, kind, debug) {
 // Bölgesel landing sayfaları — canlı ItemList JSON-LD enjeksiyonu
 // ---------------------------------------------------------------------
 
-async function withLandingItemList(request, env, config, debug) {
+async function withLandingItemList(request, env, config) {
   const assetResp = await env.ASSETS.fetch(assetFetchRequest(request));
   if (!assetResp.ok) return assetResp; // gerçek bir 404/hata ise olduğu gibi döner
 
@@ -212,9 +177,7 @@ async function withLandingItemList(request, env, config, debug) {
   let listings;
   try {
     listings = await fetchJsonAsset(request, env, "/data/listings.json");
-    if (debug) debug["x-listings-count"] = listings.length;
-  } catch (e) {
-    if (debug) debug["x-data-error"] = (e && e.message) || String(e);
+  } catch {
     return assetResp;
   }
 
@@ -225,7 +188,6 @@ async function withLandingItemList(request, env, config, debug) {
     if (config.district && l.district !== config.district) return false;
     return true;
   });
-  if (debug) debug["x-price-matched"] = filtered.length;
 
   const itemList = {
     "@context": "https://schema.org",
